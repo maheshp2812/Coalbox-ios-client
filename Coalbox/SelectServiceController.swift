@@ -68,7 +68,6 @@ class SelectServiceController : UIViewController {
     }
     
     func displayContent() {
-        changeDeliverySlot((deliveryContainer?.deliverySegmentedControl.selectedSegmentIndex)!)
         if(typeOfService.selectedIndex == 0) {
             daysForDelivery = 2
             infoLabel.text = "Get your clothes ironed within 48 hours and delivered to your doorstep"
@@ -78,6 +77,7 @@ class SelectServiceController : UIViewController {
         }
         infoLabel.textAlignment = .Center
         deliveryContainer?.setDefaultDeliveryDate(self.pickupDate,days: daysForDelivery)
+        changeDeliverySlot((deliveryContainer?.deliverySegmentedControl.selectedSegmentIndex)!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
