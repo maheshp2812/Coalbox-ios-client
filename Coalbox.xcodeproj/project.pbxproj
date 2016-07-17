@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB1E8F1D1D27A8D8004C5A35 /* NSDateComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */; };
+		EB1E8F1F1D27B219004C5A35 /* SubmitOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */; };
+		EB226CD41D339B2E00C126E5 /* SummaryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */; };
+		EB2CE9951D3B7D680075D20B /* MainPageTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CE9941D3B7D680075D20B /* MainPageTableController.swift */; };
+		EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38D8E61D2259A4001150D0 /* OrderDetails.swift */; };
+		EB3A97DB1D2D40A100B415E2 /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3A97D81D2D40A100B415E2 /* MBCircularProgressBarLayer.m */; };
+		EB3A97DC1D2D40A100B415E2 /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3A97DA1D2D40A100B415E2 /* MBCircularProgressBarView.m */; };
+		EB5594D11CF2E1600054A4F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */; };
+		EB5594D31CF2E1600054A4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594D21CF2E1600054A4F4 /* ViewController.swift */; };
+		EB5594D61CF2E1600054A4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5594D41CF2E1600054A4F4 /* Main.storyboard */; };
+		EB5594D81CF2E1600054A4F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5594D71CF2E1600054A4F4 /* Assets.xcassets */; };
+		EB5594DB1CF2E1600054A4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5594D91CF2E1600054A4F4 /* LaunchScreen.storyboard */; };
+		EB5594E61CF2E1610054A4F4 /* CoalboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594E51CF2E1610054A4F4 /* CoalboxTests.swift */; };
+		EB7862C71D35071A008E32D7 /* ItemRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7862C61D35071A008E32D7 /* ItemRates.swift */; };
+		EB7E5BA61D20FFBD0051E43D /* PlaceOrderContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E5BA51D20FFBD0051E43D /* PlaceOrderContainerController.swift */; };
+		EB7E5BA81D21088A0051E43D /* SpecialClothingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E5BA71D21088A0051E43D /* SpecialClothingController.swift */; };
+		EB83C4BF1D155A71006570C1 /* Sha1Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83C4BE1D155A71006570C1 /* Sha1Security.swift */; };
+		EB8EB0EA1D01983C00676A22 /* DbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8EB0E91D01983C00676A22 /* DbManager.swift */; };
+		EB9453781D2A9433002966FC /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94536C1D2A9433002966FC /* AkiraTextField.swift */; };
+		EB9453791D2A9433002966FC /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94536D1D2A9433002966FC /* HoshiTextField.swift */; };
+		EB94537A1D2A9433002966FC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB94536E1D2A9433002966FC /* Info.plist */; };
+		EB94537B1D2A9433002966FC /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94536F1D2A9433002966FC /* IsaoTextField.swift */; };
+		EB94537C1D2A9433002966FC /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9453701D2A9433002966FC /* JiroTextField.swift */; };
+		EB94537D1D2A9433002966FC /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9453711D2A9433002966FC /* KaedeTextField.swift */; };
+		EB94537E1D2A9433002966FC /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9453721D2A9433002966FC /* MadokaTextField.swift */; };
+		EB94537F1D2A9433002966FC /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9453731D2A9433002966FC /* MinoruTextField.swift */; };
+		EB9453801D2A9433002966FC /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9453751D2A9433002966FC /* TextFieldsEffects.swift */; };
+		EB9453811D2A9433002966FC /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9453761D2A9433002966FC /* YokoTextField.swift */; };
+		EB9453821D2A9433002966FC /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9453771D2A9433002966FC /* YoshikoTextField.swift */; };
+		EB996E371D0D4E8600E2DF58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB996E361D0D4E8600E2DF58 /* GoogleService-Info.plist */; };
+		EB996E381D0D4E8600E2DF58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB996E361D0D4E8600E2DF58 /* GoogleService-Info.plist */; };
+		EB996E3A1D0D685200E2DF58 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB996E391D0D685100E2DF58 /* UserDetails.swift */; };
+		EB996E3B1D0D685200E2DF58 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB996E391D0D685100E2DF58 /* UserDetails.swift */; };
+		EBA2FAB31D31181D00EE4079 /* SignupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2FAB21D31181D00EE4079 /* SignupTableController.swift */; };
+		EBACD78A1D1146C10033D6BE /* AccountTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACD7891D1146C10033D6BE /* AccountTableController.swift */; };
+		EBACD78C1D1148020033D6BE /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACD78B1D1148020033D6BE /* MyAccountController.swift */; };
+		EBAEA21A1D1FBBEE00548CCA /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEA2191D1FBBEE00548CCA /* Ionicons.swift */; };
+		EBAEA21E1D1FC8B700548CCA /* HSDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEA21D1D1FC8B700548CCA /* HSDatePickerViewController.xib */; };
+		EBC04BF41CF5751F002CEC6E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC04BF31CF5751F002CEC6E /* LoginController.swift */; };
+		EBC4138D1D1EC9230075B443 /* HSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4138B1D1EC9230075B443 /* HSDatePickerViewController.m */; };
+		EBC413901D1ECC7A0075B443 /* PickupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC4138F1D1ECC7A0075B443 /* PickupController.swift */; };
+		EBC413921D1ECC850075B443 /* DeliveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC413911D1ECC850075B443 /* DeliveryController.swift */; };
+		EBC9D4E81D1E65B500A0015A /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBC9D4E21D1E65B500A0015A /* ionicons.ttf */; };
+		EBD1A2351CF6ED7300A90D35 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD1A2341CF6ED7300A90D35 /* SignupController.swift */; };
+		EBD267821D0168600012190D /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD267811D0168600012190D /* MicrosoftAzureMobile.framework */; };
+		EBD318201CF999730035F51B /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3181F1CF999730035F51B /* MainPageController.swift */; };
+		EBE476821CFD7C3B00B216ED /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE476811CFD7C3B00B216ED /* AccountController.swift */; };
+		EBF05C181D1D15AF00360B8D /* ADVSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF05C171D1D15AF00360B8D /* ADVSegmentedControl.swift */; };
+		EBF05C1A1D1D16C000360B8D /* SelectServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF05C191D1D16C000360B8D /* SelectServiceController.swift */; };
+		EBF823701D1A6EDF004BBD1F /* PlaceOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8236F1D1A6EDF004BBD1F /* PlaceOrderController.swift */; };
+		EBFA6D9D1D001242001D7ACE /* MyOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA6D9C1D001242001D7ACE /* MyOrdersController.swift */; };
+		EBFC00221D30EA220077449C /* UIDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC00211D30EA220077449C /* UIDropDown.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB5594E21CF2E1610054A4F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB5594C51CF2E15F0054A4F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB5594CC1CF2E15F0054A4F4;
+			remoteInfo = Coalbox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBD1001F1D3BA9FF003A59A4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateComparison.swift; sourceTree = "<group>"; };
+		EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitOrderController.swift; sourceTree = "<group>"; };
+		EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableController.swift; sourceTree = "<group>"; };
+		EB2CE9941D3B7D680075D20B /* MainPageTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageTableController.swift; sourceTree = "<group>"; };
+		EB38D8E61D2259A4001150D0 /* OrderDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
+		EB3A97D71D2D40A100B415E2 /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarLayer.h; path = Coalbox/MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
+		EB3A97D81D2D40A100B415E2 /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarLayer.m; path = Coalbox/MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
+		EB3A97D91D2D40A100B415E2 /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarView.h; path = Coalbox/MBCircularProgressBarView.h; sourceTree = "<group>"; };
+		EB3A97DA1D2D40A100B415E2 /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarView.m; path = Coalbox/MBCircularProgressBarView.m; sourceTree = "<group>"; };
+		EB5594CD1CF2E15F0054A4F4 /* Coalbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coalbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB5594D21CF2E1600054A4F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB5594D51CF2E1600054A4F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB5594D71CF2E1600054A4F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB5594DA1CF2E1600054A4F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB5594DC1CF2E1600054A4F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB5594E11CF2E1610054A4F4 /* CoalboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoalboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5594E51CF2E1610054A4F4 /* CoalboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoalboxTests.swift; sourceTree = "<group>"; };
+		EB5594E71CF2E1610054A4F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB7862C61D35071A008E32D7 /* ItemRates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRates.swift; sourceTree = "<group>"; };
+		EB7E5BA51D20FFBD0051E43D /* PlaceOrderContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderContainerController.swift; sourceTree = "<group>"; };
+		EB7E5BA71D21088A0051E43D /* SpecialClothingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialClothingController.swift; sourceTree = "<group>"; };
+		EB83C4BE1D155A71006570C1 /* Sha1Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sha1Security.swift; sourceTree = "<group>"; };
+		EB8EB0E91D01983C00676A22 /* DbManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbManager.swift; sourceTree = "<group>"; };
+		EB94536C1D2A9433002966FC /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
+		EB94536D1D2A9433002966FC /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		EB94536E1D2A9433002966FC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB94536F1D2A9433002966FC /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		EB9453701D2A9433002966FC /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
+		EB9453711D2A9433002966FC /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		EB9453721D2A9433002966FC /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
+		EB9453731D2A9433002966FC /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
+		EB9453741D2A9433002966FC /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		EB9453751D2A9433002966FC /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
+		EB9453761D2A9433002966FC /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
+		EB9453771D2A9433002966FC /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		EB996E361D0D4E8600E2DF58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB996E391D0D685100E2DF58 /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		EBA2FAB21D31181D00EE4079 /* SignupTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupTableController.swift; path = ../SignupTableController.swift; sourceTree = "<group>"; };
+		EBACD7891D1146C10033D6BE /* AccountTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableController.swift; sourceTree = "<group>"; };
+		EBACD78B1D1148020033D6BE /* MyAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
+		EBAEA2191D1FBBEE00548CCA /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
+		EBAEA21D1D1FC8B700548CCA /* HSDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSDatePickerViewController.xib; sourceTree = "<group>"; };
+		EBC04BF31CF5751F002CEC6E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		EBC4138A1D1EC9230075B443 /* HSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDatePickerViewController.h; sourceTree = "<group>"; };
+		EBC4138B1D1EC9230075B443 /* HSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDatePickerViewController.m; sourceTree = "<group>"; };
+		EBC4138F1D1ECC7A0075B443 /* PickupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupController.swift; sourceTree = "<group>"; };
+		EBC413911D1ECC850075B443 /* DeliveryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryController.swift; sourceTree = "<group>"; };
+		EBC9D4E21D1E65B500A0015A /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = UIDropDownTests/ionicons.ttf; sourceTree = SOURCE_ROOT; };
+		EBD1A2341CF6ED7300A90D35 /* SignupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		EBD2677B1D0161BF0012190D /* Coalbox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coalbox-Bridging-Header.h"; sourceTree = "<group>"; };
+		EBD267811D0168600012190D /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		EBD3181F1CF999730035F51B /* MainPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
+		EBE476811CFD7C3B00B216ED /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		EBF05C171D1D15AF00360B8D /* ADVSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADVSegmentedControl.swift; sourceTree = "<group>"; };
+		EBF05C191D1D16C000360B8D /* SelectServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectServiceController.swift; sourceTree = "<group>"; };
+		EBF8236F1D1A6EDF004BBD1F /* PlaceOrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderController.swift; sourceTree = "<group>"; };
+		EBFA6D9C1D001242001D7ACE /* MyOrdersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersController.swift; sourceTree = "<group>"; };
+		EBFC00211D30EA220077449C /* UIDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropDown.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB5594CA1CF2E15F0054A4F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD267821D0168600012190D /* MicrosoftAzureMobile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB5594DE1CF2E1610054A4F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB5594C41CF2E15F0054A4F4 = {
+			isa = PBXGroup;
+			children = (
+				EBD267831D0168640012190D /* Frameworks */,
+				EB5594CF1CF2E1600054A4F4 /* Coalbox */,
+				EB5594E41CF2E1610054A4F4 /* CoalboxTests */,
+				EB5594CE1CF2E15F0054A4F4 /* Products */,
+				EBC9D4DC1D1E5F9000A0015A /* Supporting Files */,
+			);
+			sourceTree = "<group>";
+		};
+		EB5594CE1CF2E15F0054A4F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB5594CD1CF2E15F0054A4F4 /* Coalbox.app */,
+				EB5594E11CF2E1610054A4F4 /* CoalboxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB5594CF1CF2E1600054A4F4 /* Coalbox */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2FAB21D31181D00EE4079 /* SignupTableController.swift */,
+				EB7E5BA51D20FFBD0051E43D /* PlaceOrderContainerController.swift */,
+				EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */,
+				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
+				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
+				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EB2CE9941D3B7D680075D20B /* MainPageTableController.swift */,
+				EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */,
+				EB7862C61D35071A008E32D7 /* ItemRates.swift */,
+				EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */,
+				EB7E5BA71D21088A0051E43D /* SpecialClothingController.swift */,
+				EBC4138F1D1ECC7A0075B443 /* PickupController.swift */,
+				EBC413911D1ECC850075B443 /* DeliveryController.swift */,
+				EBF05C191D1D16C000360B8D /* SelectServiceController.swift */,
+				EBF05C171D1D15AF00360B8D /* ADVSegmentedControl.swift */,
+				EBFA6D9C1D001242001D7ACE /* MyOrdersController.swift */,
+				EBE476811CFD7C3B00B216ED /* AccountController.swift */,
+				EBD3181F1CF999730035F51B /* MainPageController.swift */,
+				EB5594D71CF2E1600054A4F4 /* Assets.xcassets */,
+				EB5594D91CF2E1600054A4F4 /* LaunchScreen.storyboard */,
+				EB5594DC1CF2E1600054A4F4 /* Info.plist */,
+				EBC04BF31CF5751F002CEC6E /* LoginController.swift */,
+				EBD1A2341CF6ED7300A90D35 /* SignupController.swift */,
+				EB8EB0E91D01983C00676A22 /* DbManager.swift */,
+				EBD2677B1D0161BF0012190D /* Coalbox-Bridging-Header.h */,
+				EB996E361D0D4E8600E2DF58 /* GoogleService-Info.plist */,
+				EBACD7891D1146C10033D6BE /* AccountTableController.swift */,
+				EB83C4BE1D155A71006570C1 /* Sha1Security.swift */,
+				EBACD78B1D1148020033D6BE /* MyAccountController.swift */,
+				EBF8236F1D1A6EDF004BBD1F /* PlaceOrderController.swift */,
+				EB38D8E61D2259A4001150D0 /* OrderDetails.swift */,
+			);
+			path = Coalbox;
+			sourceTree = "<group>";
+		};
+		EB5594E41CF2E1610054A4F4 /* CoalboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB5594E51CF2E1610054A4F4 /* CoalboxTests.swift */,
+				EB5594E71CF2E1610054A4F4 /* Info.plist */,
+			);
+			path = CoalboxTests;
+			sourceTree = "<group>";
+		};
+		EB94536B1D2A9433002966FC /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				EB94536C1D2A9433002966FC /* AkiraTextField.swift */,
+				EB94536D1D2A9433002966FC /* HoshiTextField.swift */,
+				EB94536E1D2A9433002966FC /* Info.plist */,
+				EB94536F1D2A9433002966FC /* IsaoTextField.swift */,
+				EB9453701D2A9433002966FC /* JiroTextField.swift */,
+				EB9453711D2A9433002966FC /* KaedeTextField.swift */,
+				EB9453721D2A9433002966FC /* MadokaTextField.swift */,
+				EB9453731D2A9433002966FC /* MinoruTextField.swift */,
+				EB9453741D2A9433002966FC /* TextFieldEffects.h */,
+				EB9453751D2A9433002966FC /* TextFieldsEffects.swift */,
+				EB9453761D2A9433002966FC /* YokoTextField.swift */,
+				EB9453771D2A9433002966FC /* YoshikoTextField.swift */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		EBC413891D1EC9230075B443 /* HSDatePickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EBC4138A1D1EC9230075B443 /* HSDatePickerViewController.h */,
+				EBAEA21D1D1FC8B700548CCA /* HSDatePickerViewController.xib */,
+				EBC4138B1D1EC9230075B443 /* HSDatePickerViewController.m */,
+			);
+			path = HSDatePickerViewController;
+			sourceTree = "<group>";
+		};
+		EBC9D4C91D1E5F8900A0015A /* UIDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				EBC9D4E21D1E65B500A0015A /* ionicons.ttf */,
+				EBFC00211D30EA220077449C /* UIDropDown.swift */,
+				EBAEA2191D1FBBEE00548CCA /* Ionicons.swift */,
+			);
+			path = UIDropDown;
+			sourceTree = "<group>";
+		};
+		EBC9D4DC1D1E5F9000A0015A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB3A97D71D2D40A100B415E2 /* MBCircularProgressBarLayer.h */,
+				EB3A97D81D2D40A100B415E2 /* MBCircularProgressBarLayer.m */,
+				EB3A97D91D2D40A100B415E2 /* MBCircularProgressBarView.h */,
+				EB3A97DA1D2D40A100B415E2 /* MBCircularProgressBarView.m */,
+				EB94536B1D2A9433002966FC /* TextFieldEffects */,
+				EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */,
+				EBC413891D1EC9230075B443 /* HSDatePickerViewController */,
+				EBC9D4C91D1E5F8900A0015A /* UIDropDown */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBD267831D0168640012190D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBD267811D0168600012190D /* MicrosoftAzureMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB5594CC1CF2E15F0054A4F4 /* Coalbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB5594EA1CF2E1610054A4F4 /* Build configuration list for PBXNativeTarget "Coalbox" */;
+			buildPhases = (
+				EB5594C91CF2E15F0054A4F4 /* Sources */,
+				EB5594CA1CF2E15F0054A4F4 /* Frameworks */,
+				EB5594CB1CF2E15F0054A4F4 /* Resources */,
+				EBD1001F1D3BA9FF003A59A4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Coalbox;
+			productName = Coalbox;
+			productReference = EB5594CD1CF2E15F0054A4F4 /* Coalbox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB5594E01CF2E1610054A4F4 /* CoalboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB5594ED1CF2E1610054A4F4 /* Build configuration list for PBXNativeTarget "CoalboxTests" */;
+			buildPhases = (
+				A2EF5F3A2A487FC10421DFC4 /* [CP] Check Pods Manifest.lock */,
+				EB5594DD1CF2E1610054A4F4 /* Sources */,
+				EB5594DE1CF2E1610054A4F4 /* Frameworks */,
+				EB5594DF1CF2E1610054A4F4 /* Resources */,
+				E5DB23782C8C9473CBC841DE /* [CP] Embed Pods Frameworks */,
+				F73D8D2E8F21506645E89FCE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB5594E31CF2E1610054A4F4 /* PBXTargetDependency */,
+			);
+			name = CoalboxTests;
+			productName = CoalboxTests;
+			productReference = EB5594E11CF2E1610054A4F4 /* CoalboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB5594C51CF2E15F0054A4F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Coalbox Ironing Services";
+				TargetAttributes = {
+					EB5594CC1CF2E15F0054A4F4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WZXH25N9W3;
+					};
+					EB5594E01CF2E1610054A4F4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EB5594CC1CF2E15F0054A4F4;
+					};
+				};
+			};
+			buildConfigurationList = EB5594C81CF2E15F0054A4F4 /* Build configuration list for PBXProject "Coalbox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB5594C41CF2E15F0054A4F4;
+			productRefGroup = EB5594CE1CF2E15F0054A4F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB5594CC1CF2E15F0054A4F4 /* Coalbox */,
+				EB5594E01CF2E1610054A4F4 /* CoalboxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB5594CB1CF2E15F0054A4F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC9D4E81D1E65B500A0015A /* ionicons.ttf in Resources */,
+				EB5594DB1CF2E1600054A4F4 /* LaunchScreen.storyboard in Resources */,
+				EB996E371D0D4E8600E2DF58 /* GoogleService-Info.plist in Resources */,
+				EBAEA21E1D1FC8B700548CCA /* HSDatePickerViewController.xib in Resources */,
+				EB5594D81CF2E1600054A4F4 /* Assets.xcassets in Resources */,
+				EB5594D61CF2E1600054A4F4 /* Main.storyboard in Resources */,
+				EB94537A1D2A9433002966FC /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB5594DF1CF2E1610054A4F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB996E381D0D4E8600E2DF58 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2EF5F3A2A487FC10421DFC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5DB23782C8C9473CBC841DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoalboxTests/Pods-CoalboxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F73D8D2E8F21506645E89FCE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoalboxTests/Pods-CoalboxTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB5594C91CF2E15F0054A4F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB7862C71D35071A008E32D7 /* ItemRates.swift in Sources */,
+				EBACD78A1D1146C10033D6BE /* AccountTableController.swift in Sources */,
+				EBE476821CFD7C3B00B216ED /* AccountController.swift in Sources */,
+				EB83C4BF1D155A71006570C1 /* Sha1Security.swift in Sources */,
+				EB1E8F1F1D27B219004C5A35 /* SubmitOrderController.swift in Sources */,
+				EBAEA21A1D1FBBEE00548CCA /* Ionicons.swift in Sources */,
+				EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */,
+				EB94537D1D2A9433002966FC /* KaedeTextField.swift in Sources */,
+				EB226CD41D339B2E00C126E5 /* SummaryTableController.swift in Sources */,
+				EB3A97DC1D2D40A100B415E2 /* MBCircularProgressBarView.m in Sources */,
+				EBF823701D1A6EDF004BBD1F /* PlaceOrderController.swift in Sources */,
+				EB7E5BA81D21088A0051E43D /* SpecialClothingController.swift in Sources */,
+				EB9453781D2A9433002966FC /* AkiraTextField.swift in Sources */,
+				EB9453791D2A9433002966FC /* HoshiTextField.swift in Sources */,
+				EBD318201CF999730035F51B /* MainPageController.swift in Sources */,
+				EB94537B1D2A9433002966FC /* IsaoTextField.swift in Sources */,
+				EB996E3A1D0D685200E2DF58 /* UserDetails.swift in Sources */,
+				EB2CE9951D3B7D680075D20B /* MainPageTableController.swift in Sources */,
+				EBC4138D1D1EC9230075B443 /* HSDatePickerViewController.m in Sources */,
+				EB5594D31CF2E1600054A4F4 /* ViewController.swift in Sources */,
+				EBFC00221D30EA220077449C /* UIDropDown.swift in Sources */,
+				EBA2FAB31D31181D00EE4079 /* SignupTableController.swift in Sources */,
+				EB9453801D2A9433002966FC /* TextFieldsEffects.swift in Sources */,
+				EB1E8F1D1D27A8D8004C5A35 /* NSDateComparison.swift in Sources */,
+				EB7E5BA61D20FFBD0051E43D /* PlaceOrderContainerController.swift in Sources */,
+				EBC413921D1ECC850075B443 /* DeliveryController.swift in Sources */,
+				EB94537F1D2A9433002966FC /* MinoruTextField.swift in Sources */,
+				EB9453821D2A9433002966FC /* YoshikoTextField.swift in Sources */,
+				EB3A97DB1D2D40A100B415E2 /* MBCircularProgressBarLayer.m in Sources */,
+				EB8EB0EA1D01983C00676A22 /* DbManager.swift in Sources */,
+				EBC04BF41CF5751F002CEC6E /* LoginController.swift in Sources */,
+				EB5594D11CF2E1600054A4F4 /* AppDelegate.swift in Sources */,
+				EBF05C181D1D15AF00360B8D /* ADVSegmentedControl.swift in Sources */,
+				EBC413901D1ECC7A0075B443 /* PickupController.swift in Sources */,
+				EBFA6D9D1D001242001D7ACE /* MyOrdersController.swift in Sources */,
+				EB94537C1D2A9433002966FC /* JiroTextField.swift in Sources */,
+				EBACD78C1D1148020033D6BE /* MyAccountController.swift in Sources */,
+				EBF05C1A1D1D16C000360B8D /* SelectServiceController.swift in Sources */,
+				EB9453811D2A9433002966FC /* YokoTextField.swift in Sources */,
+				EBD1A2351CF6ED7300A90D35 /* SignupController.swift in Sources */,
+				EB94537E1D2A9433002966FC /* MadokaTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB5594DD1CF2E1610054A4F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB5594E61CF2E1610054A4F4 /* CoalboxTests.swift in Sources */,
+				EB996E3B1D0D685200E2DF58 /* UserDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB5594E31CF2E1610054A4F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB5594CC1CF2E15F0054A4F4 /* Coalbox */;
+			targetProxy = EB5594E21CF2E1610054A4F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB5594D41CF2E1600054A4F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB5594D51CF2E1600054A4F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB5594D91CF2E1600054A4F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB5594DA1CF2E1600054A4F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB5594E81CF2E1610054A4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB5594E91CF2E1610054A4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB5594EB1CF2E1610054A4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Google/Headers",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/Google\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAppUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAuthUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
+				INFOPLIST_FILE = Coalbox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Google\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAppUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAuthUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coalbox.Coalbox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Coalbox/Coalbox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB5594EC1CF2E1610054A4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Google/Headers",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/Google\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAppUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAuthUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
+				INFOPLIST_FILE = Coalbox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Google\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAppUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAuthUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coalbox.Coalbox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Coalbox/Coalbox-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		EB5594EE1CF2E1610054A4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CoalboxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coalbox.CoalboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coalbox.app/Coalbox";
+			};
+			name = Debug;
+		};
+		EB5594EF1CF2E1610054A4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CoalboxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coalbox.CoalboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coalbox.app/Coalbox";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB5594C81CF2E15F0054A4F4 /* Build configuration list for PBXProject "Coalbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB5594E81CF2E1610054A4F4 /* Debug */,
+				EB5594E91CF2E1610054A4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB5594EA1CF2E1610054A4F4 /* Build configuration list for PBXNativeTarget "Coalbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB5594EB1CF2E1610054A4F4 /* Debug */,
+				EB5594EC1CF2E1610054A4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB5594ED1CF2E1610054A4F4 /* Build configuration list for PBXNativeTarget "CoalboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB5594EE1CF2E1610054A4F4 /* Debug */,
+				EB5594EF1CF2E1610054A4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB5594C51CF2E15F0054A4F4 /* Project object */;
+}
