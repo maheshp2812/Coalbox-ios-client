@@ -15,24 +15,66 @@ class MainPageTableController : UITableViewController {
     var itemsList = UITableView()
     var recentOrder : [(String,AnyObject?)] = []
     
+    let label = UILabel()
+    
+    var parentController : MainPageController!
+    
     override func viewWillAppear(animated: Bool) {
         print("processing...")
-//        dbAccessor.accessRecentOrder(["email" : UserDetails().getDetail("email") as! String], onComplete: {
-//            (result,response,error) in
-//            self.addData(result as! NSDictionary)
-//            self.itemsList.delegate = self
-//            self.itemsList.dataSource = self
-//            self.itemsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-//            self.view.addSubview(self.itemsList)
-//            self.tableView.separatorStyle = .None
-//            self.tableView.allowsSelection = false
-//            print(self.recentOrder)
-//            super.viewWillAppear(true)
-//        })
+        label.frame =  CGRect(x: 159, y: 96, width: 250, height: 30)
+        super.viewWillAppear(true)
+    }
+    
+    func onRefresh() {
+        parentController = self.parentViewController as! MainPageController
+        self.parentController.orderIDStack.hidden = true
+        self.parentController.priceView.hidden = true
+        parentController?.activityIndicator.startAnimating()
+        label.removeFromSuperview()
+        recentOrder = []
+        if UserDetails().getDetails() != nil {
+            print("inside if")
+            parentController?.refreshButton.setTitle("Refreshing...", forState: .Normal)
+            parentController?.refreshButton.enabled = false
+            dbAccessor.accessRecentOrder(["email" : UserDetails().getDetail("email") as! String], onComplete: {
+                (result,response,error) in
+                if result?.count > 0 {
+                    print("inside nested if")
+                    self.addData(result as! NSDictionary)
+                    self.parentController?.orderIDStack.hidden = false
+                    self.parentController?.priceView.hidden = false
+                    self.parentController?.activityIndicator.stopAnimating()
+                    self.view.addSubview(self.itemsList)
+                    self.tableView.separatorStyle = .None
+                    self.tableView.allowsSelection = false
+                    print(self.recentOrder)
+                }
+                else {
+                    print("inside nested else")
+                    self.parentController?.activityIndicator.stopAnimating()
+                    self.label.text = "No orders have been placed"
+                    self.parentController?.scrollView.addSubview(self.label)
+                }
+                print("finished nested if-else")
+                self.parentController?.refreshButton.setTitle("Refresh status", forState: .Normal)
+                self.parentController?.refreshButton.enabled = true
+            })
+        }
+        else {
+            print("inside else")
+            label.text = "You are not logged in"
+            parentController?.activityIndicator.stopAnimating()
+            parentController?.scrollView.addSubview(label)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        label.frame =  CGRect(x: parentController!.view.frame.width/2 - 125, y: parentController!.view.frame.height/2 - 15, width: 250, height: 30)
+//        label.frame =  CGRect(x: 100, y: 50, width: 250, height: 30)
+        self.itemsList.delegate = self
+        self.itemsList.dataSource = self
+        self.itemsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,7 +89,6 @@ class MainPageTableController : UITableViewController {
         let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "cell")
         cell.textLabel!.text = recentOrder[indexPath.row].0
         cell.detailTextLabel!.text = "x " + String((recentOrder[indexPath.row].1)!)
-        print(cell.textLabel!.text,cell.detailTextLabel!.text)
         return cell
     }
     
@@ -55,7 +96,7 @@ class MainPageTableController : UITableViewController {
         var count = 0
         for i in order {
             if isClothName(i.0 as! String) && i.1 as! NSNumber != 0 {
-                recentOrder.append((i.0 as! String,i.1 as! NSNumber))
+                recentOrder.append((returnDisplayName(i.0 as! String),i.1 as! NSNumber))
                 count += 1
             }
         }
@@ -83,7 +124,22 @@ class MainPageTableController : UITableViewController {
             return "Silk Dhotis"
         }
         else if name == "SilkSarees" {
-            
+            return "Silk Sarees"
+        }
+        else if name == "SofaCovers" {
+            return "Sofa Covers"
+        }
+        else if name == "StandardGarments" {
+            return "Standard Garments"
+        }
+        else if name == "Suit2pc" {
+            return "2 pc Suit"
+        }
+        else if name == "Suit3pc" {
+            return "3 pc Suit"
+        }
+        else if name == "WindowCurtains" {
+            return "Window Curtains"
         }
         return name
     }

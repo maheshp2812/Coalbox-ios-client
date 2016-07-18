@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coalbox/MainPageTableController.swift"
-            timestampString = "490443043.78552"
+            timestampString = "490537065.510389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "addData(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coalbox/MainPageTableController.swift"
-            timestampString = "490440771.157332"
+            timestampString = "490528123.933923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "MainPageTableController"
             landmarkType = "3">
          </BreakpointContent>

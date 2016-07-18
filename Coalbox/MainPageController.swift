@@ -13,16 +13,24 @@ class MainPageController : UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var refreshButton: UIButton!
     var userdata : NSDictionary? = nil
     let optionButton = UIBarButtonItem()
     let dbAccessor = DbManager(tableName: "ClientDetails")
     
+    @IBOutlet weak var orderIDStack: UIStackView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var mainPageTableController : MainPageTableController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        onRefresh(refreshButton)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "main-page-background.png")!)
         priceView.layer.cornerRadius = priceView.frame.width/2
+    }
+    
+    @IBAction func onRefresh(sender: UIButton) {
+        mainPageTableController?.onRefresh()
     }
     
     override func viewWillAppear(animated: Bool) {
