@@ -35,27 +35,13 @@ class SelectServiceController : UIViewController {
     }
     
     func changeDeliverySlot(value : Int) {
-        if deliveryContainer?.defaultDate == deliveryContainer?.selectedDate {
-            deliveryContainer?.deliverySegmentedControl.selectedSegmentIndex = value
-            if value == 1 {
-                deliveryContainer?.deliverySegmentedControl.setEnabled(false, forSegmentAtIndex: 0)
-            }
-            else {
-                if ((deliveryContainer?.deliverySegmentedControl.isEnabledForSegmentAtIndex(0)) == true) {
-                    deliveryContainer?.deliverySegmentedControl.selectedSegmentIndex = 1
-                    deliveryContainer?.deliverySegmentedControl.setEnabled(false, forSegmentAtIndex: 0)
-                }
-                else {
-                    deliveryContainer?.deliverySegmentedControl.setEnabled(true, forSegmentAtIndex: 0)
-                }
-            }
+        if ((deliveryContainer?.defaultDate?.isEqualToDate((deliveryContainer?.selectedDate)!)) == true) && value == 1 {
+            deliveryContainer?.deliverySegmentedControl.selectedSegmentIndex = 1
+            deliveryContainer?.deliverySegmentedControl.setEnabled(false, forSegmentAtIndex: 0)
         }
         else {
             deliveryContainer?.deliverySegmentedControl.setEnabled(true, forSegmentAtIndex: 0)
         }
-//        if deliveryContainer?.deliverySegmentedControl.isEnabledForSegmentAtIndex(0) == false {
-//            deliveryContainer?.deliverySegmentedControl.selectedSegmentIndex = 1
-//        }
     }
     
     @IBAction func onClick(sender: UIButton) {
@@ -65,6 +51,7 @@ class SelectServiceController : UIViewController {
         self.pickupDate = date
         deliveryContainer?.dateButton.enabled = true
         deliveryContainer?.setDefaultDeliveryDate(self.pickupDate,days: daysForDelivery)
+        changeDeliverySlot((pickupContainer?.pickupSegmentedControl.selectedSegmentIndex)!)
     }
     
     func displayContent() {
@@ -77,7 +64,7 @@ class SelectServiceController : UIViewController {
         }
         infoLabel.textAlignment = .Center
         deliveryContainer?.setDefaultDeliveryDate(self.pickupDate,days: daysForDelivery)
-        changeDeliverySlot((deliveryContainer?.deliverySegmentedControl.selectedSegmentIndex)!)
+        changeDeliverySlot((pickupContainer?.pickupSegmentedControl.selectedSegmentIndex)!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

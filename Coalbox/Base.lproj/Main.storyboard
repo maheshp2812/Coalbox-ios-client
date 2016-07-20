@@ -110,6 +110,20 @@
                                         <color key="textColor" red="0.25490196078431371" green="0.45882352941176469" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="H5E-Sd-n3e">
+                                        <rect key="frame" x="290" y="8" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4o-BH-fiS">
+                                        <rect key="frame" x="485" y="0.0" width="99" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="99" id="GA2-Ke-fUM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Refresh status"/>
+                                        <connections>
+                                            <action selector="onRefresh:" destination="jWF-DI-oHi" eventType="touchUpInside" id="j0i-zw-xxC"/>
+                                        </connections>
+                                    </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AI3-s9-FIR">
                                         <rect key="frame" x="16" y="36" width="568" height="223"/>
                                         <subviews>
@@ -198,20 +212,6 @@
                                             <constraint firstItem="gHf-fW-BDy" firstAttribute="centerY" secondItem="qXJ-3f-tPO" secondAttribute="centerY" id="yq4-3t-6kY"/>
                                         </constraints>
                                     </scrollView>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="H5E-Sd-n3e">
-                                        <rect key="frame" x="290" y="8" width="20" height="20"/>
-                                    </activityIndicatorView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4o-BH-fiS">
-                                        <rect key="frame" x="485" y="0.0" width="99" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="99" id="GA2-Ke-fUM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Refresh status"/>
-                                        <connections>
-                                            <action selector="onRefresh:" destination="jWF-DI-oHi" eventType="touchUpInside" id="j0i-zw-xxC"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -294,8 +294,12 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="H5E-Sd-n3e" id="qwr-TN-FrH"/>
+                        <outlet property="detailsView" destination="xjh-yu-a6s" id="ZTa-uM-biB"/>
                         <outlet property="nameLabel" destination="Ym5-aX-BDD" id="QZT-iB-zhu"/>
+                        <outlet property="orderIDLabel" destination="xGS-Uu-FTq" id="nrr-0F-a1f"/>
                         <outlet property="orderIDStack" destination="qXJ-3f-tPO" id="OFI-og-BJ1"/>
+                        <outlet property="pickupDateLabel" destination="ZI5-Fp-dTe" id="yVS-u0-xkx"/>
+                        <outlet property="priceLabel" destination="W0I-Rw-1cN" id="BQX-ss-TOS"/>
                         <outlet property="priceView" destination="gHf-fW-BDy" id="WIE-w7-vU9"/>
                         <outlet property="refreshButton" destination="J4o-BH-fiS" id="FCs-IF-yVe"/>
                         <outlet property="scrollView" destination="AI3-s9-FIR" id="YHE-sg-Lp5"/>
@@ -566,6 +570,7 @@
                                             </stackView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MMD-GH-dfw">
                                                 <rect key="frame" x="511" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="service1:" destination="RFj-LG-eAg" eventType="valueChanged" id="QgX-Hu-sXY"/>
                                                 </connections>
@@ -597,6 +602,7 @@
                                             </stackView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tef-jM-MTW">
                                                 <rect key="frame" x="511" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="service2:" destination="RFj-LG-eAg" eventType="valueChanged" id="w8W-kh-UQs"/>
                                                 </connections>
@@ -628,6 +634,7 @@
                                             </stackView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Hy-8O-enO">
                                                 <rect key="frame" x="511" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="service3:" destination="RFj-LG-eAg" eventType="valueChanged" id="K7f-W4-Y3W"/>
                                                 </connections>
@@ -996,6 +1003,9 @@
                                         <state key="normal" title="View Orders">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="tlq-ra-1CK" kind="show" id="7Sy-aG-pca"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBK-Jw-ZYQ">
                                         <rect key="frame" x="0.0" y="58" width="600" height="58"/>
@@ -1030,6 +1040,65 @@
             </objects>
             <point key="canvasLocation" x="1207" y="1776"/>
         </scene>
+        <!--View Orders Controller-->
+        <scene sceneID="zx3-Bc-XB9">
+            <objects>
+                <tableViewController id="tlq-ra-1CK" customClass="ViewOrdersController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="157" sectionHeaderHeight="28" sectionFooterHeight="28" id="HCk-io-V4V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="bvB-4v-MLN" customClass="OrderCell" customModule="Coalbox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="157"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bvB-4v-MLN" id="KEV-uY-o8E">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bU-vW-aSu">
+                                            <rect key="frame" x="8" y="14" width="128" height="128"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rs.30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ny-in-QvJ">
+                                                    <rect key="frame" x="31" y="53" width="66" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N87-xK-bPX">
+                                            <rect key="frame" x="180" y="67" width="71" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="160707RE007" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spk-Qv-wWj">
+                                            <rect key="frame" x="478" y="67" width="114" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="orderIDLabel" destination="spk-Qv-wWj" id="WbU-QS-J6D"/>
+                                    <outlet property="priceView" destination="2bU-vW-aSu" id="MuH-sP-Uj5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="tlq-ra-1CK" id="Jf0-55-HiW"/>
+                            <outlet property="delegate" destination="tlq-ra-1CK" id="h8C-LO-S5a"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NvG-9P-MaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939" y="1776"/>
+        </scene>
         <!--Sign Up-->
         <scene sceneID="FQA-WV-uVf">
             <objects>
@@ -1053,13 +1122,6 @@
                                     <action selector="onSignUp:" destination="lr2-I3-X2O" eventType="touchUpInside" id="CkL-HX-0OH"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-im-8Vl">
-                                <rect key="frame" x="0.0" y="28" width="600" height="439"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="33C-Md-vWb" kind="embed" identifier="segueToTable" id="ubU-iX-i0u"/>
-                                </connections>
-                            </containerView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nxF-6e-5iC">
                                 <rect key="frame" x="530" y="503" width="52" height="31"/>
                             </switch>
@@ -1073,6 +1135,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-im-8Vl">
+                                <rect key="frame" x="0.0" y="28" width="600" height="439"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="33C-Md-vWb" kind="embed" identifier="segueToTable" id="ubU-iX-i0u"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.98239182692307692" green="0.98239182692307692" blue="0.98239182692307692" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1121,6 +1190,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="da4-PP-L2G" customClass="HoshiTextField" customModule="Coalbox" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="584" height="39"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1155,6 +1225,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyr-4J-AgX" customClass="HoshiTextField" customModule="Coalbox" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="584" height="39"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1188,6 +1259,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6T-Cr-Hy1" customClass="HoshiTextField" customModule="Coalbox" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="584" height="39"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1221,6 +1293,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCX-oP-DV1" customClass="HoshiTextField" customModule="Coalbox" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="584" height="39"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1254,6 +1327,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Flat Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioW-tH-vLM" customClass="HoshiTextField" customModule="Coalbox" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="584" height="39"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
@@ -2428,7 +2502,7 @@
         <image name="user-default-gray" width="512" height="563"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0hu-Bc-tnc"/>
+        <segue reference="Kif-Vz-DCi"/>
         <segue reference="bXh-fN-uiv"/>
         <segue reference="lCf-fo-5cQ"/>
     </inferredMetricsTieBreakers>

@@ -9,9 +9,13 @@
 import UIKit
 
 class MainPageController : UIViewController {
+    @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var priceView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var orderIDLabel: UILabel!
+    @IBOutlet weak var pickupDateLabel: UILabel!
     
     @IBOutlet weak var refreshButton: UIButton!
     var userdata : NSDictionary? = nil

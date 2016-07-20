@@ -53,6 +53,7 @@
 		EBD1A2351CF6ED7300A90D35 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD1A2341CF6ED7300A90D35 /* SignupController.swift */; };
 		EBD267821D0168600012190D /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD267811D0168600012190D /* MicrosoftAzureMobile.framework */; };
 		EBD318201CF999730035F51B /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3181F1CF999730035F51B /* MainPageController.swift */; };
+		EBE22C531D3F692C00027AC3 /* ViewOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE22C521D3F692C00027AC3 /* ViewOrdersController.swift */; };
 		EBE476821CFD7C3B00B216ED /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE476811CFD7C3B00B216ED /* AccountController.swift */; };
 		EBF05C181D1D15AF00360B8D /* ADVSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF05C171D1D15AF00360B8D /* ADVSegmentedControl.swift */; };
 		EBF05C1A1D1D16C000360B8D /* SelectServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF05C191D1D16C000360B8D /* SelectServiceController.swift */; };
@@ -138,6 +139,7 @@
 		EBD2677B1D0161BF0012190D /* Coalbox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coalbox-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBD267811D0168600012190D /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
 		EBD3181F1CF999730035F51B /* MainPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
+		EBE22C521D3F692C00027AC3 /* ViewOrdersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOrdersController.swift; sourceTree = "<group>"; };
 		EBE476811CFD7C3B00B216ED /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		EBF05C171D1D15AF00360B8D /* ADVSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADVSegmentedControl.swift; sourceTree = "<group>"; };
 		EBF05C191D1D16C000360B8D /* SelectServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectServiceController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
 				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
 				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EBE22C521D3F692C00027AC3 /* ViewOrdersController.swift */,
 				EB2CE9941D3B7D680075D20B /* MainPageTableController.swift */,
 				EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */,
 				EB7862C61D35071A008E32D7 /* ItemRates.swift */,
@@ -476,6 +479,7 @@
 				EBFC00221D30EA220077449C /* UIDropDown.swift in Sources */,
 				EBA2FAB31D31181D00EE4079 /* SignupTableController.swift in Sources */,
 				EB9453801D2A9433002966FC /* TextFieldsEffects.swift in Sources */,
+				EBE22C531D3F692C00027AC3 /* ViewOrdersController.swift in Sources */,
 				EB1E8F1D1D27A8D8004C5A35 /* NSDateComparison.swift in Sources */,
 				EB7E5BA61D20FFBD0051E43D /* PlaceOrderContainerController.swift in Sources */,
 				EBC413921D1ECC850075B443 /* DeliveryController.swift in Sources */,

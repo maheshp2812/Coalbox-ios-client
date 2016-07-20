@@ -21,7 +21,9 @@ class MainPageTableController : UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         print("processing...")
-        label.frame =  CGRect(x: 159, y: 96, width: 250, height: 30)
+        label.font = UIFont(name: (label.font?.fontName)!, size: 20)
+        label.textColor = UIColor.lightGrayColor()
+        label.frame =  CGRect(x: 125, y: 125, width: 250, height: 30)
         super.viewWillAppear(true)
     }
     
@@ -29,21 +31,34 @@ class MainPageTableController : UITableViewController {
         parentController = self.parentViewController as! MainPageController
         self.parentController.orderIDStack.hidden = true
         self.parentController.priceView.hidden = true
+        itemsList.hidden = true
         parentController?.activityIndicator.startAnimating()
         label.removeFromSuperview()
         recentOrder = []
+        self.tableView.hidden = true
         if UserDetails().getDetails() != nil {
             print("inside if")
             parentController?.refreshButton.setTitle("Refreshing...", forState: .Normal)
             parentController?.refreshButton.enabled = false
             dbAccessor.accessRecentOrder(["email" : UserDetails().getDetail("email") as! String], onComplete: {
                 (result,response,error) in
-                if result?.count > 0 {
+                if result?.count > 0  {
                     print("inside nested if")
-                    self.addData(result as! NSDictionary)
+                    print("result",result)
+                    let orderData = result as! NSDictionary
+                    self.addData(orderData)
+                    let number = orderData["totalPrice"] as! NSNumber
+                    let dateString = ((result?.valueForKey("pickupDate"))! as! String)
+                    let formatter = NSDateFormatter()
+                    formatter.dateStyle = .ShortStyle
+                    let tempDate = formatter.dateFromString(dateString)
+                    let date = formatter.stringFromDate(tempDate!)
+                    self.parentController.priceLabel.text = "Rs.\(number)"
+                    self.parentController.pickupDateLabel.text = date + "," + ((result?.valueForKey("pickupSlot"))! as! String)
                     self.parentController?.orderIDStack.hidden = false
                     self.parentController?.priceView.hidden = false
                     self.parentController?.activityIndicator.stopAnimating()
+                    self.tableView.hidden = false
                     self.view.addSubview(self.itemsList)
                     self.tableView.separatorStyle = .None
                     self.tableView.allowsSelection = false
@@ -52,7 +67,7 @@ class MainPageTableController : UITableViewController {
                 else {
                     print("inside nested else")
                     self.parentController?.activityIndicator.stopAnimating()
-                    self.label.text = "No orders have been placed"
+                    self.label.text = "No recent orders"
                     self.parentController?.scrollView.addSubview(self.label)
                 }
                 print("finished nested if-else")

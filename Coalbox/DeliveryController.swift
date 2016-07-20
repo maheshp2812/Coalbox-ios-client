@@ -21,8 +21,8 @@ class DeliveryController : UIViewController,HSDatePickerViewControllerDelegate {
     }
     
     @IBAction func onValueChange(sender: UISegmentedControl) {
-        let parentController = self.parentViewController as! SelectServiceController
-        parentController.changeDeliverySlot(deliverySegmentedControl.selectedSegmentIndex)
+//        let parentController = self.parentViewController as! SelectServiceController
+//        parentController.changeDeliverySlot(deliverySegmentedControl.selectedSegmentIndex)
     }
     
     func hsDatePickerPickedDate(date: NSDate!) {
@@ -35,7 +35,7 @@ class DeliveryController : UIViewController,HSDatePickerViewControllerDelegate {
         dateButton.setTitle(formatter.stringFromDate(date1), forState: .Normal)
         selectedDate = date1
         let parentController = self.parentViewController as! SelectServiceController
-        parentController.changeDeliverySlot(deliverySegmentedControl.selectedSegmentIndex)
+        parentController.changeDeliverySlot((parentController.pickupContainer?.pickupSegmentedControl.selectedSegmentIndex)!)
     }
     
     @IBAction func onClick(sender: UIButton) {

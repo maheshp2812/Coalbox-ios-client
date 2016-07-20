@@ -96,7 +96,7 @@ class LoginController : UIViewController, UITextFieldDelegate {
                 }
             })
         } else {
-            sender.backgroundColor = UIColor.whiteColor()
+            sender.backgroundColor = UIColor(red: 17/255, green: 121/255, blue:245/255, alpha: 1.0)
             sender.setTitle("Login", forState: UIControlState.Normal)
         }
     }
