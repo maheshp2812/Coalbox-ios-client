@@ -38,6 +38,10 @@ class DbManager {
         client.invokeAPI("ReturnRecentOrder", body: newEntry, HTTPMethod: "POST", parameters: nil, headers: nil, completion: onComplete)
     }
     
+    func accessOrders(newEntry : AnyObject?,onComplete: MSAPIBlock) {
+        client.invokeAPI("ReturnOrders", body: newEntry, HTTPMethod: "POST", parameters: nil, headers: nil, completion: onComplete)
+    }
+    
     func verifyEmail(newEntry: AnyObject?,onComplete : MSAPIBlock) {
         client.invokeAPI("EmailVerification", body: newEntry, HTTPMethod: "POST", parameters: nil, headers: nil, completion: onComplete)
     }

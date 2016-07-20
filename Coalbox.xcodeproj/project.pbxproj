@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB153C091D3FB48000B8484E /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB153C081D3FB48000B8484E /* OrderCell.xib */; };
+		EB153C0B1D3FB62400B8484E /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB153C0A1D3FB62400B8484E /* OrderCell.swift */; };
 		EB1E8F1D1D27A8D8004C5A35 /* NSDateComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */; };
 		EB1E8F1F1D27B219004C5A35 /* SubmitOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */; };
 		EB226CD41D339B2E00C126E5 /* SummaryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */; };
@@ -86,6 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB153C081D3FB48000B8484E /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		EB153C0A1D3FB62400B8484E /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateComparison.swift; sourceTree = "<group>"; };
 		EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitOrderController.swift; sourceTree = "<group>"; };
 		EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
 				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
 				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EB153C0A1D3FB62400B8484E /* OrderCell.swift */,
+				EB153C081D3FB48000B8484E /* OrderCell.xib */,
 				EBE22C521D3F692C00027AC3 /* ViewOrdersController.swift */,
 				EB2CE9941D3B7D680075D20B /* MainPageTableController.swift */,
 				EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */,
@@ -384,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC9D4E81D1E65B500A0015A /* ionicons.ttf in Resources */,
+				EB153C091D3FB48000B8484E /* OrderCell.xib in Resources */,
 				EB5594DB1CF2E1600054A4F4 /* LaunchScreen.storyboard in Resources */,
 				EB996E371D0D4E8600E2DF58 /* GoogleService-Info.plist in Resources */,
 				EBAEA21E1D1FC8B700548CCA /* HSDatePickerViewController.xib in Resources */,
@@ -495,6 +502,7 @@
 				EB94537C1D2A9433002966FC /* JiroTextField.swift in Sources */,
 				EBACD78C1D1148020033D6BE /* MyAccountController.swift in Sources */,
 				EBF05C1A1D1D16C000360B8D /* SelectServiceController.swift in Sources */,
+				EB153C0B1D3FB62400B8484E /* OrderCell.swift in Sources */,
 				EB9453811D2A9433002966FC /* YokoTextField.swift in Sources */,
 				EBD1A2351CF6ED7300A90D35 /* SignupController.swift in Sources */,
 				EB94537E1D2A9433002966FC /* MadokaTextField.swift in Sources */,

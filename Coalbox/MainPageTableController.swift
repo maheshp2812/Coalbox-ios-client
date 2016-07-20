@@ -50,7 +50,7 @@ class MainPageTableController : UITableViewController {
                     let number = orderData["totalPrice"] as! NSNumber
                     let dateString = ((result?.valueForKey("pickupDate"))! as! String)
                     let formatter = NSDateFormatter()
-                    formatter.dateStyle = .ShortStyle
+                    formatter.dateStyle = .MediumStyle
                     let tempDate = formatter.dateFromString(dateString)
                     let date = formatter.stringFromDate(tempDate!)
                     self.parentController.priceLabel.text = "Rs.\(number)"

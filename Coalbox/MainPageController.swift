@@ -29,6 +29,7 @@ class MainPageController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         onRefresh(refreshButton)
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "main-page-background.png")!)
         priceView.layer.cornerRadius = priceView.frame.width/2
     }
