@@ -38,7 +38,7 @@ class MainPageTableController : UITableViewController {
         self.tableView.hidden = true
         if UserDetails().getDetails() != nil {
             print("inside if")
-            parentController?.refreshButton.setTitle("Refreshing...", forState: .Normal)
+            parentController?.refreshButton.setTitle("REFRESHING...", forState: .Normal)
             parentController?.refreshButton.enabled = false
             dbAccessor.accessRecentOrder(["email" : UserDetails().getDetail("email") as! String], onComplete: {
                 (result,response,error) in
@@ -49,12 +49,8 @@ class MainPageTableController : UITableViewController {
                     self.addData(orderData)
                     let number = orderData["totalPrice"] as! NSNumber
                     let dateString = ((result?.valueForKey("pickupDate"))! as! String)
-                    let formatter = NSDateFormatter()
-                    formatter.dateStyle = .MediumStyle
-                    let tempDate = formatter.dateFromString(dateString)
-                    let date = formatter.stringFromDate(tempDate!)
                     self.parentController.priceLabel.text = "Rs.\(number)"
-                    self.parentController.pickupDateLabel.text = date + "," + ((result?.valueForKey("pickupSlot"))! as! String)
+                    self.parentController.pickupDateLabel.text = dateString + "," + ((result?.valueForKey("pickupSlot"))! as! String)
                     self.parentController?.orderIDStack.hidden = false
                     self.parentController?.priceView.hidden = false
                     self.parentController?.activityIndicator.stopAnimating()
@@ -71,7 +67,7 @@ class MainPageTableController : UITableViewController {
                     self.parentController?.scrollView.addSubview(self.label)
                 }
                 print("finished nested if-else")
-                self.parentController?.refreshButton.setTitle("Refresh status", forState: .Normal)
+                self.parentController?.refreshButton.setTitle("REFRESH", forState: .Normal)
                 self.parentController?.refreshButton.enabled = true
             })
         }

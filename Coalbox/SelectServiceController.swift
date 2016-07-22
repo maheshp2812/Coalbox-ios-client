@@ -77,7 +77,7 @@ class SelectServiceController : UIViewController {
     
     @IBAction func onProceed(sender: UIButton) {
         let formatter = NSDateFormatter()
-        formatter.dateStyle = .LongStyle
+        formatter.dateStyle = .ShortStyle
         var slotString = ""
         if let a = pickupDate {
             orderDetail.setDetail(formatter.stringFromDate(a), forKey: "pickupDate")
