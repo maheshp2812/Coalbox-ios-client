@@ -38,8 +38,11 @@ class PlaceOrderContainerController : UIViewController {
         if let a = orderDetails.getDetail("Window Curtains") {
             tableViewController?.windowCurtainLabel.text = String(a)
         }
-        if let a = orderDetails.getDetail("Bedsheets") {
+        if let a = orderDetails.getDetail("Single Bedsheets") {
             tableViewController?.bedsheetLabel.text = String(a)
+        }
+        if let a = orderDetails.getDetail("Double Bedsheets") {
+            tableViewController?.bedsheet2.text = String(a)
         }
         if let a = orderDetails.getDetail("Tablecloth") {
             tableViewController?.tableclothLabel.text = String(a)
@@ -56,10 +59,11 @@ class PlaceOrderContainerController : UIViewController {
         let doorCurtains = Int((tableViewController?.doorCurtainLabel.text)!)
         let windowCurtains = Int((tableViewController?.windowCurtainLabel.text)!)
         let bedsheets = Int((tableViewController?.bedsheetLabel.text)!)
+        let bedsheets2 = Int((tableViewController?.bedsheet2.text)!)
         let tablecloth = Int((tableViewController?.tableclothLabel.text)!)
         let sofaCovers = Int((tableViewController?.sofaLabel.text)!)
         
-        if stdCount == 0 && doorCurtains == 0 && windowCurtains == 0 && bedsheets == 0 && tablecloth == 0 && sofaCovers == 0 && (tableViewController?.specialClothingController?.check == false || tableViewController?.specialClothingController?.check == nil) {
+        if stdCount == 0 && doorCurtains == 0 && windowCurtains == 0 && bedsheets == 0 && bedsheets2 == 0 && tablecloth == 0 && sofaCovers == 0 && (tableViewController?.specialClothingController?.check == false || tableViewController?.specialClothingController?.check == nil) {
             let alertController = UIAlertController(title: "No clothes selected", message:"Please select atleast one category of clothing to proceed", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
             self.presentViewController(alertController, animated: true, completion: nil)
@@ -68,7 +72,8 @@ class PlaceOrderContainerController : UIViewController {
             orderDetails.setDetail(stdCount, forKey: "Standard Garments")
             orderDetails.setDetail(doorCurtains, forKey: "Door Curtains")
             orderDetails.setDetail(windowCurtains, forKey: "Window Curtains")
-            orderDetails.setDetail(bedsheets, forKey: "Bedsheets")
+            orderDetails.setDetail(bedsheets, forKey: "Single Bedsheets")
+            orderDetails.setDetail(bedsheets2, forKey: "Double Bedsheets")
             orderDetails.setDetail(tablecloth, forKey: "Tablecloth")
             orderDetails.setDetail(sofaCovers, forKey: "Sofa Covers")
             performSegueWithIdentifier("selectServiceSegue", sender: self)

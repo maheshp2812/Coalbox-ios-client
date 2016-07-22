@@ -2127,8 +2127,58 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="84" id="J9g-3i-HCz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="84" id="An8-Fj-WGr">
                                         <rect key="frame" x="0.0" y="577" width="600" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="An8-Fj-WGr" id="Ein-UL-uNi">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g6a-nk-r3Q">
+                                                    <rect key="frame" x="8" y="23" width="82" height="38"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedsheets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-LT-Fid">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Bed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Te-cf-AKq">
+                                                            <rect key="frame" x="0.0" y="21" width="82" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DDu-I7-l0x">
+                                                    <rect key="frame" x="467" y="27" width="125" height="29"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjY-tx-0Ty">
+                                                            <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3AH-gW-2M4">
+                                                            <rect key="frame" x="31" y="0.0" width="94" height="29"/>
+                                                            <connections>
+                                                                <action selector="onValueChange6:" destination="VAJ-FP-eIZ" eventType="valueChanged" id="HOt-Ax-bMd"/>
+                                                            </connections>
+                                                        </stepper>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DDu-I7-l0x" firstAttribute="trailing" secondItem="Ein-UL-uNi" secondAttribute="trailingMargin" id="3xw-fS-8BX"/>
+                                                <constraint firstItem="g6a-nk-r3Q" firstAttribute="centerY" secondItem="DDu-I7-l0x" secondAttribute="centerY" id="P14-jI-Ir5"/>
+                                                <constraint firstItem="g6a-nk-r3Q" firstAttribute="centerY" secondItem="Ein-UL-uNi" secondAttribute="centerY" id="VlH-xt-CI4"/>
+                                                <constraint firstItem="g6a-nk-r3Q" firstAttribute="leading" secondItem="Ein-UL-uNi" secondAttribute="leadingMargin" id="f0O-sU-eR6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="84" id="J9g-3i-HCz">
+                                        <rect key="frame" x="0.0" y="661" width="600" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J9g-3i-HCz" id="3TH-AJ-PAf">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
@@ -2172,7 +2222,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="84" id="xCn-Df-Q6I">
-                                        <rect key="frame" x="0.0" y="661" width="600" height="84"/>
+                                        <rect key="frame" x="0.0" y="745" width="600" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xCn-Df-Q6I" id="i6r-1Q-qBQ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
@@ -2231,6 +2281,7 @@
                     </tableView>
                     <connections>
                         <outlet property="StandardCount" destination="gsA-1s-lXW" id="ej0-Re-HTr"/>
+                        <outlet property="bedsheet2" destination="UjY-tx-0Ty" id="rnz-eN-p6F"/>
                         <outlet property="bedsheetLabel" destination="fpa-2V-JJr" id="mvD-9T-r4B"/>
                         <outlet property="doorCurtainLabel" destination="aca-UO-5Pn" id="86n-5u-095"/>
                         <outlet property="sofaLabel" destination="1Jj-Cv-rpX" id="uQg-Pp-0FZ"/>
@@ -2240,6 +2291,7 @@
                         <outlet property="stepper4" destination="4l0-E8-D0Y" id="SMS-2D-q82"/>
                         <outlet property="stepper5" destination="U8B-ko-yLW" id="x4w-nx-ebx"/>
                         <outlet property="stepper6" destination="SnS-kX-je5" id="0UF-Hc-Jiu"/>
+                        <outlet property="stepper7" destination="3AH-gW-2M4" id="GvD-3i-NAa"/>
                         <outlet property="tableclothLabel" destination="UOQ-0i-IJe" id="MEH-Vr-3yT"/>
                         <outlet property="windowCurtainLabel" destination="qnr-K3-M6t" id="7TP-GL-dKf"/>
                     </connections>

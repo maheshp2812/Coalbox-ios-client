@@ -13,6 +13,7 @@ class PlaceOrderController : UITableViewController {
     @IBOutlet weak var doorCurtainLabel: UILabel!
     @IBOutlet weak var windowCurtainLabel: UILabel!
     @IBOutlet weak var bedsheetLabel: UILabel!
+    @IBOutlet weak var bedsheet2: UILabel!
     @IBOutlet weak var tableclothLabel: UILabel!
     @IBOutlet weak var sofaLabel: UILabel!
     
@@ -22,6 +23,8 @@ class PlaceOrderController : UITableViewController {
     @IBOutlet weak var stepper4: UIStepper!
     @IBOutlet weak var stepper5: UIStepper!
     @IBOutlet weak var stepper6: UIStepper!
+    @IBOutlet weak var stepper7: UIStepper!
+    
     var specialClothingController : SpecialClothingController? = nil
     
     override func viewDidLoad() {
@@ -35,6 +38,7 @@ class PlaceOrderController : UITableViewController {
         bedsheetLabel.text = Int(stepper4.value).description
         tableclothLabel.text = Int(stepper5.value).description
         sofaLabel.text = Int(stepper6.value).description
+        bedsheet2.text = Int(stepper7.value).description
         
         self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -67,6 +71,9 @@ class PlaceOrderController : UITableViewController {
     }
     @IBAction func onValueChange5(sender: UIStepper) {
         sofaLabel.text = Int(sender.value).description
+    }
+    @IBAction func onValueChange6(sender: UIStepper) {
+        bedsheet2.text = Int(sender.value).description
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
