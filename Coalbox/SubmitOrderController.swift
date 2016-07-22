@@ -112,6 +112,10 @@ class SubmitOrderController : UIViewController {
         if segue.identifier == "summaryTableSegue" {
             self.summaryController = segue.destinationViewController as? SummaryTableController
         }
+        else if segue.identifier == "loginSegue" {
+            let loginController = segue.destinationViewController as? LoginController
+            loginController?.orderPlaced = true
+        }
     }
     
 }

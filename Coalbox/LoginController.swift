@@ -17,6 +17,8 @@ class LoginController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var email: HoshiTextField!
     @IBOutlet weak var password: HoshiTextField!
     
+    var orderPlaced : Bool = false
+    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -91,7 +93,12 @@ class LoginController : UIViewController, UITextFieldDelegate {
                     let resultEntry = ["Name" : result!["Name"] as! String,"email" : result!["Email"] as! String,"password" : result!["Password"] as! String,"phoneNumber":result!["phoneNumber"] as! String,"address":result!["Address1"] as! String,"address2":result!["Address2"] as! String]
                     UserDetails().setDetails(resultEntry)
                     print(self.parentViewController)
-                    self.performSegueWithIdentifier("loginToMainPage", sender: self)
+                    if self.orderPlaced == false {
+                        self.performSegueWithIdentifier("loginToMainPage", sender: self)
+                    }
+                    else {
+                        self.performSegueWithIdentifier("loginToPlaceOrderSegue", sender: self)
+                    }
                     
                 }
             })

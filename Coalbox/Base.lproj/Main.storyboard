@@ -1476,6 +1476,7 @@
                         <outlet property="email" destination="i10-TF-27J" id="X0H-i9-xyk"/>
                         <outlet property="password" destination="iD5-JW-m4h" id="gnC-EN-eoi"/>
                         <segue destination="jWF-DI-oHi" kind="show" identifier="loginToMainPage" id="0hu-Bc-tnc"/>
+                        <segue destination="RFj-LG-eAg" kind="show" identifier="loginToPlaceOrderSegue" id="9XY-Yr-dzE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERq-d9-ky1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2507,6 +2508,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="0hu-Bc-tnc"/>
         <segue reference="bXh-fN-uiv"/>
+        <segue reference="9XY-Yr-dzE"/>
         <segue reference="lCf-fo-5cQ"/>
     </inferredMetricsTieBreakers>
 </document>
