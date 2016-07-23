@@ -26,6 +26,8 @@
 		EB717E9B1D4355A2008EB917 /* MainPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB717E991D4355A2008EB917 /* MainPageCell.xib */; };
 		EB717E9E1D435A16008EB917 /* SummaryPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB717E9C1D435A16008EB917 /* SummaryPageCell.swift */; };
 		EB717E9F1D435A16008EB917 /* SummaryPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB717E9D1D435A16008EB917 /* SummaryPageCell.xib */; };
+		EB717EA11D43ACD0008EB917 /* OrderDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB717EA01D43ACD0008EB917 /* OrderDetailsController.swift */; };
+		EB717EA31D43B5C0008EB917 /* OrderDetailsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB717EA21D43B5C0008EB917 /* OrderDetailsTableController.swift */; };
 		EB7862C71D35071A008E32D7 /* ItemRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7862C61D35071A008E32D7 /* ItemRates.swift */; };
 		EB7E5BA61D20FFBD0051E43D /* PlaceOrderContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E5BA51D20FFBD0051E43D /* PlaceOrderContainerController.swift */; };
 		EB7E5BA81D21088A0051E43D /* SpecialClothingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E5BA71D21088A0051E43D /* SpecialClothingController.swift */; };
@@ -116,6 +118,8 @@
 		EB717E991D4355A2008EB917 /* MainPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPageCell.xib; sourceTree = "<group>"; };
 		EB717E9C1D435A16008EB917 /* SummaryPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryPageCell.swift; sourceTree = "<group>"; };
 		EB717E9D1D435A16008EB917 /* SummaryPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryPageCell.xib; sourceTree = "<group>"; };
+		EB717EA01D43ACD0008EB917 /* OrderDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsController.swift; sourceTree = "<group>"; };
+		EB717EA21D43B5C0008EB917 /* OrderDetailsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsTableController.swift; sourceTree = "<group>"; };
 		EB7862C61D35071A008E32D7 /* ItemRates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRates.swift; sourceTree = "<group>"; };
 		EB7E5BA51D20FFBD0051E43D /* PlaceOrderContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderContainerController.swift; sourceTree = "<group>"; };
 		EB7E5BA71D21088A0051E43D /* SpecialClothingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialClothingController.swift; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
 				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
 				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EB717EA21D43B5C0008EB917 /* OrderDetailsTableController.swift */,
+				EB717EA01D43ACD0008EB917 /* OrderDetailsController.swift */,
 				EB717E981D4355A2008EB917 /* MainPageCell.swift */,
 				EB717E991D4355A2008EB917 /* MainPageCell.xib */,
 				EB153C0A1D3FB62400B8484E /* OrderCell.swift */,
@@ -482,6 +488,7 @@
 				EB717E9E1D435A16008EB917 /* SummaryPageCell.swift in Sources */,
 				EBAEA21A1D1FBBEE00548CCA /* Ionicons.swift in Sources */,
 				EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */,
+				EB717EA31D43B5C0008EB917 /* OrderDetailsTableController.swift in Sources */,
 				EB94537D1D2A9433002966FC /* KaedeTextField.swift in Sources */,
 				EB226CD41D339B2E00C126E5 /* SummaryTableController.swift in Sources */,
 				EB3A97DC1D2D40A100B415E2 /* MBCircularProgressBarView.m in Sources */,
@@ -490,6 +497,7 @@
 				EB9453781D2A9433002966FC /* AkiraTextField.swift in Sources */,
 				EB9453791D2A9433002966FC /* HoshiTextField.swift in Sources */,
 				EBD318201CF999730035F51B /* MainPageController.swift in Sources */,
+				EB717EA11D43ACD0008EB917 /* OrderDetailsController.swift in Sources */,
 				EB94537B1D2A9433002966FC /* IsaoTextField.swift in Sources */,
 				EB996E3A1D0D685200E2DF58 /* UserDetails.swift in Sources */,
 				EB2CE9951D3B7D680075D20B /* MainPageTableController.swift in Sources */,

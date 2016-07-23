@@ -9,11 +9,12 @@
 import UIKit
 
 class ViewOrdersController : UITableViewController {
-    
     let dbAccessor = DbManager(tableName: "OrderDetails")
     var ordersList : NSArray? = []
     
     let refresher = UIRefreshControl()
+    var orderDetails : NSDictionary? = nil
+    var orderDetailsController : OrderDetailsController? = nil
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
@@ -69,7 +70,19 @@ class ViewOrdersController : UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        orderDetails = ordersList![indexPath.row] as? NSDictionary
+        performSegueWithIdentifier("orderDetailsSegue", sender: self)
+    }
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 190
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "orderDetailsSegue" {
+            orderDetailsController = segue.destinationViewController as? OrderDetailsController
+            orderDetailsController?.orderDetails = self.orderDetails
+        }
     }
 }
