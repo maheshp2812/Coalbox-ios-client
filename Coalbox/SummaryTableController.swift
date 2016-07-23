@@ -24,6 +24,8 @@ class SummaryTableController : UITableViewController {
         super.viewDidLoad()
         numberOfItems = getCount()
         itemRates = ItemRates().getAllDetails()
+        let nib = UINib(nibName: "SummaryPageCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         itemsList.delegate = self
         itemsList.dataSource = self
         itemsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -46,12 +48,17 @@ class SummaryTableController : UITableViewController {
         return numberOfItems
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 30
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "cell")
-        cell.textLabel?.text = items[indexPath.row].0 + "  x" + String(items[indexPath.row].1)
+        let cell : SummaryPageCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! SummaryPageCell
+        cell.clothLabel?.text = items[indexPath.row].0
+        cell.numberLabel.text =  "x" + String(items[indexPath.row].1)
         let rate = itemRates[items[indexPath.row].0]!
         subtotal += rate * Int(items[indexPath.row].1 as! NSNumber)
-        cell.detailTextLabel!.text = "Rs." + String(rate  * Int(items[indexPath.row].1 as! NSNumber))
+        cell.costLabel!.text = "Rs." + String(rate  * Int(items[indexPath.row].1 as! NSNumber))
         return cell
     }
     

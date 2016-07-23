@@ -26,7 +26,7 @@ class LoginController : UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a n
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login-page-background.png")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login-page-background.png")!)
 //        email.attributedPlaceholder = NSAttributedString(string:"Email ID",attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
 //        password.attributedPlaceholder = NSAttributedString(string:"Password",attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
 //        setBorder(email)

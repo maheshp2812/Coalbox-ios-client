@@ -21,7 +21,7 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login-page-background.png")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login-page-background.png")!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

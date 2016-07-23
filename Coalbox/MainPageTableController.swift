@@ -50,7 +50,7 @@ class MainPageTableController : UITableViewController {
                     let number = orderData["totalPrice"] as! NSNumber
                     let dateString = ((result?.valueForKey("pickupDate"))! as! String)
                     self.parentController.priceLabel.text = "Rs.\(number)"
-                    self.parentController.pickupDateLabel.text = dateString + "," + ((result?.valueForKey("pickupSlot"))! as! String)
+                    self.parentController.pickupDateLabel.text = dateString + ", " + ((result?.valueForKey("pickupSlot"))! as! String)
                     self.parentController?.orderIDStack.hidden = false
                     self.parentController?.priceView.hidden = false
                     self.parentController?.activityIndicator.stopAnimating()
@@ -83,6 +83,8 @@ class MainPageTableController : UITableViewController {
         super.viewDidLoad()
 //        label.frame =  CGRect(x: parentController!.view.frame.width/2 - 125, y: parentController!.view.frame.height/2 - 15, width: 250, height: 30)
 //        label.frame =  CGRect(x: 100, y: 50, width: 250, height: 30)
+        let nib = UINib(nibName: "MainPageCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         self.itemsList.delegate = self
         self.itemsList.dataSource = self
         self.itemsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -97,10 +99,14 @@ class MainPageTableController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "cell")
-        cell.textLabel!.text = recentOrder[indexPath.row].0
-        cell.detailTextLabel!.text = "x " + String((recentOrder[indexPath.row].1)!)
+        let cell : MainPageCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! MainPageCell
+        cell.clothLabel.text = recentOrder[indexPath.row].0
+        cell.numberLabel.text = "x " + String((recentOrder[indexPath.row].1)!)
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 30
     }
     
     func addData(order : NSDictionary) {

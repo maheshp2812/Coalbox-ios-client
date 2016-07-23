@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "launch-login-background.png")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "launch-login-background.png")!)
     }
     
     override func viewWillAppear(animated: Bool) {
