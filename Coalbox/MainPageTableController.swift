@@ -15,15 +15,10 @@ class MainPageTableController : UITableViewController {
     var itemsList = UITableView()
     var recentOrder : [(String,AnyObject?)] = []
     
-    let label = UILabel()
-    
     var parentController : MainPageController!
     
     override func viewWillAppear(animated: Bool) {
         print("processing...")
-        label.font = UIFont(name: (label.font?.fontName)!, size: 20)
-        label.textColor = UIColor.lightGrayColor()
-        label.frame =  CGRect(x: 125, y: 125, width: 250, height: 30)
         super.viewWillAppear(true)
     }
     
@@ -33,7 +28,7 @@ class MainPageTableController : UITableViewController {
         self.parentController.priceView.hidden = true
         itemsList.hidden = true
         parentController?.activityIndicator.startAnimating()
-        label.removeFromSuperview()
+        parentController.infoLabel.hidden = true
         recentOrder = []
         self.tableView.hidden = true
         if UserDetails().getDetails() != nil {
@@ -63,8 +58,8 @@ class MainPageTableController : UITableViewController {
                 else {
                     print("inside nested else")
                     self.parentController?.activityIndicator.stopAnimating()
-                    self.label.text = "No recent orders"
-                    self.parentController?.scrollView.addSubview(self.label)
+                    self.parentController.infoLabel.text = "No recent orders"
+                    self.parentController.infoLabel.hidden = false
                 }
                 print("finished nested if-else")
                 self.parentController?.refreshButton.setTitle("REFRESH", forState: .Normal)
@@ -73,9 +68,9 @@ class MainPageTableController : UITableViewController {
         }
         else {
             print("inside else")
-            label.text = "You are not logged in"
+            self.parentController.infoLabel.text = "You are not logged in"
             parentController?.activityIndicator.stopAnimating()
-            parentController?.scrollView.addSubview(label)
+            self.parentController.infoLabel.hidden = false
         }
     }
     

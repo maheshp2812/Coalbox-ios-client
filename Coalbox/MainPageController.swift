@@ -16,6 +16,7 @@ class MainPageController : UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var orderIDLabel: UILabel!
     @IBOutlet weak var pickupDateLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     @IBOutlet weak var refreshButton: UIButton!
     var userdata : NSDictionary? = nil
