@@ -97,7 +97,7 @@ class LoginController : UIViewController, UITextFieldDelegate {
                         self.performSegueWithIdentifier("loginToMainPage", sender: self)
                     }
                     else {
-                        self.performSegueWithIdentifier("loginToPlaceOrderSegue", sender: self)
+                        self.performSegueWithIdentifier("loginToSubmitOrderSegue", sender: self)
                     }
                     
                 }

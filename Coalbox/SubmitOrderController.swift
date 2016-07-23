@@ -65,6 +65,24 @@ class SubmitOrderController : UIViewController {
     
     func setSubtotal(subtotal : Int) {
         grandTotal = subtotal
+        if let a = (orderDetails.getDetail("service1") as? Bool) {
+            service1.on = a
+            if a == true {
+                grandTotal += itemRates.get("Service1")!
+            }
+        }
+        if let a = (orderDetails.getDetail("service2") as? Bool) {
+            service2.on = a
+            if a == true {
+                grandTotal += itemRates.get("Service2")!
+            }
+        }
+        if let a = (orderDetails.getDetail("service3") as? Bool) {
+            service3.on = a
+            if a == true {
+                grandTotal += itemRates.get("Service3")!
+            }
+        }
         subtotalLabel.text = "Rs." + String(subtotal)
         grandTotalLabel.text = "Rs." + String(grandTotal)
     }

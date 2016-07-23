@@ -58,14 +58,18 @@ class SummaryTableController : UITableViewController {
     func getCount() -> Int {
         let orderData = orderDetails.getAllDetails()
         var count = orderData!.count
+        var t = 0
         for i in orderData! {
             if i.1 as! NSObject == 0 {
                 count -= 1
             }
-            else if i.0 != "deliveryDate" && i.0 != "serviceType" && i.0 != "pickupDate" && i.0 != "pickupSlot" && i.0 != "deliverySlot" {
+            else if i.0 != "deliveryDate" && i.0 != "serviceType" && i.0 != "pickupDate" && i.0 != "pickupSlot" && i.0 != "deliverySlot" && i.0 != "service1" && i.0 != "service2" && i.0 != "service3" && i.0 != "totalPrice" {
                 items.append(i)
             }
+            else {
+                t += 1
+            }
         }
-        return count - 5
+        return count - t
     }
 }
