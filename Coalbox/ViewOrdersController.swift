@@ -16,14 +16,16 @@ class ViewOrdersController : UITableViewController {
     let refresher = UIRefreshControl()
     
     override func viewWillAppear(animated: Bool) {
-        onRefresh()
         super.viewWillAppear(true)
+        refreshControl!.beginRefreshing()
+        onRefresh()
     }
     
     override func viewDidLoad() {
         let nib = UINib(nibName: "OrderCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         refresher.addTarget(self, action: #selector(self.onRefresh), forControlEvents: .ValueChanged)
+        self.refreshControl = refresher
         super.viewDidLoad()
     }
     
@@ -40,6 +42,7 @@ class ViewOrdersController : UITableViewController {
             self.tableView.delegate = self
             self.tableView.dataSource = self
             self.tableView.reloadData()
+            self.refreshControl!.endRefreshing()
         })
     }
     
@@ -50,9 +53,15 @@ class ViewOrdersController : UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: OrderCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! OrderCell
-        cell.priceLabel.text = "Rs.30"
-        cell.deliveryDateLabel.text = "Someday"
-        cell.pickupDateLabel.text = "Someday"
+        cell.priceLabel.text = "Rs." + String(ordersList![indexPath.row].valueForKey("totalPrice") as! NSNumber)
+        cell.deliveryDateLabel.text = (ordersList![indexPath.row].valueForKey("deliveryDate") as? String)! + ", " + (ordersList![indexPath.row].valueForKey("deliverySlot") as? String)!
+        cell.pickupDateLabel.text = (ordersList![indexPath.row].valueForKey("pickupDate") as? String)! + ", " + (ordersList![indexPath.row].valueForKey("pickupSlot") as? String)!
+        if ordersList![indexPath.row].valueForKey("serviceType") as? String == "Regular" {
+            cell.priceView.backgroundColor = UIColor(red: 252/255, green: 0/255, blue: 55/255, alpha: 1)
+        }
+        else {
+            cell.priceView.backgroundColor = UIColor(red: 17/255, green: 121/255, blue: 245/255, alpha: 1)
+        }
         return cell
     }
     
@@ -61,6 +70,6 @@ class ViewOrdersController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 152
+        return 190
     }
 }
