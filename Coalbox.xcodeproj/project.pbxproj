@@ -51,7 +51,6 @@
 		EBACD78C1D1148020033D6BE /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACD78B1D1148020033D6BE /* MyAccountController.swift */; };
 		EBAEA21A1D1FBBEE00548CCA /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEA2191D1FBBEE00548CCA /* Ionicons.swift */; };
 		EBAEA21E1D1FC8B700548CCA /* HSDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEA21D1D1FC8B700548CCA /* HSDatePickerViewController.xib */; };
-		EBC04BF41CF5751F002CEC6E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC04BF31CF5751F002CEC6E /* LoginController.swift */; };
 		EBC4138D1D1EC9230075B443 /* HSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4138B1D1EC9230075B443 /* HSDatePickerViewController.m */; };
 		EBC413901D1ECC7A0075B443 /* PickupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC4138F1D1ECC7A0075B443 /* PickupController.swift */; };
 		EBC413921D1ECC850075B443 /* DeliveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC413911D1ECC850075B443 /* DeliveryController.swift */; };
@@ -141,7 +140,6 @@
 		EBACD78B1D1148020033D6BE /* MyAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
 		EBAEA2191D1FBBEE00548CCA /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
 		EBAEA21D1D1FC8B700548CCA /* HSDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSDatePickerViewController.xib; sourceTree = "<group>"; };
-		EBC04BF31CF5751F002CEC6E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EBC4138A1D1EC9230075B443 /* HSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDatePickerViewController.h; sourceTree = "<group>"; };
 		EBC4138B1D1EC9230075B443 /* HSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDatePickerViewController.m; sourceTree = "<group>"; };
 		EBC4138F1D1ECC7A0075B443 /* PickupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupController.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				EB5594D71CF2E1600054A4F4 /* Assets.xcassets */,
 				EB5594D91CF2E1600054A4F4 /* LaunchScreen.storyboard */,
 				EB5594DC1CF2E1600054A4F4 /* Info.plist */,
-				EBC04BF31CF5751F002CEC6E /* LoginController.swift */,
 				EBD1A2341CF6ED7300A90D35 /* SignupController.swift */,
 				EB8EB0E91D01983C00676A22 /* DbManager.swift */,
 				EBD2677B1D0161BF0012190D /* Coalbox-Bridging-Header.h */,
@@ -509,7 +506,6 @@
 				EB9453821D2A9433002966FC /* YoshikoTextField.swift in Sources */,
 				EB3A97DB1D2D40A100B415E2 /* MBCircularProgressBarLayer.m in Sources */,
 				EB8EB0EA1D01983C00676A22 /* DbManager.swift in Sources */,
-				EBC04BF41CF5751F002CEC6E /* LoginController.swift in Sources */,
 				EB5594D11CF2E1600054A4F4 /* AppDelegate.swift in Sources */,
 				EBF05C181D1D15AF00360B8D /* ADVSegmentedControl.swift in Sources */,
 				EBC413901D1ECC7A0075B443 /* PickupController.swift in Sources */,

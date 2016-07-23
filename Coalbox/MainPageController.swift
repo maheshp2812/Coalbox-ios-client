@@ -78,6 +78,10 @@ class MainPageController : UIViewController {
         if segue.identifier == "mainPageTableSegue" {
             self.mainPageTableController = segue.destinationViewController as? MainPageTableController
         }
+        else if segue.identifier == "mainPageToLoginPage" {
+            let loginController = segue.destinationViewController as? ViewController
+            loginController?.mainPageAccess = true
+        }
     }
     
     func onLoginClick(sender : UIButton!) {
