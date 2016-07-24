@@ -70,7 +70,7 @@ class SummaryTableController : UITableViewController {
             if i.1 as! NSObject == 0 {
                 count -= 1
             }
-            else if i.0 != "deliveryDate" && i.0 != "serviceType" && i.0 != "pickupDate" && i.0 != "pickupSlot" && i.0 != "deliverySlot" && i.0 != "service1" && i.0 != "service2" && i.0 != "service3" && i.0 != "totalPrice" {
+            else if isClothName(i.0) == true {
                 items.append(i)
             }
             else {
@@ -78,5 +78,12 @@ class SummaryTableController : UITableViewController {
             }
         }
         return count - t
+    }
+    
+    func isClothName(name : String) -> Bool {
+        if name == "Single Bedsheets" || name == "Double Bedsheets" || name == "Blazers" || name == "Cotton Dhotis" || name == "Cotton Sarees" || name == "Door Curtains" || name == "Gowns" || name == "Silk Dhotis" || name == "Silk Sarees" || name == "Sofa Covers" || name == "Standard Garments" || name == "2 pc Suit" || name == "3 pc Suit" || name == "Tablecloth" || name == "Window Curtains" {
+            return true
+        }
+        return false
     }
 }

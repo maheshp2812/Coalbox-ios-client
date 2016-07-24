@@ -18,7 +18,6 @@ class ViewOrdersController : UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        refreshControl!.beginRefreshing()
         onRefresh()
     }
     
@@ -27,6 +26,7 @@ class ViewOrdersController : UITableViewController {
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         refresher.addTarget(self, action: #selector(self.onRefresh), forControlEvents: .ValueChanged)
         self.refreshControl = refresher
+        self.refreshControl!.beginRefreshing()
         super.viewDidLoad()
     }
     

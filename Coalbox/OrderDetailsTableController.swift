@@ -58,7 +58,7 @@ class OrderDetailsTableController : UITableViewController {
             if i.1 as! NSObject == 0 {
                 count -= 1
             }
-            else if (i.0 as! String) != "deliveryDate" && (i.0 as! String) != "serviceType" && (i.0 as! String) != "pickupDate" && (i.0 as! String) != "pickupSlot" && (i.0 as! String) != "deliverySlot" && (i.0 as! String) != "service1" && (i.0 as! String) != "service2" && (i.0 as! String) != "service3" && (i.0 as! String) != "totalPrice" && (i.0 as! String) != "createdAt" && (i.0 as! String) != "deleted" && (i.0 as! String) != "id" && (i.0 as! String) != "updatedAt" && (i.0 as! String) != "version" && (i.0 as! String) != "email" {
+            else if isClothName(i.0 as! String) == true {
                 print(i.0 as! String)
                 filteredData.append((i.0 as! String,i.1))
             }
@@ -68,6 +68,13 @@ class OrderDetailsTableController : UITableViewController {
         }
         print(filteredData)
         return count - t
+    }
+    
+    func isClothName(name : String) -> Bool {
+        if name == "BedsheetsSingle" || name == "BedsheetsDouble" || name == "Blazers" || name == "CottonDhotis" || name == "CottonSarees" || name == "DoorCurtains" || name == "Gowns" || name == "SilkDhotis" || name == "SilkSarees" || name == "SofaCovers" || name == "StandardGarments" || name == "Suit2pc" || name == "Suit3pc" || name == "Tablecloth" || name == "WindowCurtains" {
+            return true
+        }
+        return false
     }
     
     func returnDisplayName(name : String) -> String{
@@ -100,6 +107,12 @@ class OrderDetailsTableController : UITableViewController {
         }
         else if name == "WindowCurtains" {
             return "Window Curtains"
+        }
+        else if name == "BedsheetsSingle" {
+            return "Single Bedsheets"
+        }
+        else if name == "BedsheetsDouble" {
+            return "Double Bedsheets"
         }
         return name
     }

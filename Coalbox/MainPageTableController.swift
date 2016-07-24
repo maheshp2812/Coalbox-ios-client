@@ -37,6 +37,7 @@ class MainPageTableController : UITableViewController {
             parentController?.refreshButton.enabled = false
             dbAccessor.accessRecentOrder(["email" : UserDetails().getDetail("email") as! String], onComplete: {
                 (result,response,error) in
+                print("result1",result)
                 if result?.count > 0  {
                     print("inside nested if")
                     print("result",result)
@@ -45,6 +46,12 @@ class MainPageTableController : UITableViewController {
                     let number = orderData["totalPrice"] as! NSNumber
                     let dateString = ((result?.valueForKey("pickupDate"))! as! String)
                     self.parentController.priceLabel.text = "Rs.\(number)"
+                    if orderData["serviceType"] as! String == "Regular" {
+                        self.parentController.priceView.backgroundColor = UIColor(red: 252/255, green: 0/255, blue: 55/255, alpha: 1)
+                    }
+                    else {
+                        self.parentController.priceView.backgroundColor = UIColor(red: 17/255, green: 121/255, blue: 245/255, alpha: 1)
+                    }
                     self.parentController.pickupDateLabel.text = dateString + ", " + ((result?.valueForKey("pickupSlot"))! as! String)
                     self.parentController?.orderIDStack.hidden = false
                     self.parentController?.priceView.hidden = false
@@ -116,7 +123,7 @@ class MainPageTableController : UITableViewController {
     }
     
     func isClothName(name : String) -> Bool {
-        if name == "Bedsheets" || name == "Blazers" || name == "CottonDhotis" || name == "CottonSarees" || name == "DoorCurtains" || name == "Gowns" || name == "SilkDhotis" || name == "SilkSarees" || name == "SofaCovers" || name == "StandardGarments" || name == "Suit2pc" || name == "Suit3pc" || name == "Tablecloth" || name == "WindowCurtains" {
+        if name == "BedsheetsSingle" || name == "BedsheetsDouble" || name == "Blazers" || name == "CottonDhotis" || name == "CottonSarees" || name == "DoorCurtains" || name == "Gowns" || name == "SilkDhotis" || name == "SilkSarees" || name == "SofaCovers" || name == "StandardGarments" || name == "Suit2pc" || name == "Suit3pc" || name == "Tablecloth" || name == "WindowCurtains" {
             return true
         }
         return false
@@ -152,6 +159,12 @@ class MainPageTableController : UITableViewController {
         }
         else if name == "WindowCurtains" {
             return "Window Curtains"
+        }
+        else if name == "BedsheetsSingle" {
+            return "Single Bedsheets"
+        }
+        else if name == "BedsheetsDouble" {
+            return "Double Bedsheets"
         }
         return name
     }

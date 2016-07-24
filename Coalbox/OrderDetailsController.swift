@@ -12,8 +12,34 @@ class OrderDetailsController : UIViewController {
     var orderDetails : NSDictionary? = [:]
     var tableController : OrderDetailsTableController? = nil
     
+    @IBOutlet weak var service1Image: UIImageView!
+    @IBOutlet weak var service2Image: UIImageView!
+    @IBOutlet weak var service3Image: UIImageView!
+    @IBOutlet weak var subtotalLabel: UILabel!
+    @IBOutlet weak var grandTotalLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        service1Image.hidden = true
+        service2Image.hidden = true
+        service3Image.hidden = true
+        if orderDetails?.valueForKey("service1") as! NSNumber == 1 {
+            service1Image.hidden = false
+        }
+        if orderDetails?.valueForKey("service2") as! NSNumber == 1 {
+            service2Image.hidden = false
+        }
+        if orderDetails?.valueForKey("service3") as! NSNumber == 1 {
+            service3Image.hidden = false
+        }
+        
+        subtotalLabel.text = "Rs." + String((orderDetails?.valueForKey("subtotal"))! as! NSNumber)
+        grandTotalLabel.text = "Rs." + String((orderDetails?.valueForKey("totalPrice"))! as! NSNumber)
+        super.viewWillAppear(true)
     }
     
     override func didReceiveMemoryWarning() {

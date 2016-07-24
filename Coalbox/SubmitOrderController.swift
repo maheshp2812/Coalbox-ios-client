@@ -65,6 +65,7 @@ class SubmitOrderController : UIViewController {
     
     func setSubtotal(subtotal : Int) {
         grandTotal = subtotal
+        orderDetails.setDetail(subtotal, forKey: "subtotal")
         if let a = (orderDetails.getDetail("service1") as? Bool) {
             service1.on = a
             if a == true {
