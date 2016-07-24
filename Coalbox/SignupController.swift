@@ -13,6 +13,7 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
     var drop : UIDropDown!
     var selectedApt = ""
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var switchTC: UISwitch!
     let dbAccessor = DbManager(tableName: "ClientDetails")
     
@@ -30,10 +31,10 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
         }
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        drop.resignFirstResponder()
-        self.view.endEditing(true)
-    }
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        drop.resignFirstResponder()
+//        self.view.endEditing(true)
+//    }
     
     func dropDown(dropDown: UIDropDown, didSelectOption option: String, atIndex index: Int) {
         print(option)
@@ -42,12 +43,12 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
     
     
     @IBAction func onSignUp(sender: UIButton) {
-        sender.backgroundColor = UIColor.greenColor()
-        sender.setTitle("Signing up...", forState: UIControlState.Normal)
+        sender.setTitle("", forState: UIControlState.Normal)
+        loading.startAnimating()
         var newEntry = ["Name":signupTable.name.text!,"email":signupTable.email.text!,"password":signupTable.password.text!,"phoneNumber":signupTable.phoneNumber.text!,"address":signupTable.address.text!,"address2":signupTable.selectedApt]
         if switchTC.on == false {
-            sender.backgroundColor = UIColor(red: 17/255, green: 121/255, blue:245/255, alpha: 1.0)
-            sender.setTitle("Sign Up", forState: UIControlState.Normal)
+            loading.stopAnimating()
+            sender.setTitle("SIGN UP", forState: UIControlState.Normal)
             let alertController = UIAlertController(title: "Terms & Conditions", message: "Please agree to the Terms & Conditions to proceed", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
             self.presentViewController(alertController, animated: true, completion: nil)
@@ -56,9 +57,9 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
             newEntry.updateValue(signupTable.password.text!.sha1(), forKey: "password")
             dbAccessor.verifyEmail(newEntry,onComplete: {
                 (result,response,error) -> Void in
-                sender.backgroundColor = UIColor(red: 17/255, green: 121/255, blue:245/255, alpha: 1.0)
-                sender.setTitle("Sign Up with Coalbox", forState: UIControlState.Normal)
                 if((error) != nil) {
+                    sender.setTitle("SIGN UP", forState: .Normal)
+                    self.loading.stopAnimating()
                     let alertController = UIAlertController(title: "Signup Failed", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
                     self.presentViewController(alertController, animated: true, completion: nil)
@@ -69,7 +70,10 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
                     let alertController = UIAlertController(title: "Verify your identity", message:"An email has been sent to your account for verification", preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
                     self.presentViewController(alertController, animated: true, completion: nil)
+                    sender.setTitle("SIGN UP", forState: .Normal)
+                    self.loading.stopAnimating()
                 }
+                
             })
         }
         else {

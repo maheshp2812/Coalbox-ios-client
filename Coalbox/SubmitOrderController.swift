@@ -17,6 +17,8 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     @IBOutlet weak var subtotalLabel: UILabel!
     @IBOutlet weak var specialTF: HoshiTextField!
     
+    @IBOutlet weak var serviceType: UILabel!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var service1: UISwitch!
@@ -41,10 +43,15 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
         scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         specialTF.delegate = self
 //        print(orderDetails.getAllDetails())
+        serviceType.text = orderDetails.getDetail("serviceType") as? String
         pickupDateLabel.text = (orderDetails.getDetail("pickupDate")! as! String) + ", " + (orderDetails.getDetail("pickupSlot")! as! String)
         deliveryDateLabel.text = (orderDetails.getDetail("deliveryDate")! as! String) + ", " + (orderDetails.getDetail("deliverySlot")! as! String)
     }
@@ -70,6 +77,8 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     }
     
     func setSubtotal(subtotal : Int) {
+        let bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height)
+        scrollView.setContentOffset(bottomOffset, animated: true)
         grandTotal = subtotal
         orderDetails.setDetail(subtotal, forKey: "subtotal")
         if let a = (orderDetails.getDetail("service1") as? Bool) {
@@ -111,8 +120,8 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
         else {
             orderDetails.setDetail(UserDetails().getDetail("email"), forKey: "email")
             print(orderDetails.getAllDetails())
-            sender.setTitle("Submitting...", forState: .Normal)
-            sender.backgroundColor = UIColor.greenColor()
+            sender.setTitle("", forState: .Normal)
+            loading.startAnimating()
             let dbManager = DbManager(tableName: "OrderDetails")
             dbManager.placeOrder(orderDetails.getAllDetails(), onComplete: {
                 (request,response,error) in
@@ -126,6 +135,7 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
                 else {
                     self.performSegueWithIdentifier("submitToMainPageSegue", sender: self)
                 }
+                self.loading.stopAnimating()
             })
         }
     }
