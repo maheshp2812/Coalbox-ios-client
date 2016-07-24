@@ -8,17 +8,19 @@
 
 import UIKit
 
-class SubmitOrderController : UIViewController {
+class SubmitOrderController : UIViewController,UITextFieldDelegate {
     
     let orderDetails = OrderDetails()
     
     @IBOutlet weak var pickupDateLabel: UILabel!
     @IBOutlet weak var deliveryDateLabel: UILabel!
     @IBOutlet weak var subtotalLabel: UILabel!
+    @IBOutlet weak var specialTF: HoshiTextField!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var service1: UISwitch!
     @IBOutlet weak var service2: UISwitch!
-    @IBOutlet weak var service3: UISwitch!
     var itemRates = ItemRates()
 
     var summaryController : SummaryTableController? = nil
@@ -26,8 +28,22 @@ class SubmitOrderController : UIViewController {
     var grandTotal : Int = 0
     @IBOutlet weak var grandTotalLabel: UILabel!
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        scrollView.setContentOffset(CGPointMake(0, 250), animated: true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        specialTF.delegate = self
 //        print(orderDetails.getAllDetails())
         pickupDateLabel.text = (orderDetails.getDetail("pickupDate")! as! String) + ", " + (orderDetails.getDetail("pickupSlot")! as! String)
         deliveryDateLabel.text = (orderDetails.getDetail("deliveryDate")! as! String) + ", " + (orderDetails.getDetail("deliverySlot")! as! String)
@@ -53,16 +69,6 @@ class SubmitOrderController : UIViewController {
         grandTotalLabel.text = "Rs." + String(grandTotal)
     }
     
-    @IBAction func service3(sender: UISwitch) {
-        if sender.on == true {
-            grandTotal += itemRates.get("Service3")!
-        }
-        else {
-            grandTotal -= itemRates.get("Service3")!
-        }
-        grandTotalLabel.text = "Rs." + String(grandTotal)
-    }
-    
     func setSubtotal(subtotal : Int) {
         grandTotal = subtotal
         orderDetails.setDetail(subtotal, forKey: "subtotal")
@@ -78,11 +84,8 @@ class SubmitOrderController : UIViewController {
                 grandTotal += itemRates.get("Service2")!
             }
         }
-        if let a = (orderDetails.getDetail("service3") as? Bool) {
-            service3.on = a
-            if a == true {
-                grandTotal += itemRates.get("Service3")!
-            }
+        if let a = (orderDetails.getDetail("service3") as? String) {
+            specialTF.text = a
         }
         subtotalLabel.text = "Rs." + String(subtotal)
         grandTotalLabel.text = "Rs." + String(grandTotal)
@@ -95,7 +98,7 @@ class SubmitOrderController : UIViewController {
     @IBAction func onSubmit(sender: UIButton) {
         orderDetails.setDetail(service1.on, forKey: "service1")
         orderDetails.setDetail(service2.on, forKey: "service2")
-        orderDetails.setDetail(service3.on, forKey: "service3")
+        orderDetails.setDetail(specialTF.text, forKey: "service3")
         orderDetails.setDetail(grandTotal, forKey: "totalPrice")
         if UserDetails().getDetails() == nil {
             let alertController = UIAlertController(title: "Log In", message:"You must be logged in to place an order", preferredStyle: UIAlertControllerStyle.Alert)

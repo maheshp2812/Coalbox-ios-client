@@ -14,9 +14,10 @@ class OrderDetailsController : UIViewController {
     
     @IBOutlet weak var service1Image: UIImageView!
     @IBOutlet weak var service2Image: UIImageView!
-    @IBOutlet weak var service3Image: UIImageView!
     @IBOutlet weak var subtotalLabel: UILabel!
     @IBOutlet weak var grandTotalLabel: UILabel!
+    @IBOutlet weak var specialLabel: UILabel!
+    @IBOutlet weak var specialStack: UIStackView!
     
     
     override func viewDidLoad() {
@@ -26,15 +27,16 @@ class OrderDetailsController : UIViewController {
     override func viewWillAppear(animated: Bool) {
         service1Image.hidden = true
         service2Image.hidden = true
-        service3Image.hidden = true
+        specialStack.hidden = true
         if orderDetails?.valueForKey("service1") as! NSNumber == 1 {
             service1Image.hidden = false
         }
         if orderDetails?.valueForKey("service2") as! NSNumber == 1 {
             service2Image.hidden = false
         }
-        if orderDetails?.valueForKey("service3") as! NSNumber == 1 {
-            service3Image.hidden = false
+        if orderDetails?.valueForKey("service3") as! String != "" {
+            specialLabel.text = orderDetails?.valueForKey("service3") as? String
+            specialStack.hidden = false
         }
         
         subtotalLabel.text = "Rs." + String((orderDetails?.valueForKey("subtotal"))! as! NSNumber)
