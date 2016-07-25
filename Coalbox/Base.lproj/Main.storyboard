@@ -35,18 +35,6 @@
                                     <segue destination="jWF-DI-oHi" kind="show" id="BvW-Wj-H5c"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2a-0e-E4e">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem title="Create Account" id="OaD-2R-J0H">
-                                        <connections>
-                                            <segue destination="lr2-I3-X2O" kind="show" id="bxv-e7-6dF"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Xx3-pH-Jfg"/>
-                                    <barButtonItem title="Forgot Password" style="plain" id="2if-Hg-Oqa"/>
-                                </items>
-                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-5I-IBi">
                                 <rect key="frame" x="0.0" y="407" width="600" height="58"/>
                                 <color key="backgroundColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,6 +109,22 @@
                                     <constraint firstAttribute="height" constant="103" id="mz3-df-Hwa"/>
                                 </constraints>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2a-0e-E4e">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Create Account" id="OaD-2R-J0H">
+                                        <connections>
+                                            <segue destination="lr2-I3-X2O" kind="show" id="bxv-e7-6dF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Xx3-pH-Jfg"/>
+                                    <barButtonItem title="Forgot Password" style="plain" id="2if-Hg-Oqa">
+                                        <connections>
+                                            <action selector="forgotPassword:" destination="BYZ-38-t0r" id="igM-it-sHh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -157,6 +161,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207" y="289"/>
+        </scene>
+        <!--Terms and Conditions-->
+        <scene sceneID="Kca-o5-mfC">
+            <objects>
+                <viewController title="Terms and Conditions" id="DDh-jv-FG7" customClass="TnCController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nf8-aI-es9"/>
+                        <viewControllerLayoutGuide type="bottom" id="CXR-CU-J1S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a7Z-mc-O5r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvR-0r-ljR">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">TERMS OF SERVICE AGREEMENT
+LAST REVISION: [Date-Month-Year]
+PLEASE READ THIS TERMS OF SERVICE AGREEMENT CAREFULLY. BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT.
+This Terms of Service Agreement (the "Agreement") governs your use of this website, [Website Address] (the "Website"), [Business Name] ("Business Name") offer of products for purchase on this Website, or your purchase of products available on this Website. This Agreement includes, and incorporates by this reference, the policies and guidelines referenced below. [Business Name] reserves the right to change or revise the terms and conditions of this Agreement at any time by posting any changes or a revised Agreement on this Website. [Business Name] will alert you that changes or revisions have been made by indicating on the top of this Agreement the date it was last revised. The changed or revised Agreement will be effective immediately after it is posted on this Website. Your use of the Website following the posting any such changes or of a revised Agreement will constitute your acceptance of any such changes or revisions. [Business Name] encourages you to review this Agreement whenever you visit the Website to make sure that you understand the terms and conditions governing use of the Website. This Agreement does not alter in any way the terms or conditions of any other written agreement you may have with [Business Name] for other products or services. If you do not agree to this Agreement (including any referenced policies or guidelines), please immediately terminate your use of the Website. If you would like to print this Agreement, please click the print button on your browser toolbar.
+I. PRODUCTS
+Terms of Offer. This Website offers for sale certain products (the "Products"). By placing an order for Products through this Website, you agree to the terms set forth in this Agreement. 
+Customer Solicitation: Unless you notify our third party call center reps or direct [Business Name] sales reps, while they are calling you, of your desire to opt out from further direct company communications and solicitations, you are agreeing to continue to receive further emails and call solicitations [Business Name] and its designated in house or third party call team(s).  
+Opt Out Procedure: We provide 3 easy ways to opt out of from future solicitations. 1. You may use the opt out link found in any email solicitation that you may receive. 2. You may also choose to opt out, via sending your email address to: [opt-out email]. 
+3. You may send a written remove request to [Company Address]. 
+Proprietary Rights. [Business Name] has proprietary rights and trade secrets in the Products. You may not copy, reproduce, resell or redistribute any Product manufactured and/or distributed by [Business Name]. [Business Name] also has rights to all trademarks and trade dress and specific layouts of this webpage, including calls to action, text placement, images and other information.
+Sales Tax. If you purchase any Products, you will be responsible for paying any applicable sales tax.
+II. WEBSITE
+Content; Intellectual Property; Third Party Links. In addition to making Products available, this Website also offers information and marketing materials. This Website also offers information, both directly and through indirect links to third-party websites, about nutritional and dietary supplements. [Business Name] does not always create the information offered on this Website; instead the information is often gathered from other sources. To the extent that [Business Name] does create the content on this Website, such content is protected by intellectual property laws of the India, foreign nations, and international bodies. Unauthorized use of the material may violate copyright, trademark, and/or other laws. You acknowledge that your use of the content on this Website is for personal, noncommercial use. Any links to third-party websites are provided solely as a convenience to you. [Business Name] does not endorse the contents on any such third-party websites. [Business Name]  is not responsible for the content of or any damage that may result from your access to or reliance on these third-party websites. If you link to third-party websites, you do so at your own risk. 
+Use of Website; [Business Name] is not responsible for any damages resulting from use of this website by anyone. You will not use the Website for illegal purposes. You will (1) abide by all applicable local, state, national, and international laws and regulations in your use of the Website (including laws regarding intellectual property), (2) not interfere with or disrupt the use and enjoyment of the Website by other users, (3) not resell material on the Website, (4) not engage, directly or indirectly, in transmission of "spam", chain letters, junk mail or any other type of unsolicited communication, and (5) not defame, harass, abuse, or disrupt other users of the Website
+License. By using this Website, you are granted a limited, non-exclusive, non-transferable right to use the content and materials on the Website in connection with your normal, noncommercial, use of the Website. You may not copy, reproduce, transmit, distribute, or create derivative works of such content or information without express written authorization from [Business Name] or the applicable third party (if third party content is at issue).
+Posting. By posting, storing, or transmitting any content on the Website, you hereby grant [Business Name] a perpetual, worldwide, non-exclusive, royalty-free, assignable, right and license to use, copy, display, perform, create derivative works from, distribute, have distributed, transmit and assign such content in any form, in all media now known or hereinafter created, anywhere in the world. [Business Name] does not have the ability to control the nature of the user-generated content offered through the Website. You are solely responsible for your interactions with other users of the Website and any content you post. [Business Name] is not liable for any damage or harm resulting from any posts by or interactions between users. [Business Name] reserves the right, but has no obligation, to monitor interactions between and among users of the Website and to remove any content [Business Name]  deems objectionable, in MuscleUP Nutrition 's sole discretion. 
+III. DISCLAIMER OF WARRANTIES
+YOUR USE OF THIS WEBSITE AND/OR PRODUCTS ARE AT YOUR SOLE RISK. THE WEBSITE AND PRODUCTS ARE OFFERED ON AN "AS IS" AND "AS AVAILABLE" BASIS. [Business Name] EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT WITH RESPECT TO THE PRODUCTS OR WEBSITE CONTENT, OR ANY RELIANCE UPON OR USE OF THE WEBSITE CONTENT OR PRODUCTS. ("PRODUCTS" INCLUDE TRIAL PRODUCTS.)
+WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, [Business Name]  MAKES NO WARRANTY:
+THAT THE INFORMATION PROVIDED ON THIS WEBSITE IS ACCURATE, RELIABLE, COMPLETE, OR TIMELY.
+THAT THE LINKS TO THIRD-PARTY WEBSITES ARE TO INFORMATION THAT IS ACCURATE, RELIABLE, COMPLETE, OR TIMELY.
+NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM THIS WEBSITE WILL CREATE ANY WARRANTY NOT EXPRESSLY STATED HEREIN. 
+AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE PRODUCTS OR THAT DEFECTS IN PRODUCTS WILL BE CORRECTED. 
+REGARDING ANY PRODUCTS PURCHASED OR OBTAINED THROUGH THE WEBSITE.
+SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES, SO SOME OF THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU.
+IV. LIMITATION OF LIABILITY
+[Business Name] ENTIRE LIABILITY, AND YOUR EXCLUSIVE REMEDY, IN LAW, IN EQUITY, OR OTHWERWISE, WITH RESPECT TO THE WEBSITE CONTENT AND PRODUCTS AND/OR FOR ANY BREACH OF THIS AGREEMENT IS SOLELY LIMITED TO THE AMOUNT YOU PAID, LESS SHIPPING AND HANDLING, FOR PRODUCTS PURCHASED VIA THE WEBSITE.
+[Business Name] WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES IN CONNECTION WITH THIS AGREEMENT OR THE PRODUCTS IN ANY MANNER, INCLUDING LIABILITIES RESULTING FROM (1) THE USE OR THE INABILITY TO USE THE WEBSITE CONTENT OR PRODUCTS; (2) THE COST OF PROCURING SUBSTITUTE PRODUCTS OR CONTENT; (3) ANY PRODUCTS PURCHASED OR OBTAINED OR TRANSACTIONS ENTERED INTO THROUGH THE WEBSITE; OR (4) ANY LOST PROFITS YOU ALLEGE.
+SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES SO SOME OF THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU.
+V. INDEMNIFICATION
+You will release, indemnify, defend and hold harmless [Business Name], and any of its contractors, agents, employees, officers, directors, shareholders, affiliates and assigns from all liabilities, claims, damages, costs and expenses, including reasonable attorneys' fees and expenses, of third parties relating to or arising out of (1) this Agreement or the breach of your warranties, representations and obligations under this Agreement; (2) the Website content or your use of the Website content; (3) the Products or your use of the Products (including Trial Products); (4) any intellectual property or other proprietary right of any person or entity; (5) your violation of any provision of this Agreement; or (6) any information or data you supplied to [Business Name]. When [Business Name] is threatened with suit or sued by a third party, [Business Name] may seek written assurances from you concerning your promise to indemnify [Business Name]; your failure to provide such assurances may be considered by [Business Name] to be a material breach of this Agreement. [Business Name] will have the right to participate in any defense by you of a third-party claim related to your use of any of the Website content or Products, with counsel of [Business Name] choice at its expense. [Business Name] will reasonably cooperate in any defense by you of a third-party claim at your request and expense. You will have sole responsibility to defend [Business Name] against any claim, but you must receive [Business Name] prior written consent regarding any related settlement. The terms of this provision will survive any termination or cancellation of this Agreement or your use of the Website or Products.
+VI. PRIVACY
+[Business Name] believes strongly in protecting user privacy and providing you with notice of MuscleUP Nutrition 's use of data. Please refer to [Business Name] privacy policy, incorporated by reference herein, that is posted on the Website.
+VI. AGREEMENT TO BE BOUND
+By using this Website or ordering Products, you acknowledge that you have read and agree to be bound by this Agreement and all terms and conditions on this Website. 
+VIII. GENERAL
+Force Majeure. [Business Name] will not be deemed in default hereunder or held responsible for any cessation, interruption or delay in the performance of its obligations hereunder due to earthquake, flood, fire, storm, natural disaster, act of God, war, terrorism, armed conflict, labor strike, lockout, or boycott.
+Cessation of Operation. [Business Name] may at any time, in its sole discretion and without advance notice to you, cease operation of the Website and distribution of the Products.
+Entire Agreement. This Agreement comprises the entire agreement between you and [Business Name] and supersedes any prior agreements pertaining to the subject matter contained herein.
+Effect of Waiver. The failure of [Business Name] to exercise or enforce any right or provision of this Agreement will not constitute a waiver of such right or provision. If any provision of this Agreement is found by a court of competent jurisdiction to be invalid, the parties nevertheless agree that the court should endeavor to give effect to the parties' intentions as reflected in the provision, and the other provisions of this Agreement remain in full force and effect.
+Governing Law; Jurisdiction. This Website originates from the [City, State]. This Agreement will be governed by the laws of the State of [Law State Name] without regard to its conflict of law principles to the contrary. Neither you nor [Business Name] will commence or prosecute any suit, proceeding or claim to enforce the provisions of this Agreement, to recover damages for breach of or default of this Agreement, or otherwise arising under or by reason of this Agreement, other than in courts located in State of [State Name]. By using this Website or ordering Products, you consent to the jurisdiction and venue of such courts in connection with any action, suit, proceeding or claim arising under or by reason of this Agreement. You hereby waive any right to trial by jury arising out of this Agreement and any related documents.
+Statute of Limitation. You agree that regardless of any statute or law to the contrary, any claim or cause of action arising out of or related to use of the Website or Products or this Agreement must be filed within one (1) year after such claim or cause of action arose or be forever barred.
+Waiver of Class Action Rights. BY ENTERING INTO THIS AGREEMENT, YOU HEREBY IRREVOCABLY WAIVE ANY RIGHT YOU MAY HAVE TO JOIN CLAIMS WITH THOSE OF OTHER IN THE FORM OF A CLASS ACTION OR SIMILAR PROCEDURAL DEVICE. ANY CLAIMS ARISING OUT OF, RELATING TO, OR CONNECTION WITH THIS AGREEMENT MUST BE ASSERTED INDIVIDUALLY.
+Termination. [Business Name] reserves the right to terminate your access to the Website if it reasonably believes, in its sole discretion, that you have breached any of the terms and conditions of this Agreement. Following termination, you will not be permitted to use the Website and [Business Name] may, in its sole discretion and without advance notice to you, cancel any outstanding orders for Products. If your access to the Website is terminated, [Business Name] reserves the right to exercise whatever means it deems necessary to prevent unauthorized access of the Website. This Agreement will survive indefinitely unless and until [Business Name] chooses, in its sole discretion and without advance to you, to terminate it.
+Domestic Use. [Business Name] makes no representation that the Website or Products are appropriate or available for use in locations outside India. Users who access the Website from outside India do so at their own risk and initiative and must bear all responsibility for compliance with any applicable local laws. Assignment. You may not assign your rights and obligations under this Agreement to anyone. [Business Name] may assign its rights and obligations under this Agreement in its sole discretion and without advance notice to you.
+BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LvR-0r-ljR" firstAttribute="leading" secondItem="a7Z-mc-O5r" secondAttribute="leadingMargin" id="Ldf-8W-nvC"/>
+                            <constraint firstAttribute="bottom" secondItem="LvR-0r-ljR" secondAttribute="bottom" id="Ttd-Cp-7pj"/>
+                            <constraint firstItem="LvR-0r-ljR" firstAttribute="trailing" secondItem="a7Z-mc-O5r" secondAttribute="trailingMargin" id="WiQ-Ug-1Jq"/>
+                            <constraint firstItem="LvR-0r-ljR" firstAttribute="top" secondItem="nf8-aI-es9" secondAttribute="bottom" id="vIQ-dI-1wX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="LvR-0r-ljR" id="TC6-KA-LqY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bul-yK-ubQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939" y="289"/>
         </scene>
         <!--Coalbox-->
         <scene sceneID="mtz-Nt-4MI">
@@ -867,7 +952,7 @@
             <objects>
                 <tableViewController id="pFE-9g-hJC" customClass="AccountTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="22" id="Pw7-OY-NvT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="459"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1458,6 +1543,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="T&amp;C"/>
+                                <connections>
+                                    <segue destination="DDh-jv-FG7" kind="show" id="9Hd-k0-22e"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQl-12-lO5">
                                 <rect key="frame" x="130" y="508" width="25" height="21"/>
@@ -1475,6 +1563,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Privacy Policy"/>
+                                <connections>
+                                    <segue destination="ahH-5V-iYJ" kind="show" id="d1P-Gr-iSI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
@@ -1516,12 +1607,102 @@
             </objects>
             <point key="canvasLocation" x="1912" y="1053"/>
         </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="YQL-ju-Kzg">
+            <objects>
+                <viewController title="Privacy Policy" id="ahH-5V-iYJ" customClass="PrivacyPolicyController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cDS-yv-b1O"/>
+                        <viewControllerLayoutGuide type="bottom" id="itm-h8-BMa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FDi-NS-ukj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w2j-rl-ST1">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">This Privacy Policy applies to the coalbox.in
+Bookmyseats.in recognises the importance of maintaining your privacy. We value your privacy and appreciate your trust in us. This Policy describes how we treat user information we collect on http://www.bookmyseats.in and other offline sources. This Privacy Policy applies to current and former visitors to our website and to our online customers. By visiting and/or using our website, you agree to this Privacy Policy.
+Bookmyseats.in is a property of Bookmyseats Private Limited, an Indian Company registered under the Companies Act, 2013 having its registered office at C-5, Plot No. 57, Kailash Tower, Mandir Marg, Saidullajas, Ignou Road, New Delhi, Delhi - 110 030.
+
+Information we collect
+Contact information. We might collect your name, email, mobile number, phone number, street, city, state, pincode,  country and ip address.
+Payment and billing information. We might collect your billing name, billing address and payment method when you buy a ticket. We NEVER collect your credit card number or credit card expiry date or other details pertaining to your credit card on our website. Credit card information will be obtained and processed by our online payment partner CC Avenue.
+Information you post. We collect information you post in a public space on our website or on a third-party social media site belonging to Bookmyseats.in.
+Demographic information. We may collect demographic information about you, events you like, events you intend to participate in, tickets you buy, or any other information provided by your during the use of our website. We might collect this as a part of a survey also.
+Other information. If you use our website, we may collect information about your IP address and the browser you're using. We might look at what site you came from, duration of time spent on our website, pages accessed or what site you visit when you leave us. We might also collect the type of mobile device you are using, or the version of the operating system your computer or device is running. 
+We collect information in different ways.
+We collect information directly from you. We collect information directly from you when you register for an event or buy tickets. We also collect information if you post a comment on our websites or ask us a question through phone or email.
+We collect information from you passively. We use tracking tools like Google Analytics, Google Webmaster, browser cookies and web beacons for collecting information about your usage of our website. 
+We get information about you from third parties. For example, if you use an integrated social media feature on our websites. The third-party social media site will give us certain information about you. This could include your name and email address.
+
+
+Use of your personal information
+We use information to contact you: We might use the information you provide to contact you for confirmation of a purchase on our website or for other promotional purposes.
+We use information to respond to your requests or questions. We might use your information to confirm your registration for an event or contest. 
+We use information to improve our products and services. We might use your information to customize your experience with us. This could include displaying content based upon your preferences.
+We use information to look at site trends and customer interests. We may use your information to make our website and products better. We may combine information we get from you with information about you we get from third parties.
+We use information for security purposes. We may use information to protect our company, our customers, or our websites.
+We use information for marketing purposes. We might send you information about special promotions or offers. We might also tell you about new features or products. These might be our own offers or products, or third-party offers or products we think you might find interesting. Or, for example, if you buy tickets from us we'll enroll you in our newsletter. 
+We use information to send you transactional communications. We might send you emails or SMS about your account or a ticket purchase. 
+We use information as otherwise permitted by law.
+
+Sharing of information with third-parties
+We will share information with third parties who perform services on our behalf. We share information with vendors who help us manage our online registration process or payment processors or transactional message processors. Some vendors may be located outside of India.
+We will share information with the event organizers. We share your information with event organizers and other parties responsible for fulfilling the purchase obligation. The event organizers and other parties may use the information we give them as described in their privacy policies. 
+We will share information with our business partners. This includes a third party who provide or sponsor an event, or who operates a venue where we hold events. Our partners use the information we give them as described in their privacy policies. 
+We may share information if we think we have to in order to comply with the law or to protect ourselves. We will share information to respond to a court order or subpoena. We may also share it if a government agency or investigatory body requests. Or, we might also share information when we are investigating potential fraud. 
+We may share information with any successor to all or part of our business. For example, if part of our business is sold we may give our customer list as part of that transaction.
+We may share your information for reasons not described in this policy. We will tell you before we do this.
+Email Opt-Out
+You can opt out of receiving our marketing emails. To stop receiving our promotional emails, please email unsubscriber@bookmyseats.in. It may take about ten days to process your request. Even if you opt out of getting marketing messages, we will still be sending you transactional messages through email and SMS about your purchases.  
+Third party sites 
+If you click on one of the links to third party websites, you may be taken to websites we do not control. This policy does not apply to the privacy practices of those websites. Read the privacy policy of other websites carefully. We are not responsible for these third party sites.
+
+Grievance Officer
+In accordance with Information Technology Act 2000 and rules made there under, the name and contact details of the Grievance Officer are provided below:
+Mr. XXXXXXXXXXX
+A-283, Okhla Industrial Area, Phase-I 
+New Delhi- 110020
+Phone: +91-11- 45757575
+Email: XXXX
+If you have any questions about this Policy or other privacy concerns, you can also email us at webmaster@bookmyseats.in 
+
+Updates to this policy
+This Privacy Policy was last updated on 12.12.2014. From time to time we may change our privacy practices. We will notify you of any material changes to this policy as required by law. We will also post an updated copy on our website. Please check our site periodically for updates.
+
+Jurisdiction
+If you choose to visit the website, your visit and any dispute over privacy is subject to this Policy and the website's terms of use. In addition to the foregoing, any disputes arising under this Policy shall be governed by the laws of India. 
+
+
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w2j-rl-ST1" firstAttribute="top" secondItem="cDS-yv-b1O" secondAttribute="bottom" id="4Ya-eN-e1e"/>
+                            <constraint firstItem="w2j-rl-ST1" firstAttribute="leading" secondItem="FDi-NS-ukj" secondAttribute="leadingMargin" id="Abs-RH-z5z"/>
+                            <constraint firstItem="w2j-rl-ST1" firstAttribute="bottom" secondItem="itm-h8-BMa" secondAttribute="top" id="Cjn-am-0XD"/>
+                            <constraint firstItem="w2j-rl-ST1" firstAttribute="trailing" secondItem="FDi-NS-ukj" secondAttribute="trailingMargin" id="Dpl-lK-dIu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="w2j-rl-ST1" id="udt-ij-tTE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VkW-hB-caU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2629" y="289"/>
+        </scene>
         <!--Signup Table Controller-->
         <scene sceneID="hl1-nN-1dG">
             <objects>
                 <tableViewController id="33C-Md-vWb" customClass="SignupTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="rf5-sM-g0X">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="439"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1749,7 +1930,7 @@
             <objects>
                 <tableViewController id="TCm-Q3-Dvk" customClass="OrderDetailsTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ift-Kf-kJM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="587" height="203"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -1785,7 +1966,7 @@
             <objects>
                 <tableViewController title="Special Clothing" id="bhp-NN-zaB" customClass="SpecialClothingController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="hb8-Ry-hlw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -2163,7 +2344,7 @@
             <objects>
                 <tableViewController id="VAJ-FP-eIZ" customClass="PlaceOrderController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="112" sectionHeaderHeight="18" sectionFooterHeight="18" id="IRy-2S-x5H">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -2649,11 +2830,11 @@
                         <viewControllerLayoutGuide type="bottom" id="tly-iZ-WXA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XPB-fx-PvC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="599" height="140"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6oe-4P-8hf">
-                                <rect key="frame" x="159" y="267" width="283" height="66"/>
+                                <rect key="frame" x="158" y="37" width="283" height="66"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqw-xo-AaG">
                                         <rect key="frame" x="87" y="0.0" width="109" height="21"/>
@@ -2716,11 +2897,11 @@
                         <viewControllerLayoutGuide type="bottom" id="fNf-YK-tIC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vmd-Vl-NgP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="599" height="140"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uXR-XJ-hl1">
-                                <rect key="frame" x="161" y="267" width="279" height="66"/>
+                                <rect key="frame" x="160" y="37" width="279" height="66"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcT-eo-mFb">
                                         <rect key="frame" x="80" y="0.0" width="119" height="21"/>
@@ -2786,8 +2967,8 @@
         <image name="user-default-gray" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Ml-hE-3y7"/>
-        <segue reference="rzU-PC-LgD"/>
+        <segue reference="aFF-vB-oHe"/>
+        <segue reference="Gf8-Hw-Mbx"/>
         <segue reference="QyJ-ms-O6Y"/>
         <segue reference="SXe-C1-c9P"/>
     </inferredMetricsTieBreakers>

@@ -50,6 +50,12 @@ class ViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
+    @IBAction func forgotPassword(sender: UIBarButtonItem) {
+        if let url = NSURL(string: "http://coalbox.in/passwordreset") {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
     @IBAction func onLogin(sender: UIButton) {
         sender.setTitle("", forState: .Normal)
         loading.startAnimating()

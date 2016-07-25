@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EB153C091D3FB48000B8484E /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB153C081D3FB48000B8484E /* OrderCell.xib */; };
 		EB153C0B1D3FB62400B8484E /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB153C0A1D3FB62400B8484E /* OrderCell.swift */; };
+		EB16D5CC1D4600F800134417 /* TnCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16D5CB1D4600F800134417 /* TnCController.swift */; };
+		EB16D5CE1D46073B00134417 /* PrivacyPolicyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16D5CD1D46073B00134417 /* PrivacyPolicyController.swift */; };
 		EB1E8F1D1D27A8D8004C5A35 /* NSDateComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */; };
 		EB1E8F1F1D27B219004C5A35 /* SubmitOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */; };
 		EB226CD41D339B2E00C126E5 /* SummaryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */; };
@@ -95,6 +97,8 @@
 /* Begin PBXFileReference section */
 		EB153C081D3FB48000B8484E /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		EB153C0A1D3FB62400B8484E /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		EB16D5CB1D4600F800134417 /* TnCController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TnCController.swift; sourceTree = "<group>"; };
+		EB16D5CD1D46073B00134417 /* PrivacyPolicyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyController.swift; sourceTree = "<group>"; };
 		EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateComparison.swift; sourceTree = "<group>"; };
 		EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitOrderController.swift; sourceTree = "<group>"; };
 		EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableController.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
 				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
 				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EB16D5CD1D46073B00134417 /* PrivacyPolicyController.swift */,
+				EB16D5CB1D4600F800134417 /* TnCController.swift */,
 				EB717EA21D43B5C0008EB917 /* OrderDetailsTableController.swift */,
 				EB717EA01D43ACD0008EB917 /* OrderDetailsController.swift */,
 				EB717E981D4355A2008EB917 /* MainPageCell.swift */,
@@ -490,6 +496,7 @@
 				EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */,
 				EB717EA31D43B5C0008EB917 /* OrderDetailsTableController.swift in Sources */,
 				EB94537D1D2A9433002966FC /* KaedeTextField.swift in Sources */,
+				EB16D5CE1D46073B00134417 /* PrivacyPolicyController.swift in Sources */,
 				EB226CD41D339B2E00C126E5 /* SummaryTableController.swift in Sources */,
 				EB3A97DC1D2D40A100B415E2 /* MBCircularProgressBarView.m in Sources */,
 				EBF823701D1A6EDF004BBD1F /* PlaceOrderController.swift in Sources */,
@@ -501,6 +508,7 @@
 				EB94537B1D2A9433002966FC /* IsaoTextField.swift in Sources */,
 				EB996E3A1D0D685200E2DF58 /* UserDetails.swift in Sources */,
 				EB2CE9951D3B7D680075D20B /* MainPageTableController.swift in Sources */,
+				EB16D5CC1D4600F800134417 /* TnCController.swift in Sources */,
 				EBC4138D1D1EC9230075B443 /* HSDatePickerViewController.m in Sources */,
 				EB5594D31CF2E1600054A4F4 /* ViewController.swift in Sources */,
 				EBFC00221D30EA220077449C /* UIDropDown.swift in Sources */,
