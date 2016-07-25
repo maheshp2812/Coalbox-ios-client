@@ -37,7 +37,7 @@ class UpdatingController : UIViewController {
                 self.message.text = "Profile Updated"
                 self.image.image = UIImage(named: "checked.png")
                 self.loading.stopAnimating()
-                let newEntry = ["Name" : details["Name"] as! String!,"email":updateEntry["email"] as! String!,"password":details["password"] as! String!,"phoneNumber":updateEntry["phoneNumber"] as! String!,"address":updateEntry["address"] as! String!,"address2":updateEntry["address2"] as! String!]
+                let newEntry = ["Name" : updateEntry["Name"] as! String!,"email":updateEntry["email"] as! String!,"password":details["password"] as! String!,"phoneNumber":updateEntry["phoneNumber"] as! String!,"address":updateEntry["address"] as! String!,"address2":updateEntry["address2"] as! String!]
                 UserDetails().setDetails(newEntry)
             }
             let delay = 1 * Double(NSEC_PER_SEC)

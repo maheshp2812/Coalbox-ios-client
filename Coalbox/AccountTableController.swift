@@ -23,7 +23,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     var updateEntry = [:]
     
     
-    let details = UserDetails().getDetails()
+    var details = UserDetails().getDetails()!
     let dbAccessor = DbManager(tableName: "ClientDetails")
     var updatingController : UpdatingController? = nil
     
@@ -40,7 +40,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     }
     
     func returnSelectedIndex() -> Int {
-        let aptName = (details!["address2"] as? String)!
+        let aptName = (details["address2"] as? String)!
         for i in 0 ..< aptList.count {
             if aptName == aptList[i] {
                 self.selectedApt = aptName
@@ -68,10 +68,12 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     }
     
     override func viewWillAppear(animated: Bool) {
-        nameLabel.text = details!["Name"] as? String
-        emailTF.text = details!["email"] as? String
-        phoneTF.text = details!["phoneNumber"] as? String
-        addressTV.text = (details!["address"] as? String)!
+        print("in view appear")
+        details = UserDetails().getDetails()!
+        nameLabel.text = details["Name"] as? String
+        emailTF.text = details["email"] as? String
+        phoneTF.text = details["phoneNumber"] as? String
+        addressTV.text = (details["address"] as? String)!
 //        address2TV.text = (details!["address2"] as? String)!
         
         self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
@@ -124,16 +126,16 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
             addressTV.userInteractionEnabled = false
             dropDown.userInteractionEnabled = false
             aptLabel.textColor = UIColor.blackColor()
-            updateEntry = ["Name" : nameLabel.text!,"email" : emailTF.text!,"phoneNumber" : phoneTF.text!,"address" : addressTV.text!,"address2" : selectedApt,"emailOld" : details!["email"] as! String]
+            updateEntry = ["Name" : nameLabel.text!,"email" : emailTF.text!,"phoneNumber" : phoneTF.text!,"address" : addressTV.text!,"address2" : selectedApt,"emailOld" : details["email"] as! String]
             if validateFields(updateEntry) {
 //                self.view.userInteractionEnabled = false
 //                self.navigationController?.navigationBar.userInteractionEnabled = false
                 performSegueWithIdentifier("updatingSegue", sender: self)
                 //UserDetails().setDetails(updateEntry)
             }
-            else {
-                viewWillAppear(true)
-            }
+//            else {
+//                viewWillAppear(true)
+//            }
         }
     }
     
@@ -142,7 +144,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "updatingSegue" {
             updatingController = segue.destinationViewController as? UpdatingController
-            updatingController!.updateDetails(updateEntry as [NSObject : AnyObject],details: details!)
+            updatingController!.updateDetails(updateEntry as [NSObject : AnyObject],details: details)
         }
     }
     
