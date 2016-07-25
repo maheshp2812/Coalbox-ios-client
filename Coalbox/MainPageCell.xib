@@ -15,6 +15,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="516" height="101"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard Garments" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpW-x0-sdZ">
+                        <rect key="frame" x="8" y="40" width="436" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doc-Kj-iqu">
                         <rect key="frame" x="452" y="40" width="56" height="21"/>
                         <constraints>
@@ -24,12 +30,6 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard Garments" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpW-x0-sdZ">
-                        <rect key="frame" x="8" y="40" width="436" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="doc-Kj-iqu" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="9aH-51-b5h"/>
@@ -37,7 +37,7 @@
                     <constraint firstItem="dpW-x0-sdZ" firstAttribute="top" secondItem="doc-Kj-iqu" secondAttribute="top" id="aLT-Tn-tvH"/>
                     <constraint firstItem="dpW-x0-sdZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="axu-FI-5VM"/>
                     <constraint firstItem="dpW-x0-sdZ" firstAttribute="bottom" secondItem="doc-Kj-iqu" secondAttribute="bottom" id="gva-IL-bja"/>
-                    <constraint firstItem="doc-Kj-iqu" firstAttribute="leading" secondItem="dpW-x0-sdZ" secondAttribute="trailing" constant="8" symbolic="YES" id="mMd-H3-uaM"/>
+                    <constraint firstItem="doc-Kj-iqu" firstAttribute="leading" secondItem="dpW-x0-sdZ" secondAttribute="trailing" constant="8" id="mMd-H3-uaM"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
