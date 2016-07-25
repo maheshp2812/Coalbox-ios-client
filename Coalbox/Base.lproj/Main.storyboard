@@ -958,26 +958,39 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                         <sections>
                             <tableViewSection id="GcJ-7B-OWi">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="nameTableCell" textLabel="bp8-4q-xf4" imageView="42h-nf-uKC" rowHeight="98" style="IBUITableViewCellStyleDefault" id="43a-Lg-1Ih">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="nameTableCell" rowHeight="98" id="43a-Lg-1Ih">
                                         <rect key="frame" x="0.0" y="35" width="600" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="43a-Lg-1Ih" id="lQC-Dw-70T">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Mahesh Parab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bp8-4q-xf4">
-                                                    <rect key="frame" x="80" y="0.0" width="505" height="97"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mahesh Parab" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gg-Ng-2Fq">
+                                                    <rect key="frame" x="174" y="34" width="418" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="33"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="user-default-gray" id="42h-nf-uKC">
-                                                    <rect key="frame" x="15" y="23" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-default-gray" translatesAutoresizingMaskIntoConstraints="NO" id="cza-2a-6CK">
+                                                    <rect key="frame" x="8" y="24" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="U8R-VG-fTr"/>
+                                                        <constraint firstAttribute="height" constant="50" id="xMq-u8-55E"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cza-2a-6CK" firstAttribute="centerY" secondItem="lQC-Dw-70T" secondAttribute="centerY" id="Dbc-tE-MnP"/>
+                                                <constraint firstItem="cza-2a-6CK" firstAttribute="leading" secondItem="lQC-Dw-70T" secondAttribute="leadingMargin" id="ObC-vi-eG6"/>
+                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="trailing" secondItem="lQC-Dw-70T" secondAttribute="trailingMargin" id="TPT-97-jP9"/>
+                                                <constraint firstItem="cza-2a-6CK" firstAttribute="centerY" secondItem="5gg-Ng-2Fq" secondAttribute="centerY" id="VlW-5o-MbF"/>
+                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="leading" secondItem="cza-2a-6CK" secondAttribute="trailing" constant="116" id="atc-cE-4Nz"/>
+                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="top" secondItem="lQC-Dw-70T" secondAttribute="topMargin" constant="26" id="zrn-uY-ZRd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5gg-Ng-2Fq" secondAttribute="trailing" constant="8" id="jjW-9s-R1K"/>
+                                            <constraint firstItem="cza-2a-6CK" firstAttribute="leading" secondItem="43a-Lg-1Ih" secondAttribute="leading" constant="8" id="oMk-yk-Z8G"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1134,7 +1147,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                         <outlet property="aptLabel" destination="9b0-al-ScA" id="toR-WP-c6n"/>
                         <outlet property="dropDown" destination="PLt-Uz-7nR" id="rEc-aj-c9C"/>
                         <outlet property="emailTF" destination="Out-Cd-gBi" id="JJR-fZ-MOc"/>
-                        <outlet property="nameLabel" destination="bp8-4q-xf4" id="byr-o7-kgS"/>
+                        <outlet property="nameLabel" destination="5gg-Ng-2Fq" id="P0R-nL-ImN"/>
                         <outlet property="phoneTF" destination="lpN-Aa-MI6" id="rGo-Th-lHy"/>
                     </connections>
                 </tableViewController>

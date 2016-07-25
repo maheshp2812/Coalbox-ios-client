@@ -9,7 +9,8 @@
 import UIKit
 
 class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropDownDelegate {
-    @IBOutlet weak var nameLabel: UILabel!
+
+    @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var emailTF: HoshiTextField!
     @IBOutlet weak var phoneTF: HoshiTextField!
     @IBOutlet weak var addressTV: HoshiTextField!
@@ -25,6 +26,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.delegate = self
         emailTF.delegate = self
         phoneTF.delegate = self
         addressTV.delegate = self
@@ -84,13 +86,17 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        let textF = textField as! HoshiTextField
-        textF.placeholderColor = UIColor(red: 1, green: 87/255, blue: 34/255, alpha: 1)
+        if textField != nameLabel {
+            let textF = textField as! HoshiTextField
+            textF.placeholderColor = UIColor(red: 1, green: 87/255, blue: 34/255, alpha: 1)
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        let textF = textField as! HoshiTextField
-        textF.placeholderColor = UIColor.blackColor()
+        if nameLabel != textField {
+            let textF = textField as! HoshiTextField
+            textF.placeholderColor = UIColor.blackColor()
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -101,19 +107,21 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     override func setEditing(editing: Bool, animated: Bool) {
         print("Enter account table")
         if(editing) {
+            nameLabel.userInteractionEnabled = true
             emailTF.userInteractionEnabled = true
             phoneTF.userInteractionEnabled = true
             addressTV.userInteractionEnabled = true
             dropDown.userInteractionEnabled = true
-            emailTF.becomeFirstResponder()
+            nameLabel.becomeFirstResponder()
         }
         else {
+            nameLabel.userInteractionEnabled = true
             emailTF.userInteractionEnabled = false
             phoneTF.userInteractionEnabled = false
             addressTV.userInteractionEnabled = false
             dropDown.userInteractionEnabled = false
             aptLabel.textColor = UIColor.blackColor()
-            let updateEntry = ["email" : emailTF.text!,"phoneNumber" : phoneTF.text!,"address" : addressTV.text!,"address2" : selectedApt,"emailOld" : details!["email"] as! String]
+            let updateEntry = ["Name" : nameLabel.text!,"email" : emailTF.text!,"phoneNumber" : phoneTF.text!,"address" : addressTV.text!,"address2" : selectedApt,"emailOld" : details!["email"] as! String]
             if validateFields(updateEntry){
                 self.view.userInteractionEnabled = false
                 self.navigationController?.navigationBar.userInteractionEnabled = false
@@ -153,7 +161,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
         let add2 = newEntry["address2"] as! String
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        if(email.isEmpty || phoneNo.isEmpty || add1.isEmpty || add2.isEmpty) {
+        if(nameLabel == "" || email.isEmpty || phoneNo.isEmpty || add1.isEmpty || add2.isEmpty) {
             let alertController = UIAlertController(title: "Signup Failed", message:"One or more fields are empty", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
             self.presentViewController(alertController, animated: true, completion: nil)
