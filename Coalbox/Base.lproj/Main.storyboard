@@ -2832,8 +2832,8 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6oe-4P-8hf">
-                                <rect key="frame" x="158" y="37" width="283" height="66"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6oe-4P-8hf">
+                                <rect key="frame" x="159" y="267" width="283" height="66"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqw-xo-AaG">
                                         <rect key="frame" x="87" y="0.0" width="109" height="21"/>
@@ -2966,9 +2966,9 @@ If you choose to visit the website, your visit and any dispute over privacy is s
         <image name="user-default-gray" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aFF-vB-oHe"/>
         <segue reference="rzU-PC-LgD"/>
-        <segue reference="QyJ-ms-O6Y"/>
+        <segue reference="Kif-Vz-DCi"/>
         <segue reference="SXe-C1-c9P"/>
+        <segue reference="QyJ-ms-O6Y"/>
     </inferredMetricsTieBreakers>
 </document>
