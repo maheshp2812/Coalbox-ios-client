@@ -243,10 +243,10 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
             </objects>
             <point key="canvasLocation" x="1939" y="289"/>
         </scene>
-        <!--Your recent order-->
+        <!--Coalbox-->
         <scene sceneID="mtz-Nt-4MI">
             <objects>
-                <viewController title="Your recent order" id="jWF-DI-oHi" customClass="MainPageController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Coalbox" id="jWF-DI-oHi" customClass="MainPageController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emy-js-N5V"/>
                         <viewControllerLayoutGuide type="bottom" id="oBb-P7-eGV"/>
@@ -965,11 +965,6 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mahesh Parab" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gg-Ng-2Fq">
-                                                    <rect key="frame" x="174" y="34" width="418" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="33"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-default-gray" translatesAutoresizingMaskIntoConstraints="NO" id="cza-2a-6CK">
                                                     <rect key="frame" x="8" y="24" width="50" height="50"/>
                                                     <constraints>
@@ -977,24 +972,28 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                                         <constraint firstAttribute="height" constant="50" id="xMq-u8-55E"/>
                                                     </constraints>
                                                 </imageView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nishant Bhattacharya" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gg-Ng-2Fq">
+                                                    <rect key="frame" x="66" y="34" width="526" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="33"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cza-2a-6CK" firstAttribute="centerY" secondItem="lQC-Dw-70T" secondAttribute="centerY" id="Dbc-tE-MnP"/>
                                                 <constraint firstItem="cza-2a-6CK" firstAttribute="leading" secondItem="lQC-Dw-70T" secondAttribute="leadingMargin" id="ObC-vi-eG6"/>
-                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="trailing" secondItem="lQC-Dw-70T" secondAttribute="trailingMargin" id="TPT-97-jP9"/>
-                                                <constraint firstItem="cza-2a-6CK" firstAttribute="centerY" secondItem="5gg-Ng-2Fq" secondAttribute="centerY" id="VlW-5o-MbF"/>
-                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="leading" secondItem="cza-2a-6CK" secondAttribute="trailing" constant="116" id="atc-cE-4Nz"/>
-                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="top" secondItem="lQC-Dw-70T" secondAttribute="topMargin" constant="26" id="zrn-uY-ZRd"/>
+                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="centerY" secondItem="cza-2a-6CK" secondAttribute="centerY" id="P0j-6M-Nod"/>
+                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="trailing" secondItem="lQC-Dw-70T" secondAttribute="trailingMargin" id="Vv9-La-bMw"/>
+                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="top" secondItem="lQC-Dw-70T" secondAttribute="topMargin" constant="26" id="eEy-Zq-VO1"/>
+                                                <constraint firstItem="5gg-Ng-2Fq" firstAttribute="leading" secondItem="cza-2a-6CK" secondAttribute="trailing" constant="8" symbolic="YES" id="vsX-rX-Aih"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="5gg-Ng-2Fq" secondAttribute="trailing" constant="8" id="jjW-9s-R1K"/>
                                             <constraint firstItem="cza-2a-6CK" firstAttribute="leading" secondItem="43a-Lg-1Ih" secondAttribute="leading" constant="8" id="oMk-yk-Z8G"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="User Details" id="YLW-sn-sqV">
+                            <tableViewSection headerTitle="My profile" id="YLW-sn-sqV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emailCell" rowHeight="50" id="Zef-co-wBB">
                                         <rect key="frame" x="0.0" y="188" width="600" height="50"/>
@@ -1012,7 +1011,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                                 <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="EMAIL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Out-Cd-gBi" customClass="HoshiTextField" customModule="Coalbox" customModuleProvider="target">
                                                     <rect key="frame" x="51" y="3" width="541" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1047,7 +1046,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                                 <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PHONE NUMBER" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpN-Aa-MI6" customClass="HoshiTextField" customModule="Coalbox" customModuleProvider="target">
                                                     <rect key="frame" x="51" y="3" width="541" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1149,11 +1148,58 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                         <outlet property="emailTF" destination="Out-Cd-gBi" id="JJR-fZ-MOc"/>
                         <outlet property="nameLabel" destination="5gg-Ng-2Fq" id="P0R-nL-ImN"/>
                         <outlet property="phoneTF" destination="lpN-Aa-MI6" id="rGo-Th-lHy"/>
+                        <segue destination="B7z-pl-a26" kind="presentation" identifier="updatingSegue" id="IzF-Xo-5T5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOV-0W-0lH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207" y="2460"/>
+        </scene>
+        <!--Updating-->
+        <scene sceneID="dOw-XM-vbC">
+            <objects>
+                <viewController title="Updating" id="B7z-pl-a26" customClass="UpdatingController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bii-pe-SMJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fsN-nE-BEz"/>
+                    </layoutGuides>
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="Kwf-B9-76d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bJh-X5-k56">
+                                <rect key="frame" x="238" y="249" width="124" height="101"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-default-white" translatesAutoresizingMaskIntoConstraints="NO" id="9bo-d5-yzb">
+                                        <rect key="frame" x="37" y="0.0" width="50" height="50"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updating Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZI-3S-wCL">
+                                        <rect key="frame" x="0.0" y="55" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="vRQ-Ya-HL7">
+                                        <rect key="frame" x="52" y="81" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bJh-X5-k56" firstAttribute="centerY" secondItem="Kwf-B9-76d" secondAttribute="centerY" id="dsQ-yC-AE1"/>
+                            <constraint firstItem="bJh-X5-k56" firstAttribute="centerX" secondItem="Kwf-B9-76d" secondAttribute="centerX" id="i5j-CO-Bex"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="9bo-d5-yzb" id="ueg-GC-szB"/>
+                        <outlet property="loading" destination="vRQ-Ya-HL7" id="v5l-Ca-m7v"/>
+                        <outlet property="message" destination="QZI-3S-wCL" id="0D3-EA-cyH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfV-XM-iG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939" y="2460"/>
         </scene>
         <!--My Account-->
         <scene sceneID="wz1-eJ-Dus">
@@ -2977,11 +3023,12 @@ If you choose to visit the website, your visit and any dispute over privacy is s
         <image name="mail" width="50" height="50"/>
         <image name="phone" width="50" height="50"/>
         <image name="user-default-gray" width="50" height="50"/>
+        <image name="user-default-white" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rzU-PC-LgD"/>
         <segue reference="Kif-Vz-DCi"/>
-        <segue reference="SXe-C1-c9P"/>
+        <segue reference="rzU-PC-LgD"/>
         <segue reference="QyJ-ms-O6Y"/>
+        <segue reference="SXe-C1-c9P"/>
     </inferredMetricsTieBreakers>
 </document>

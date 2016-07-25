@@ -20,9 +20,12 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     let aptList = ["Elita Promenade","Brigade Millennium"]
     var selectedApt = ""
     
+    var updateEntry = [:]
+    
     
     let details = UserDetails().getDetails()
     let dbAccessor = DbManager(tableName: "ClientDetails")
+    var updatingController : UpdatingController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,42 +118,31 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
             nameLabel.becomeFirstResponder()
         }
         else {
-            nameLabel.userInteractionEnabled = true
+            nameLabel.userInteractionEnabled = false
             emailTF.userInteractionEnabled = false
             phoneTF.userInteractionEnabled = false
             addressTV.userInteractionEnabled = false
             dropDown.userInteractionEnabled = false
             aptLabel.textColor = UIColor.blackColor()
-            let updateEntry = ["Name" : nameLabel.text!,"email" : emailTF.text!,"phoneNumber" : phoneTF.text!,"address" : addressTV.text!,"address2" : selectedApt,"emailOld" : details!["email"] as! String]
-            if validateFields(updateEntry){
-                self.view.userInteractionEnabled = false
-                self.navigationController?.navigationBar.userInteractionEnabled = false
-                dbAccessor.update(updateEntry, onComplete: {
-                    (result,response,error) in
-                    if((error) != nil) {
-                        let alertController = UIAlertController(title: "Update Failed", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
-                        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
-                        self.view.userInteractionEnabled = true
-                        self.navigationController?.navigationBar.userInteractionEnabled = true
-                        self.presentViewController(alertController, animated: true, completion: nil)
-                        self.viewWillAppear(true)
-                    }
-                    else {
-                        let newEntry = ["Name" : self.details!["Name"] as! String!,"email":updateEntry["email"] as String!,"password":self.details!["password"] as! String!,"phoneNumber":updateEntry["phoneNumber"] as String!,"address":updateEntry["address"] as String!,"address2":updateEntry["address2"] as String!]
-                        UserDetails().setDetails(newEntry)
-                        let alertController = UIAlertController(title: "Update Successful", message:"Your details have been updated", preferredStyle: UIAlertControllerStyle.Alert)
-                        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
-                        self.view.userInteractionEnabled = true
-                        self.navigationController?.navigationBar.userInteractionEnabled = true
-                        self.presentViewController(alertController, animated: true, completion: nil)
-                        self.viewWillAppear(true)
-                    }
-                })
+            updateEntry = ["Name" : nameLabel.text!,"email" : emailTF.text!,"phoneNumber" : phoneTF.text!,"address" : addressTV.text!,"address2" : selectedApt,"emailOld" : details!["email"] as! String]
+            if validateFields(updateEntry) {
+//                self.view.userInteractionEnabled = false
+//                self.navigationController?.navigationBar.userInteractionEnabled = false
+                performSegueWithIdentifier("updatingSegue", sender: self)
                 //UserDetails().setDetails(updateEntry)
             }
             else {
                 viewWillAppear(true)
             }
+        }
+    }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "updatingSegue" {
+            updatingController = segue.destinationViewController as? UpdatingController
+            updatingController!.updateDetails(updateEntry as [NSObject : AnyObject],details: details!)
         }
     }
     

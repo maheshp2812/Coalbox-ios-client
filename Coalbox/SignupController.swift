@@ -31,10 +31,9 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
         }
     }
     
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        drop.resignFirstResponder()
-//        self.view.endEditing(true)
-//    }
+    /*override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+    }*/
     
     func dropDown(dropDown: UIDropDown, didSelectOption option: String, atIndex index: Int) {
         print(option)
