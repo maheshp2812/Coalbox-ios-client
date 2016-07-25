@@ -591,7 +591,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                     <connections>
                         <outlet property="infoLabel" destination="Pav-5G-cmf" id="AG3-GS-6CQ"/>
                         <outlet property="typeOfService" destination="L7q-4D-iN0" id="UYp-Vx-MtD"/>
-                        <segue destination="RFj-LG-eAg" kind="show" identifier="proceedSegue" id="X4G-Vv-XrB"/>
+                        <segue destination="bl5-Ac-8XA" kind="show" identifier="ratesSegue" id="GqU-SN-1W0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWF-V8-Rgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -610,25 +610,39 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mql-aA-HlG">
+                                <rect key="frame" x="0.0" y="542" width="600" height="58"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.47450980390000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <state key="normal" title="Submit Order">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubmit:" destination="RFj-LG-eAg" eventType="touchUpInside" id="1Jx-2j-uP4"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="lRD-8f-owM">
+                                <rect key="frame" x="290" y="561" width="20" height="20"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8OX-lZ-CTL">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="534"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhC-HB-ymN" userLabel="bottomBorder">
-                                        <rect key="frame" x="8" y="343" width="584" height="1"/>
+                                        <rect key="frame" x="8" y="388" width="584" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="dqR-I9-IDg"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eG5-7j-rdF" userLabel="topBorder">
-                                        <rect key="frame" x="8" y="114" width="584" height="1"/>
+                                        <rect key="frame" x="8" y="159" width="584" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="aJN-N9-571"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cnj-EU-v6d">
-                                        <rect key="frame" x="20" y="352" width="560" height="24"/>
+                                        <rect key="frame" x="20" y="397" width="560" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBTOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQK-Du-1du">
                                                 <rect key="frame" x="0.0" y="0.0" width="450" height="24"/>
@@ -651,14 +665,14 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axe-5x-5dg">
-                                        <rect key="frame" x="20" y="554" width="560" height="1"/>
+                                        <rect key="frame" x="20" y="599" width="560" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="WlM-1e-5NR"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0z-Db-prZ">
-                                        <rect key="frame" x="20" y="563" width="560" height="24"/>
+                                        <rect key="frame" x="20" y="608" width="560" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRAND TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-Jo-iKP">
                                                 <rect key="frame" x="0.0" y="0.0" width="450" height="24"/>
@@ -681,7 +695,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                         </constraints>
                                     </stackView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWX-TD-EGh">
-                                        <rect key="frame" x="8" y="123" width="584" height="212"/>
+                                        <rect key="frame" x="8" y="168" width="584" height="212"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="212" id="l6t-2d-Dbl"/>
                                         </constraints>
@@ -690,13 +704,16 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                         </connections>
                                     </containerView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1G-0v-nvO">
-                                        <rect key="frame" x="20" y="406" width="560" height="31"/>
+                                        <rect key="frame" x="20" y="451" width="560" height="31"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="htg-jH-O62">
                                                 <rect key="frame" x="0.0" y="0.0" width="511" height="31"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get your clothes delivered with hangers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQD-3E-nAP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="257" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive crisp, starched clothes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQD-3E-nAP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="202" id="atD-wj-Z5O"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -722,7 +739,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zr6-SO-4wf">
-                                        <rect key="frame" x="20" y="445" width="560" height="31"/>
+                                        <rect key="frame" x="20" y="490" width="560" height="31"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ewr-fU-HhT">
                                                 <rect key="frame" x="0.0" y="0.0" width="511" height="31"/>
@@ -754,7 +771,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-1Y-S5P">
-                                        <rect key="frame" x="20" y="496" width="560" height="50"/>
+                                        <rect key="frame" x="20" y="541" width="560" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SPECIAL INSTRUCTIONS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XXt-To-e7C" customClass="HoshiTextField" customModule="Coalbox" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
@@ -775,7 +792,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Zsw-o2-CWu">
-                                        <rect key="frame" x="20" y="20" width="298" height="75"/>
+                                        <rect key="frame" x="20" y="65" width="298" height="75"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o6G-Wo-hOi">
                                                 <rect key="frame" x="0.0" y="0.0" width="289" height="25"/>
@@ -867,7 +884,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                     <constraint firstItem="Cnj-EU-v6d" firstAttribute="top" secondItem="RhC-HB-ymN" secondAttribute="bottom" constant="8" symbolic="YES" id="bfl-5c-LEM"/>
                                     <constraint firstItem="hdg-1Y-S5P" firstAttribute="top" secondItem="zr6-SO-4wf" secondAttribute="bottom" constant="20" id="cTJ-6Z-ErU"/>
                                     <constraint firstItem="Cnj-EU-v6d" firstAttribute="trailing" secondItem="A1G-0v-nvO" secondAttribute="trailing" id="e3d-jy-w66"/>
-                                    <constraint firstItem="Zsw-o2-CWu" firstAttribute="top" secondItem="8OX-lZ-CTL" secondAttribute="top" constant="20" id="elP-PX-Bfn"/>
+                                    <constraint firstItem="Zsw-o2-CWu" firstAttribute="top" secondItem="8OX-lZ-CTL" secondAttribute="top" constant="65" id="elP-PX-Bfn"/>
                                     <constraint firstItem="zr6-SO-4wf" firstAttribute="trailing" secondItem="hdg-1Y-S5P" secondAttribute="trailing" id="h0x-aI-FUb"/>
                                     <constraint firstItem="eG5-7j-rdF" firstAttribute="trailing" secondItem="8OX-lZ-CTL" secondAttribute="trailingMargin" id="hr8-HH-I5Y"/>
                                     <constraint firstItem="eG5-7j-rdF" firstAttribute="leading" secondItem="LWX-TD-EGh" secondAttribute="leading" id="hrN-Hh-JYn"/>
@@ -883,20 +900,6 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                     <constraint firstItem="RhC-HB-ymN" firstAttribute="top" secondItem="LWX-TD-EGh" secondAttribute="bottom" constant="8" symbolic="YES" id="zUp-WH-2sf"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mql-aA-HlG">
-                                <rect key="frame" x="0.0" y="542" width="600" height="58"/>
-                                <color key="backgroundColor" red="0.066666666669999999" green="0.47450980390000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
-                                <state key="normal" title="Submit Order">
-                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSubmit:" destination="RFj-LG-eAg" eventType="touchUpInside" id="1Jx-2j-uP4"/>
-                                </connections>
-                            </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="lRD-8f-owM">
-                                <rect key="frame" x="290" y="561" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -916,6 +919,8 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                         <outlet property="grandTotalLabel" destination="EXz-As-CoL" id="eBE-tW-POD"/>
                         <outlet property="loading" destination="lRD-8f-owM" id="gzM-1a-7PA"/>
                         <outlet property="pickupDateLabel" destination="kdd-ph-kwH" id="btA-ak-N6n"/>
+                        <outlet property="s1Price" destination="ikK-jL-Zgd" id="dbb-aZ-FLJ"/>
+                        <outlet property="s2Price" destination="gL4-uF-MNQ" id="lOn-rO-gXz"/>
                         <outlet property="scrollView" destination="8OX-lZ-CTL" id="ED1-32-E4W"/>
                         <outlet property="service1" destination="MMD-GH-dfw" id="4ad-Lw-Tuj"/>
                         <outlet property="service2" destination="Tef-jM-MTW" id="rwK-bO-dzC"/>
@@ -929,6 +934,53 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Nb-cX-oJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="395" y="3285"/>
+        </scene>
+        <!--Getting Rates Controller-->
+        <scene sceneID="nM5-SJ-fQg">
+            <objects>
+                <viewController id="bl5-Ac-8XA" customClass="GettingRatesController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WPM-l5-RNL"/>
+                        <viewControllerLayoutGuide type="bottom" id="upp-yD-ELb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Zu-hg-Hbk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HDo-KX-Vqx">
+                                <rect key="frame" x="250" y="249" width="100" height="101"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rupee" translatesAutoresizingMaskIntoConstraints="NO" id="luc-2p-ofi">
+                                        <rect key="frame" x="25" y="0.0" width="50" height="50"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting rates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-UX-swn">
+                                        <rect key="frame" x="0.0" y="55" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fti-Tt-RLx">
+                                        <rect key="frame" x="40" y="81" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HDo-KX-Vqx" firstAttribute="centerY" secondItem="3Zu-hg-Hbk" secondAttribute="centerY" id="NwG-nM-cOz"/>
+                            <constraint firstItem="HDo-KX-Vqx" firstAttribute="centerX" secondItem="3Zu-hg-Hbk" secondAttribute="centerX" id="YXt-cV-oWG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="luc-2p-ofi" id="r6O-aq-QYN"/>
+                        <outlet property="loading" destination="fti-Tt-RLx" id="mde-ox-zMT"/>
+                        <outlet property="message" destination="Qfg-UX-swn" id="61d-sH-ZdH"/>
+                        <segue destination="RFj-LG-eAg" kind="show" identifier="proceedSegue" id="GVn-aW-nfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TdX-Mm-R3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-344" y="3525"/>
         </scene>
         <!--Main Page Table Controller-->
         <scene sceneID="nc5-ZT-8sp">
@@ -3022,13 +3074,14 @@ If you choose to visit the website, your visit and any dispute over privacy is s
         <image name="logo" width="299" height="77"/>
         <image name="mail" width="50" height="50"/>
         <image name="phone" width="50" height="50"/>
+        <image name="rupee" width="50" height="50"/>
         <image name="user-default-gray" width="50" height="50"/>
         <image name="user-default-white" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kif-Vz-DCi"/>
-        <segue reference="rzU-PC-LgD"/>
-        <segue reference="QyJ-ms-O6Y"/>
-        <segue reference="SXe-C1-c9P"/>
+        <segue reference="PQa-uK-ppp"/>
+        <segue reference="GVn-aW-nfB"/>
+        <segue reference="lCf-fo-5cQ"/>
+        <segue reference="QAI-3z-Lqu"/>
     </inferredMetricsTieBreakers>
 </document>

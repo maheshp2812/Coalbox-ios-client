@@ -16,19 +16,19 @@ class SummaryTableController : UITableViewController {
     var items : [(String,AnyObject)] = []
     
     var numberOfItems = 0
-    var itemRates : Dictionary<String,Int> = [:]
+    var itemRates : [NSObject : AnyObject]?
     
     var subtotal : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("items",itemRates)
         numberOfItems = getCount()
-        itemRates = ItemRates().getAllDetails()
         let nib = UINib(nibName: "SummaryPageCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
+        itemsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         itemsList.delegate = self
         itemsList.dataSource = self
-        itemsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(itemsList)
         self.tableView.separatorStyle = .None
         self.tableView.allowsSelection = false
@@ -53,10 +53,12 @@ class SummaryTableController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        print("here1")
         let cell : SummaryPageCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! SummaryPageCell
+        let a = returnTableName(items[indexPath.row].0)
         cell.clothLabel?.text = items[indexPath.row].0
         cell.numberLabel.text =  "x" + String(items[indexPath.row].1)
-        let rate = itemRates[items[indexPath.row].0]!
+        let rate = Int(itemRates![a] as! NSNumber)
         subtotal += rate * Int(items[indexPath.row].1 as! NSNumber)
         cell.costLabel!.text = "Rs." + String(rate  * Int(items[indexPath.row].1 as! NSNumber))
         return cell
@@ -85,5 +87,44 @@ class SummaryTableController : UITableViewController {
             return true
         }
         return false
+    }
+    
+    func returnTableName(name : String) -> String {
+        if name == "Single Bedsheets" {
+            return "BedsheetsSingle"
+        }
+        else if name == "Double Bedsheets" {
+            return "BedsheetsDouble"
+        }
+        else if name == "Cotton Dhotis" {
+            return "CottonDhotis"
+        }
+        else if name == "Cotton Sarees" {
+            return "CottonSarees"
+        }
+        else if name == "Door Curtains" {
+            return "DoorCurtains"
+        }
+        else if name == "Silk Dhotis" {
+            return "SilkDhotis"
+        }
+        else if name == "Sofa Covers" {
+            return "SofaCovers"
+        }
+        else if name == "Standard Garments" {
+            return "StandardGarments"
+        }
+        else if name == "2 pc Suit" {
+            return "Suit2pc"
+        }
+        else if name == "3 pc Suit" {
+            return "Suit3pc"
+        }
+        else if name == "Window Curtains" {
+            return "WindowCurtains"
+        }
+        else {
+            return name
+        }
     }
 }

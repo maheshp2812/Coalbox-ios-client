@@ -16,6 +16,7 @@ class SelectServiceController : UIViewController {
     var deliveryDate : NSDate?
     var pickupContainer : PickupController?
     var deliveryContainer : DeliveryController?
+    var ratesView : GettingRatesController?
     var daysForDelivery : Double = 2
     
     let orderDetail = OrderDetails()
@@ -72,6 +73,8 @@ class SelectServiceController : UIViewController {
             self.pickupContainer = segue.destinationViewController as? PickupController
         } else if segue.identifier == "serviceToDeliverySegue" {
             self.deliveryContainer = segue.destinationViewController as? DeliveryController
+        } else if segue.identifier == "ratesSegue" {
+            ratesView = segue.destinationViewController as? GettingRatesController
         }
     }
     
@@ -105,7 +108,8 @@ class SelectServiceController : UIViewController {
             } else {
                 orderDetail.setDetail("Express", forKey: "serviceType")
             }
-            performSegueWithIdentifier("proceedSegue", sender: self)
+            performSegueWithIdentifier("ratesSegue", sender: self)
+            print("here4")
         }
         else {
             let alertController = UIAlertController(title: "Cannot proceed", message:"Pick up date must be selected", preferredStyle: UIAlertControllerStyle.Alert)

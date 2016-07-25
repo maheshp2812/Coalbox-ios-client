@@ -36,6 +36,7 @@
 		EB83C4BF1D155A71006570C1 /* Sha1Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83C4BE1D155A71006570C1 /* Sha1Security.swift */; };
 		EB8EB0EA1D01983C00676A22 /* DbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8EB0E91D01983C00676A22 /* DbManager.swift */; };
 		EB8F1F2A1D463C1E006036A1 /* UpdatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1F291D463C1E006036A1 /* UpdatingController.swift */; };
+		EB8F1F2C1D4655AC006036A1 /* GettingRatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1F2B1D4655AC006036A1 /* GettingRatesController.swift */; };
 		EB9453781D2A9433002966FC /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94536C1D2A9433002966FC /* AkiraTextField.swift */; };
 		EB9453791D2A9433002966FC /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94536D1D2A9433002966FC /* HoshiTextField.swift */; };
 		EB94537A1D2A9433002966FC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB94536E1D2A9433002966FC /* Info.plist */; };
@@ -131,6 +132,7 @@
 		EB83C4BE1D155A71006570C1 /* Sha1Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sha1Security.swift; sourceTree = "<group>"; };
 		EB8EB0E91D01983C00676A22 /* DbManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbManager.swift; sourceTree = "<group>"; };
 		EB8F1F291D463C1E006036A1 /* UpdatingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatingController.swift; sourceTree = "<group>"; };
+		EB8F1F2B1D4655AC006036A1 /* GettingRatesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GettingRatesController.swift; sourceTree = "<group>"; };
 		EB94536C1D2A9433002966FC /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
 		EB94536D1D2A9433002966FC /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
 		EB94536E1D2A9433002966FC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
 				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
 				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EB8F1F2B1D4655AC006036A1 /* GettingRatesController.swift */,
 				EB8F1F291D463C1E006036A1 /* UpdatingController.swift */,
 				EB16D5CD1D46073B00134417 /* PrivacyPolicyController.swift */,
 				EB16D5CB1D4600F800134417 /* TnCController.swift */,
@@ -495,6 +498,7 @@
 				EB83C4BF1D155A71006570C1 /* Sha1Security.swift in Sources */,
 				EB1E8F1F1D27B219004C5A35 /* SubmitOrderController.swift in Sources */,
 				EB717E9E1D435A16008EB917 /* SummaryPageCell.swift in Sources */,
+				EB8F1F2C1D4655AC006036A1 /* GettingRatesController.swift in Sources */,
 				EBAEA21A1D1FBBEE00548CCA /* Ionicons.swift in Sources */,
 				EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */,
 				EB717EA31D43B5C0008EB917 /* OrderDetailsTableController.swift in Sources */,

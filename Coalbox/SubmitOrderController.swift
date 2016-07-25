@@ -23,7 +23,10 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var service1: UISwitch!
     @IBOutlet weak var service2: UISwitch!
-    var itemRates = ItemRates()
+    
+    @IBOutlet weak var s1Price: UILabel!
+    @IBOutlet weak var s2Price: UILabel!
+    var itemRates : [NSObject : AnyObject]?
 
     var summaryController : SummaryTableController? = nil
     
@@ -54,24 +57,26 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
         serviceType.text = orderDetails.getDetail("serviceType") as? String
         pickupDateLabel.text = (orderDetails.getDetail("pickupDate")! as! String) + ", " + (orderDetails.getDetail("pickupSlot")! as! String)
         deliveryDateLabel.text = (orderDetails.getDetail("deliveryDate")! as! String) + ", " + (orderDetails.getDetail("deliverySlot")! as! String)
+        s1Price.text = "( +Rs." + String(itemRates!["service1"] as! NSNumber) + " )"
+        s2Price.text = "( +Rs." + String(itemRates!["service2"] as! NSNumber) + " )"
     }
     
     @IBAction func service1(sender: UISwitch) {
         if sender.on == true {
-            grandTotal += itemRates.get("Service1")!
+            grandTotal += Int(itemRates!["service1"] as! NSNumber)
         }
         else {
-            grandTotal -= itemRates.get("Service1")!
+            grandTotal -= Int(itemRates!["service1"] as! NSNumber)
         }
         grandTotalLabel.text = "Rs." + String(grandTotal)
     }
 
     @IBAction func service2(sender: UISwitch) {
         if sender.on == true {
-            grandTotal += itemRates.get("Service2")!
+            grandTotal += Int(itemRates!["service2"] as! NSNumber)
         }
         else {
-            grandTotal -= itemRates.get("Service2")!
+            grandTotal -= Int(itemRates!["service2"] as! NSNumber)
         }
         grandTotalLabel.text = "Rs." + String(grandTotal)
     }
@@ -84,13 +89,13 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
         if let a = (orderDetails.getDetail("service1") as? Bool) {
             service1.on = a
             if a == true {
-                grandTotal += itemRates.get("Service1")!
+                grandTotal += Int(itemRates!["service1"] as! NSNumber)
             }
         }
         if let a = (orderDetails.getDetail("service2") as? Bool) {
             service2.on = a
             if a == true {
-                grandTotal += itemRates.get("Service2")!
+                grandTotal += Int(itemRates!["service2"] as! NSNumber)
             }
         }
         if let a = (orderDetails.getDetail("service3") as? String) {
@@ -143,6 +148,7 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "summaryTableSegue" {
             self.summaryController = segue.destinationViewController as? SummaryTableController
+            summaryController?.itemRates = self.itemRates
         }
         else if segue.identifier == "loginSegue" {
             let loginController = segue.destinationViewController as? ViewController

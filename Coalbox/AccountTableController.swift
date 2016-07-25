@@ -133,9 +133,6 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
                 performSegueWithIdentifier("updatingSegue", sender: self)
                 //UserDetails().setDetails(updateEntry)
             }
-//            else {
-//                viewWillAppear(true)
-//            }
         }
     }
     

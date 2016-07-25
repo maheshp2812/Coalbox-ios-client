@@ -45,4 +45,8 @@ class DbManager {
     func verifyEmail(newEntry: AnyObject?,onComplete : MSAPIBlock) {
         client.invokeAPI("EmailVerification", body: newEntry, HTTPMethod: "POST", parameters: nil, headers: nil, completion: onComplete)
     }
+    
+    func getRates(onComplete: MSItemBlock) {
+        table.readWithId("CA7B6DBB-84E6-45A3-B3FD-3CC340EB0B5A", completion: onComplete)
+    }
 }
