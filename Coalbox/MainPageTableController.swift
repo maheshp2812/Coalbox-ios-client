@@ -53,6 +53,7 @@ class MainPageTableController : UITableViewController {
                         self.parentController.priceView.backgroundColor = UIColor(red: 17/255, green: 121/255, blue: 245/255, alpha: 1)
                     }
                     self.parentController.pickupDateLabel.text = dateString + ", " + ((result?.valueForKey("pickupSlot"))! as! String)
+                    self.parentController.orderIDLabel.text = result?.valueForKey("id") as? String
                     self.parentController?.orderIDStack.hidden = false
                     self.parentController?.priceView.hidden = false
                     self.parentController?.activityIndicator.stopAnimating()

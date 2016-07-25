@@ -19,6 +19,7 @@ class OrderDetailsController : UIViewController {
     @IBOutlet weak var specialLabel: UILabel!
     @IBOutlet weak var specialStack: UIStackView!
     
+    @IBOutlet weak var orderIDLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,7 @@ class OrderDetailsController : UIViewController {
         
         subtotalLabel.text = "Rs." + String((orderDetails?.valueForKey("subtotal"))! as! NSNumber)
         grandTotalLabel.text = "Rs." + String((orderDetails?.valueForKey("totalPrice"))! as! NSNumber)
+        orderIDLabel.text = orderDetails?.valueForKey("id") as? String
         super.viewWillAppear(true)
     }
     

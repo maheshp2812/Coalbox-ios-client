@@ -54,6 +54,7 @@ class ViewOrdersController : UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: OrderCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! OrderCell
+        cell.orderIDLabel.text = ordersList![indexPath.row].valueForKey("id") as? String
         cell.priceLabel.text = "Rs." + String(ordersList![indexPath.row].valueForKey("totalPrice") as! NSNumber)
         cell.deliveryDateLabel.text = (ordersList![indexPath.row].valueForKey("deliveryDate") as? String)! + ", " + (ordersList![indexPath.row].valueForKey("deliverySlot") as? String)!
         cell.pickupDateLabel.text = (ordersList![indexPath.row].valueForKey("pickupDate") as? String)! + ", " + (ordersList![indexPath.row].valueForKey("pickupSlot") as? String)!
