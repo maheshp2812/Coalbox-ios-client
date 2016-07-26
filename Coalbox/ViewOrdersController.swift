@@ -17,8 +17,11 @@ class ViewOrdersController : UITableViewController {
     var orderDetailsController : OrderDetailsController? = nil
     
     override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         super.viewWillAppear(true)
-        onRefresh()
+//        onRefresh()
     }
     
     override func viewDidLoad() {
@@ -26,7 +29,6 @@ class ViewOrdersController : UITableViewController {
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         refresher.addTarget(self, action: #selector(self.onRefresh), forControlEvents: .ValueChanged)
         self.refreshControl = refresher
-        self.refreshControl!.beginRefreshing()
         super.viewDidLoad()
     }
     
@@ -40,8 +42,6 @@ class ViewOrdersController : UITableViewController {
             else if self.ordersList?.count > 0 {
                 print("orderList:",self.ordersList)
             }
-            self.tableView.delegate = self
-            self.tableView.dataSource = self
             self.tableView.reloadData()
             self.refreshControl!.endRefreshing()
         })

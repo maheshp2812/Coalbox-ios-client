@@ -102,6 +102,9 @@ class SummaryTableController : UITableViewController {
         else if name == "Cotton Sarees" {
             return "CottonSarees"
         }
+        else if name == "Silk Sarees" {
+            return "SilkSarees"
+        }
         else if name == "Door Curtains" {
             return "DoorCurtains"
         }

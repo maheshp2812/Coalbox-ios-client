@@ -794,18 +794,21 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                         <rect key="frame" x="20" y="65" width="298" height="75"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o6G-Wo-hOi">
-                                                <rect key="frame" x="0.0" y="0.0" width="289" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="298" height="25"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service type :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDg-Mi-pPL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="89" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERVICE TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDg-Mi-pPL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="95" id="kuC-tz-hde"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVs-Bb-uKt">
-                                                        <rect key="frame" x="99" y="0.0" width="190" height="25"/>
+                                                        <rect key="frame" x="105" y="0.0" width="193" height="25"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="190" id="ugL-XN-LOP"/>
+                                                            <constraint firstAttribute="width" constant="193" id="Srs-cN-9l8"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -816,17 +819,17 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bmE-gL-TvH">
                                                 <rect key="frame" x="0.0" y="25" width="298" height="25"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hj-yP-Yuq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PICKUP DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hj-yP-Yuq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="25"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="86" id="31b-dl-nwU"/>
+                                                            <constraint firstAttribute="width" constant="95" id="31b-dl-nwU"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-ph-kwH">
-                                                        <rect key="frame" x="96" y="0.0" width="202" height="25"/>
+                                                        <rect key="frame" x="105" y="0.0" width="193" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -836,13 +839,13 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-kc-nFd">
                                                 <rect key="frame" x="0.0" y="50" width="298" height="25"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csV-qd-95j">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DELIVERY DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csV-qd-95j">
                                                         <rect key="frame" x="0.0" y="0.0" width="95" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="95" id="TDW-jR-T6m"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5l-1A-Jf3">
@@ -1291,7 +1294,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="tlq-ra-1CK" kind="show" id="7Sy-aG-pca"/>
+                                            <segue destination="FeH-KK-RPW" kind="show" id="bel-XS-GGX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBK-Jw-ZYQ">
@@ -2034,6 +2037,53 @@ If you choose to visit the website, your visit and any dispute over privacy is s
             </objects>
             <point key="canvasLocation" x="2594" y="1053"/>
         </scene>
+        <!--Downloading Orders Controller-->
+        <scene sceneID="P8J-QJ-qrR">
+            <objects>
+                <viewController id="FeH-KK-RPW" customClass="DownloadingOrdersController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fwb-I2-iTT"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Pj-23-f2t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LSk-Ra-GRa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-5T-bxc">
+                                <rect key="frame" x="204" y="249" width="192" height="101"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloading" translatesAutoresizingMaskIntoConstraints="NO" id="7aB-kc-DQe">
+                                        <rect key="frame" x="71" y="0.0" width="50" height="50"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading your orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RI-sl-Y6f">
+                                        <rect key="frame" x="0.0" y="55" width="192" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ccV-Hh-iqj">
+                                        <rect key="frame" x="86" y="81" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xIM-5T-bxc" firstAttribute="centerY" secondItem="LSk-Ra-GRa" secondAttribute="centerY" id="9dz-8G-dYQ"/>
+                            <constraint firstItem="xIM-5T-bxc" firstAttribute="centerX" secondItem="LSk-Ra-GRa" secondAttribute="centerX" id="eph-dm-0gw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="7aB-kc-DQe" id="ke6-Rp-YEC"/>
+                        <outlet property="loading" destination="ccV-Hh-iqj" id="gUI-pU-JAK"/>
+                        <outlet property="message" destination="0RI-sl-Y6f" id="mYT-1f-tQx"/>
+                        <segue destination="tlq-ra-1CK" kind="show" identifier="viewOrdersSegue" id="0vK-pT-nDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46Y-xS-Kvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3319" y="1053"/>
+        </scene>
         <!--Order Details Table Controller-->
         <scene sceneID="haS-BD-VtF">
             <objects>
@@ -2074,7 +2124,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
         <scene sceneID="ULT-Ae-rF2">
             <objects>
                 <tableViewController title="Options" id="cZf-u2-rCc" customClass="OptionsController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="MRd-a1-tss">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="MRd-a1-tss">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -3150,6 +3200,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
     <resources>
         <image name="address" width="50" height="50"/>
         <image name="checkmark" width="50" height="50"/>
+        <image name="downloading" width="50" height="50"/>
         <image name="logo" width="299" height="77"/>
         <image name="mail" width="50" height="50"/>
         <image name="phone" width="50" height="50"/>

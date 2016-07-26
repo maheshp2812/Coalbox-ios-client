@@ -43,7 +43,7 @@ class OrderDetailsTableController : UITableViewController {
         let cell : SummaryPageCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! SummaryPageCell
         cell.clothLabel?.text = returnDisplayName(filteredData[indexPath.row].0)
         cell.numberLabel.text =  "x" + String(filteredData[indexPath.row].1)
-        let rate = Int(itemRates![returnDisplayName(filteredData[indexPath.row].0)]! as! NSNumber)
+        let rate = Int(itemRates![filteredData[indexPath.row].0]! as! NSNumber)
         subtotal += rate * Int(filteredData[indexPath.row].1 as! NSNumber)
         cell.costLabel!.text = "Rs." + String(rate  * Int(filteredData[indexPath.row].1 as! NSNumber))
         return cell

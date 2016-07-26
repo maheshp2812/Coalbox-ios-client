@@ -29,21 +29,20 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     var itemRates : [NSObject : AnyObject]?
 
     var summaryController : SummaryTableController? = nil
+    var tempOffset : CGFloat?
     
     var grandTotal : Int = 0
     @IBOutlet weak var grandTotalLabel: UILabel!
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        scrollView.setContentOffset(CGPointMake(0, tempOffset!), animated: true)
         return true
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        scrollView.setContentOffset(CGPointMake(0, 250), animated: true)
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        tempOffset = scrollView.contentOffset.y
+        scrollView.setContentOffset(CGPointMake(0, 300), animated: true)
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -1,31 +1,31 @@
 //
-//  GettingRatesController.swift
+//  DownloadingOrdersController.swift
 //  Coalbox
 //
-//  Created by Mahesh Parab on 25/07/16.
+//  Created by Mahesh Parab on 26/07/16.
 //  Copyright © 2016 Coalbox Ironing Services. All rights reserved.
 //
 
 import UIKit
 
-class GettingRatesController : UIViewController {
-    var submitController : SubmitOrderController?
-    var itemRates : [NSObject : AnyObject]? = nil
-    
+class DownloadingOrdersController : UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
+    let dbAccessor = DbManager(tableName: "OrderDetails")
+    var ordersList : NSArray?
+    var viewOrdersController : ViewOrdersController?
+    
     var backtrack = false
     
     override func viewDidLoad() {
-        print("here2")
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        loading.startAnimating()
         if backtrack == true {
             backtrack = false
             image.image = nil
@@ -34,11 +34,12 @@ class GettingRatesController : UIViewController {
         }
         else {
             super.viewWillAppear(true)
-            ItemRates().downloadRates({
-                (results,error) in
-                if error != nil || results?.count == 0 {
+            dbAccessor.accessOrders(["email" : UserDetails().getDetail("email") as! String], onComplete: {
+                (result,response,error) in
+                self.ordersList = result as? NSArray
+                if error != nil {
                     self.image.image = UIImage(named: "error.png")
-                    self.message.text = "Could not get rates"
+                    self.message.text = "Orders could not be retrieved"
                     self.loading.stopAnimating()
                     let delay = 1 * Double(NSEC_PER_SEC)
                     let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
@@ -47,28 +48,22 @@ class GettingRatesController : UIViewController {
                     }
                 }
                 else {
-                    ItemRates().rates = results
-                    self.itemRates = results
+                    self.loading.stopAnimating()
                     self.backtrack = true
-                    self.performSegueWithIdentifier("proceedSegue", sender: self)
+                    self.performSegueWithIdentifier("viewOrdersSegue", sender: self)
                 }
             })
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        super.viewWillDisappear(true)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "proceedSegue" {
-            submitController = segue.destinationViewController as? SubmitOrderController
-            submitController?.itemRates = self.itemRates
+        if segue.identifier == "viewOrdersSegue" {
+            viewOrdersController = segue.destinationViewController as? ViewOrdersController
+            viewOrdersController?.ordersList = self.ordersList
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }

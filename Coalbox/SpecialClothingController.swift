@@ -116,4 +116,11 @@ class SpecialClothingController : UITableViewController {
     @IBAction func onClickStepper8(sender: UIStepper) {
         label8.text = Int(sender.value).description
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        if label1.text! != "0" || label2.text! != "0" || label3.text! != "0" || label4.text! != "0" || label5.text! != "0" || label6.text! != "0" || label7.text! != "0" || label8.text! != "0" {
+            check = true
+        }
+        super.viewWillDisappear(true)
+    }
 }
