@@ -20,6 +20,7 @@
 		EB3A97DC1D2D40A100B415E2 /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3A97DA1D2D40A100B415E2 /* MBCircularProgressBarView.m */; };
 		EB50FFEA1D4744AE008C9E96 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FFE91D4744AE008C9E96 /* OptionsController.swift */; };
 		EB50FFEC1D4758A2008C9E96 /* DownloadingOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FFEB1D4758A2008C9E96 /* DownloadingOrdersController.swift */; };
+		EB50FFEE1D479E4F008C9E96 /* LoadSocietiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FFED1D479E4F008C9E96 /* LoadSocietiesController.swift */; };
 		EB5594D11CF2E1600054A4F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */; };
 		EB5594D31CF2E1600054A4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594D21CF2E1600054A4F4 /* ViewController.swift */; };
 		EB5594D61CF2E1600054A4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5594D41CF2E1600054A4F4 /* Main.storyboard */; };
@@ -114,6 +115,7 @@
 		EB3A97DA1D2D40A100B415E2 /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarView.m; path = Coalbox/MBCircularProgressBarView.m; sourceTree = "<group>"; };
 		EB50FFE91D4744AE008C9E96 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
 		EB50FFEB1D4758A2008C9E96 /* DownloadingOrdersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingOrdersController.swift; sourceTree = "<group>"; };
+		EB50FFED1D479E4F008C9E96 /* LoadSocietiesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadSocietiesController.swift; sourceTree = "<group>"; };
 		EB5594CD1CF2E15F0054A4F4 /* Coalbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coalbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5594D21CF2E1600054A4F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
 				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
 				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EB50FFED1D479E4F008C9E96 /* LoadSocietiesController.swift */,
 				EB50FFEB1D4758A2008C9E96 /* DownloadingOrdersController.swift */,
 				EB50FFE91D4744AE008C9E96 /* OptionsController.swift */,
 				EB8F1F2B1D4655AC006036A1 /* GettingRatesController.swift */,
@@ -523,6 +526,7 @@
 				EB996E3A1D0D685200E2DF58 /* UserDetails.swift in Sources */,
 				EB2CE9951D3B7D680075D20B /* MainPageTableController.swift in Sources */,
 				EB16D5CC1D4600F800134417 /* TnCController.swift in Sources */,
+				EB50FFEE1D479E4F008C9E96 /* LoadSocietiesController.swift in Sources */,
 				EBC4138D1D1EC9230075B443 /* HSDatePickerViewController.m in Sources */,
 				EB5594D31CF2E1600054A4F4 /* ViewController.swift in Sources */,
 				EBFC00221D30EA220077449C /* UIDropDown.swift in Sources */,

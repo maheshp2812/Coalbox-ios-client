@@ -30,7 +30,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.delegate = self
-        emailTF.delegate = self
+//        emailTF.delegate = self
         phoneTF.delegate = self
         addressTV.delegate = self
         dropDown.delegate = self
@@ -112,7 +112,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
         print("Enter account table")
         if(editing) {
             nameLabel.userInteractionEnabled = true
-            emailTF.userInteractionEnabled = true
+//            emailTF.userInteractionEnabled = true
             phoneTF.userInteractionEnabled = true
             addressTV.userInteractionEnabled = true
             dropDown.userInteractionEnabled = true
@@ -120,7 +120,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
         }
         else {
             nameLabel.userInteractionEnabled = false
-            emailTF.userInteractionEnabled = false
+//            emailTF.userInteractionEnabled = false
             phoneTF.userInteractionEnabled = false
             addressTV.userInteractionEnabled = false
             dropDown.userInteractionEnabled = false

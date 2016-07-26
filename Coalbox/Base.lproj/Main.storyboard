@@ -114,7 +114,7 @@
                                 <items>
                                     <barButtonItem title="Create Account" id="OaD-2R-J0H">
                                         <connections>
-                                            <segue destination="lr2-I3-X2O" kind="show" id="bxv-e7-6dF"/>
+                                            <segue destination="OrT-TL-i81" kind="show" id="2K7-Ay-pDW"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Xx3-pH-Jfg"/>
@@ -1809,12 +1809,59 @@ If you choose to visit the website, your visit and any dispute over privacy is s
             </objects>
             <point key="canvasLocation" x="2629" y="289"/>
         </scene>
+        <!--Load Societies Controller-->
+        <scene sceneID="UIR-0O-WHe">
+            <objects>
+                <viewController id="OrT-TL-i81" customClass="LoadSocietiesController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hgh-Lq-foQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="J3u-7K-ciV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="65F-SL-5MJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gh4-Ch-DMU">
+                                <rect key="frame" x="207" y="249" width="186" height="101"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloading" translatesAutoresizingMaskIntoConstraints="NO" id="fuV-2H-CHz">
+                                        <rect key="frame" x="68" y="0.0" width="50" height="50"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading society list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDb-Gw-BEV">
+                                        <rect key="frame" x="0.0" y="55" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="lT1-20-y3Q">
+                                        <rect key="frame" x="83" y="81" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gh4-Ch-DMU" firstAttribute="centerX" secondItem="65F-SL-5MJ" secondAttribute="centerX" id="bhn-y5-IVy"/>
+                            <constraint firstItem="gh4-Ch-DMU" firstAttribute="centerY" secondItem="65F-SL-5MJ" secondAttribute="centerY" id="k0t-0e-16V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="fuV-2H-CHz" id="YpN-zq-IGf"/>
+                        <outlet property="loading" destination="lT1-20-y3Q" id="D5z-xP-W3d"/>
+                        <outlet property="message" destination="rDb-Gw-BEV" id="ubU-og-xKB"/>
+                        <segue destination="lr2-I3-X2O" kind="show" identifier="signupSegue" id="84D-HL-zhB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z61-x8-4f2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3366" y="289"/>
+        </scene>
         <!--Signup Table Controller-->
         <scene sceneID="hl1-nN-1dG">
             <objects>
                 <tableViewController id="33C-Md-vWb" customClass="SignupTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="rf5-sM-g0X">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="439"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3210,8 +3257,8 @@ If you choose to visit the website, your visit and any dispute over privacy is s
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lCf-fo-5cQ"/>
-        <segue reference="PQa-uK-ppp"/>
-        <segue reference="GVn-aW-nfB"/>
+        <segue reference="0Ml-hE-3y7"/>
         <segue reference="55K-OI-8pF"/>
+        <segue reference="QyJ-ms-O6Y"/>
     </inferredMetricsTieBreakers>
 </document>

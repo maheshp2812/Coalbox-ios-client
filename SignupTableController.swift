@@ -17,11 +17,14 @@ class SignupTableController : UITableViewController,UITextFieldDelegate,UIDropDo
     @IBOutlet weak var dropDown: UIDropDown!
     
     var selectedApt = ""
+    var aptsList : NSArray?
+    var filteredList : NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        generateArray()
         dropDown.delegate = self
-        dropDown.options = ["Elita Promenade","Brigade Millennium"]
+        dropDown.options = filteredList
         dropDown.placeholder = "Select Apartment"
         dropDown.backgroundColor = UIColor.clearColor()
         dropDown.tintColor = UIColor.whiteColor()
@@ -50,5 +53,11 @@ class SignupTableController : UITableViewController,UITextFieldDelegate,UIDropDo
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func generateArray() {
+        for i in aptsList! {
+            filteredList.addObject(i.valueForKey("name")!)
+        }
     }
 }

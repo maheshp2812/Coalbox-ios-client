@@ -49,4 +49,8 @@ class DbManager {
     func getRates(onComplete: MSItemBlock) {
         table.readWithId("CA7B6DBB-84E6-45A3-B3FD-3CC340EB0B5A", completion: onComplete)
     }
+    
+    func getSocieties(onComplete : MSAPIBlock) {
+        client.invokeAPI("ReturnSociety", body: nil, HTTPMethod: "POST", parameters: nil, headers: nil, completion: onComplete)
+    }
 }

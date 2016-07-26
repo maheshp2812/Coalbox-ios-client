@@ -12,6 +12,7 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
     var signupTable : SignupTableController!
     var drop : UIDropDown!
     var selectedApt = ""
+    var aptsList : NSArray?
     
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var switchTC: UISwitch!
@@ -27,6 +28,7 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segueToTable" {
             self.signupTable = segue.destinationViewController as! SignupTableController
+            self.signupTable.aptsList = self.aptsList
         }
     }
     
