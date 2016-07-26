@@ -52,7 +52,6 @@ class PickupController : UIViewController,HSDatePickerViewControllerDelegate {
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([.Hour,.Minute], fromDate: currentDate)
         let hour = components.hour
-        //MARK: Check logic here
         if hour >= 20 {
             let newDate = NSDate().dateByAddingTimeInterval(24*60*60)
             datePick.date = newDate

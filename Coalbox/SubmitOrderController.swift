@@ -53,7 +53,6 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         specialTF.delegate = self
-//        print(orderDetails.getAllDetails())
         serviceType.text = orderDetails.getDetail("serviceType") as? String
         pickupDateLabel.text = (orderDetails.getDetail("pickupDate")! as! String) + ", " + (orderDetails.getDetail("pickupSlot")! as! String)
         deliveryDateLabel.text = (orderDetails.getDetail("deliveryDate")! as! String) + ", " + (orderDetails.getDetail("deliverySlot")! as! String)

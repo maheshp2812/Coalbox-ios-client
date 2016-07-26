@@ -30,8 +30,6 @@ class UpdatingController : UIViewController {
                 self.message.text = "Could not update profile"
                 self.image.image = UIImage(named: "error.png")
                 self.loading.stopAnimating()
-                //                        self.view.userInteractionEnabled = true
-                //                        self.navigationController?.navigationBar.userInteractionEnabled = true
             }
             else {
                 self.message.text = "Profile Updated"

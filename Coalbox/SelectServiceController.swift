@@ -125,12 +125,6 @@ class SelectServiceController : UIViewController {
     }
     
     override func viewWillDisappear(animated: Bool) {
-//        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
-//        self.navigationController?.navigationBar.shadowImage = nil
-//        self.navigationController?.navigationBar.translucent = true
-//        UIApplication.sharedApplication().statusBarStyle = .Default
-//        self.navigationController?.navigationBar.tintColor = UIColor.blueColor()
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor()]
         super.viewWillDisappear(true)
     }
 }

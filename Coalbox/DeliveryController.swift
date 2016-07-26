@@ -21,8 +21,6 @@ class DeliveryController : UIViewController,HSDatePickerViewControllerDelegate {
     }
     
     @IBAction func onValueChange(sender: UISegmentedControl) {
-//        let parentController = self.parentViewController as! SelectServiceController
-//        parentController.changeDeliverySlot(deliverySegmentedControl.selectedSegmentIndex)
     }
     
     func hsDatePickerPickedDate(date: NSDate!) {

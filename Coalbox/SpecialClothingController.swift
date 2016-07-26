@@ -41,7 +41,6 @@ class SpecialClothingController : UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        //print(orderDetails.getAllDetails())
         if let a = orderDetails.getDetail("Cotton Sarees") {
             label1.text = String(a)
             stepper1.value = Double(a as! NSNumber)

@@ -31,7 +31,6 @@ class MainPageController : UIViewController {
         super.viewDidLoad()
         onRefresh(refreshButton)
         UIApplication.sharedApplication().statusBarStyle = .LightContent
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "main-page-background.png")!)
         priceView.layer.cornerRadius = priceView.frame.width/2
     }
     
@@ -45,32 +44,16 @@ class MainPageController : UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "login-page-background.png"), forBarMetrics: .Default)
         self.navigationItem.setHidesBackButton(true, animated: false)
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        
-//        let imageView = UIImageView(frame:CGRectMake(0, 0, 20, 20))
-//        imageView.contentMode = .ScaleAspectFit
-//        imageView.image = UIImage(named: "dark-logo.png")
-//        self.navigationItem.titleView = imageView
         optionButton.target = self
         optionButton.image = UIImage(named: "menu.png")
         optionButton.action = #selector(MainPageController.onMenuClick(_:))
         if let a = UserDetails().getDetails() {
             userdata = a
-            //optionButton.setTitle("My Account", forState: UIControlState.Normal)
-            //optionButton.addTarget(self, action: #selector(MainPageController.onMyAccountClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-            
-//            optionButton.title = "My Account"
-//            optionButton.action = #selector(MainPageController.onMyAccountClick(_:))
             nameLabel.text = a.valueForKey("Name") as? String
-        }
-        else {
-            //optionButton.setTitle("Login", forState: UIControlState.Normal)
-            //optionButton.addTarget(self, action: #selector(MainPageController.onLoginClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-//            optionButton.title = "Login"
         }
         self.navigationItem.rightBarButtonItem = optionButton
         super.viewWillAppear(true)
@@ -81,23 +64,11 @@ class MainPageController : UIViewController {
         if segue.identifier == "mainPageTableSegue" {
             self.mainPageTableController = segue.destinationViewController as? MainPageTableController
         }
-//        else if segue.identifier == "mainPageToLoginPage" {
-//            let loginController = segue.destinationViewController as? ViewController
-//            loginController?.mainPageAccess = true
-//        }
     }
     
     func onMenuClick(sender : UIButton!) {
         performSegueWithIdentifier("menuSegue", sender: self)
     }
-    
-//    func onLoginClick(sender : UIButton!) {
-//        performSegueWithIdentifier("mainPageToLoginPage", sender: self)
-//    }
-//    
-//    func onMyAccountClick(sender : UIButton!) {
-//        performSegueWithIdentifier("mainPageToAccountPage", sender: self)
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -20,7 +20,6 @@ class OrderDetailsTableController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(orderData)
         itemRates = ItemRates().getAllDetails()
         numberOfItems = getCount()
         let nib = UINib(nibName: "SummaryPageCell", bundle: nil)

@@ -84,8 +84,6 @@ class MainPageTableController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        label.frame =  CGRect(x: parentController!.view.frame.width/2 - 125, y: parentController!.view.frame.height/2 - 15, width: 250, height: 30)
-//        label.frame =  CGRect(x: 100, y: 50, width: 250, height: 30)
         let nib = UINib(nibName: "MainPageCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         self.itemsList.delegate = self

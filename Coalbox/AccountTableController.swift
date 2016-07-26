@@ -74,7 +74,6 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
         emailTF.text = details["email"] as? String
         phoneTF.text = details["phoneNumber"] as? String
         addressTV.text = (details["address"] as? String)!
-//        address2TV.text = (details!["address2"] as? String)!
         
         self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -128,10 +127,7 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
             aptLabel.textColor = UIColor.blackColor()
             updateEntry = ["Name" : nameLabel.text!,"email" : emailTF.text!,"phoneNumber" : phoneTF.text!,"address" : addressTV.text!,"address2" : selectedApt,"emailOld" : details["email"] as! String]
             if validateFields(updateEntry) {
-//                self.view.userInteractionEnabled = false
-//                self.navigationController?.navigationBar.userInteractionEnabled = false
                 performSegueWithIdentifier("updatingSegue", sender: self)
-                //UserDetails().setDetails(updateEntry)
             }
         }
     }

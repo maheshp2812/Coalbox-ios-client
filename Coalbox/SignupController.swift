@@ -22,7 +22,6 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login-page-background.png")!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -30,10 +29,6 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
             self.signupTable = segue.destinationViewController as! SignupTableController
         }
     }
-    
-    /*override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
-    }*/
     
     func dropDown(dropDown: UIDropDown, didSelectOption option: String, atIndex index: Int) {
         print(option)
@@ -64,8 +59,6 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
                     self.presentViewController(alertController, animated: true, completion: nil)
                 }else {
                     print("Sign up:",newEntry)
-//                    UserDetails().setDetails(newEntry)
-//                    self.performSegueWithIdentifier("signupToMainPage", sender: self)
                     let alertController = UIAlertController(title: "Verify your identity", message:"An email has been sent to your account for verification", preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
                     self.presentViewController(alertController, animated: true, completion: nil)

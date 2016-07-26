@@ -29,9 +29,6 @@ class PlaceOrderContainerController : UIViewController {
         if let a = orderDetails.getDetail("Standard Garments") {
             tableViewController!.StandardCount.text = String(a)
         }
-        else {
-//            tableViewController?.StandardCount.text = tableViewController
-        }
         if let a = orderDetails.getDetail("Door Curtains") {
             tableViewController?.doorCurtainLabel.text = String(a)
         }

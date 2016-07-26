@@ -10,7 +10,6 @@ import UIKit
 
 class OptionsController : UITableViewController {
     let userDetails = UserDetails().getDetails()
-//    let segueNames = ["loginSegue","myAccountSegue","aboutUsSegue","faqsSegue"]
     
     @IBOutlet weak var accountLabel: UILabel!
     
