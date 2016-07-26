@@ -476,8 +476,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                         <outlet property="priceView" destination="gHf-fW-BDy" id="WIE-w7-vU9"/>
                         <outlet property="refreshButton" destination="J4o-BH-fiS" id="FCs-IF-yVe"/>
                         <outlet property="scrollView" destination="AI3-s9-FIR" id="YHE-sg-Lp5"/>
-                        <segue destination="rF0-AL-lfw" kind="show" identifier="mainPageToAccountPage" id="Pwo-1f-sPa"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="mainPageToLoginPage" id="rzU-PC-LgD"/>
+                        <segue destination="cZf-u2-rCc" kind="show" identifier="menuSegue" id="BrZ-ro-i4Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmI-Lb-eCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1003,7 +1002,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
             <objects>
                 <tableViewController id="pFE-9g-hJC" customClass="AccountTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="22" id="Pw7-OY-NvT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="459"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2040,7 +2039,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
             <objects>
                 <tableViewController id="TCm-Q3-Dvk" customClass="OrderDetailsTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ift-Kf-kJM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="587" height="203"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -2070,6 +2069,86 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CtD-pT-wHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="395" y="289"/>
+        </scene>
+        <!--Options-->
+        <scene sceneID="ULT-Ae-rF2">
+            <objects>
+                <tableViewController title="Options" id="cZf-u2-rCc" customClass="OptionsController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="MRd-a1-tss">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="a0r-ZZ-uoH">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="EAS-0X-C6A" style="IBUITableViewCellStyleDefault" id="Iiw-ik-r3O">
+                                        <rect key="frame" x="0.0" y="35" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iiw-ik-r3O" id="YXC-2P-n1O">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EAS-0X-C6A">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="n6E-Z3-5X7" style="IBUITableViewCellStyleDefault" id="FkT-dd-GAi">
+                                        <rect key="frame" x="0.0" y="79" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FkT-dd-GAi" id="Gy3-jG-KiN">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n6E-Z3-5X7">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fnn-le-FW8" style="IBUITableViewCellStyleDefault" id="U06-UF-9lv">
+                                        <rect key="frame" x="0.0" y="123" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U06-UF-9lv" id="AVB-c9-363">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="FAQs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fnn-le-FW8">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="cZf-u2-rCc" id="tY0-SE-0aO"/>
+                            <outlet property="delegate" destination="cZf-u2-rCc" id="VCo-m0-kCG"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="accountLabel" destination="EAS-0X-C6A" id="PRV-nm-1Px"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginSegue" id="55K-OI-8pF"/>
+                        <segue destination="rF0-AL-lfw" kind="show" identifier="myAccountSegue" id="8c4-Fa-dEH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlN-SW-T7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="289"/>
         </scene>
         <!--Special Clothing-->
         <scene sceneID="oZX-1s-79W">
@@ -3079,9 +3158,9 @@ If you choose to visit the website, your visit and any dispute over privacy is s
         <image name="user-default-white" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="lCf-fo-5cQ"/>
         <segue reference="PQa-uK-ppp"/>
         <segue reference="GVn-aW-nfB"/>
-        <segue reference="lCf-fo-5cQ"/>
-        <segue reference="QAI-3z-Lqu"/>
+        <segue reference="55K-OI-8pF"/>
     </inferredMetricsTieBreakers>
 </document>

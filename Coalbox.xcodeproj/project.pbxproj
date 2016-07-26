@@ -18,6 +18,7 @@
 		EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38D8E61D2259A4001150D0 /* OrderDetails.swift */; };
 		EB3A97DB1D2D40A100B415E2 /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3A97D81D2D40A100B415E2 /* MBCircularProgressBarLayer.m */; };
 		EB3A97DC1D2D40A100B415E2 /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3A97DA1D2D40A100B415E2 /* MBCircularProgressBarView.m */; };
+		EB50FFEA1D4744AE008C9E96 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FFE91D4744AE008C9E96 /* OptionsController.swift */; };
 		EB5594D11CF2E1600054A4F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */; };
 		EB5594D31CF2E1600054A4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594D21CF2E1600054A4F4 /* ViewController.swift */; };
 		EB5594D61CF2E1600054A4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5594D41CF2E1600054A4F4 /* Main.storyboard */; };
@@ -110,6 +111,7 @@
 		EB3A97D81D2D40A100B415E2 /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarLayer.m; path = Coalbox/MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
 		EB3A97D91D2D40A100B415E2 /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarView.h; path = Coalbox/MBCircularProgressBarView.h; sourceTree = "<group>"; };
 		EB3A97DA1D2D40A100B415E2 /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarView.m; path = Coalbox/MBCircularProgressBarView.m; sourceTree = "<group>"; };
+		EB50FFE91D4744AE008C9E96 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
 		EB5594CD1CF2E15F0054A4F4 /* Coalbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coalbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5594D21CF2E1600054A4F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
 				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
 				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EB50FFE91D4744AE008C9E96 /* OptionsController.swift */,
 				EB8F1F2B1D4655AC006036A1 /* GettingRatesController.swift */,
 				EB8F1F291D463C1E006036A1 /* UpdatingController.swift */,
 				EB16D5CD1D46073B00134417 /* PrivacyPolicyController.swift */,
@@ -499,6 +502,7 @@
 				EB1E8F1F1D27B219004C5A35 /* SubmitOrderController.swift in Sources */,
 				EB717E9E1D435A16008EB917 /* SummaryPageCell.swift in Sources */,
 				EB8F1F2C1D4655AC006036A1 /* GettingRatesController.swift in Sources */,
+				EB50FFEA1D4744AE008C9E96 /* OptionsController.swift in Sources */,
 				EBAEA21A1D1FBBEE00548CCA /* Ionicons.swift in Sources */,
 				EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */,
 				EB717EA31D43B5C0008EB917 /* OrderDetailsTableController.swift in Sources */,
