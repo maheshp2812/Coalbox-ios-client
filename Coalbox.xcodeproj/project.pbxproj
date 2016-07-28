@@ -21,6 +21,8 @@
 		EB50FFEA1D4744AE008C9E96 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FFE91D4744AE008C9E96 /* OptionsController.swift */; };
 		EB50FFEC1D4758A2008C9E96 /* DownloadingOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FFEB1D4758A2008C9E96 /* DownloadingOrdersController.swift */; };
 		EB50FFEE1D479E4F008C9E96 /* LoadSocietiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FFED1D479E4F008C9E96 /* LoadSocietiesController.swift */; };
+		EB50FFF11D49DE8D008C9E96 /* OrderDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FFEF1D49DE8D008C9E96 /* OrderDetailsCell.swift */; };
+		EB50FFF21D49DE8D008C9E96 /* OrderDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB50FFF01D49DE8D008C9E96 /* OrderDetailsCell.xib */; };
 		EB5594D11CF2E1600054A4F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */; };
 		EB5594D31CF2E1600054A4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594D21CF2E1600054A4F4 /* ViewController.swift */; };
 		EB5594D61CF2E1600054A4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5594D41CF2E1600054A4F4 /* Main.storyboard */; };
@@ -116,6 +118,8 @@
 		EB50FFE91D4744AE008C9E96 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
 		EB50FFEB1D4758A2008C9E96 /* DownloadingOrdersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingOrdersController.swift; sourceTree = "<group>"; };
 		EB50FFED1D479E4F008C9E96 /* LoadSocietiesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadSocietiesController.swift; sourceTree = "<group>"; };
+		EB50FFEF1D49DE8D008C9E96 /* OrderDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsCell.swift; sourceTree = "<group>"; };
+		EB50FFF01D49DE8D008C9E96 /* OrderDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailsCell.xib; sourceTree = "<group>"; };
 		EB5594CD1CF2E15F0054A4F4 /* Coalbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coalbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5594D21CF2E1600054A4F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				EB717EA01D43ACD0008EB917 /* OrderDetailsController.swift */,
 				EB717E981D4355A2008EB917 /* MainPageCell.swift */,
 				EB717E991D4355A2008EB917 /* MainPageCell.xib */,
+				EB50FFEF1D49DE8D008C9E96 /* OrderDetailsCell.swift */,
+				EB50FFF01D49DE8D008C9E96 /* OrderDetailsCell.xib */,
 				EB153C0A1D3FB62400B8484E /* OrderCell.swift */,
 				EB153C081D3FB48000B8484E /* OrderCell.xib */,
 				EBE22C521D3F692C00027AC3 /* ViewOrdersController.swift */,
@@ -431,6 +437,7 @@
 				EB5594DB1CF2E1600054A4F4 /* LaunchScreen.storyboard in Resources */,
 				EB996E371D0D4E8600E2DF58 /* GoogleService-Info.plist in Resources */,
 				EBAEA21E1D1FC8B700548CCA /* HSDatePickerViewController.xib in Resources */,
+				EB50FFF21D49DE8D008C9E96 /* OrderDetailsCell.xib in Resources */,
 				EB5594D81CF2E1600054A4F4 /* Assets.xcassets in Resources */,
 				EB5594D61CF2E1600054A4F4 /* Main.storyboard in Resources */,
 				EB94537A1D2A9433002966FC /* Info.plist in Resources */,
@@ -520,6 +527,7 @@
 				EB7E5BA81D21088A0051E43D /* SpecialClothingController.swift in Sources */,
 				EB9453781D2A9433002966FC /* AkiraTextField.swift in Sources */,
 				EB9453791D2A9433002966FC /* HoshiTextField.swift in Sources */,
+				EB50FFF11D49DE8D008C9E96 /* OrderDetailsCell.swift in Sources */,
 				EBD318201CF999730035F51B /* MainPageController.swift in Sources */,
 				EB717EA11D43ACD0008EB917 /* OrderDetailsController.swift in Sources */,
 				EB94537B1D2A9433002966FC /* IsaoTextField.swift in Sources */,

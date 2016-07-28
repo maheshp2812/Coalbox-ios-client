@@ -18,17 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="3b8-n7-oLF">
-                                <rect key="frame" x="20" y="231" width="560" height="138"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="nce-Yj-Zt1">
+                                <rect key="frame" x="20" y="223" width="560" height="154"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="3b8-n7-oLF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Evb-Gl-QVS"/>
-                            <constraint firstItem="3b8-n7-oLF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="K6Q-of-eFA"/>
-                            <constraint firstItem="3b8-n7-oLF" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="P0S-0V-9cC"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="3b8-n7-oLF" secondAttribute="bottom" constant="231" id="abV-Tb-SwP"/>
-                            <constraint firstItem="3b8-n7-oLF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="dVE-uW-p8l"/>
+                            <constraint firstItem="nce-Yj-Zt1" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="203" id="OxC-nV-bwD"/>
+                            <constraint firstItem="nce-Yj-Zt1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="PyK-J5-ZMA"/>
+                            <constraint firstItem="nce-Yj-Zt1" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="v2z-br-yA7"/>
+                            <constraint firstItem="nce-Yj-Zt1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="w2n-qj-OX9"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo-white" width="960" height="540"/>
+        <image name="logo-white" width="960" height="153"/>
     </resources>
 </document>

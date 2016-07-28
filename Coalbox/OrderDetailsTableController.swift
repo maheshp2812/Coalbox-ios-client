@@ -13,16 +13,12 @@ class OrderDetailsTableController : UITableViewController {
     var orderData : NSDictionary? = nil
     var filteredData : [(String,AnyObject)] = []
     
-    var itemRates : [NSObject : AnyObject]?
-    
     var numberOfItems = 0
-    var subtotal : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemRates = ItemRates().getAllDetails()
         numberOfItems = getCount()
-        let nib = UINib(nibName: "SummaryPageCell", bundle: nil)
+        let nib = UINib(nibName: "OrderDetailsCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
@@ -40,12 +36,9 @@ class OrderDetailsTableController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : SummaryPageCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! SummaryPageCell
+        let cell : OrderDetailsCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! OrderDetailsCell
         cell.clothLabel?.text = returnDisplayName(filteredData[indexPath.row].0)
         cell.numberLabel.text =  "x" + String(filteredData[indexPath.row].1)
-        let rate = Int(itemRates![filteredData[indexPath.row].0]! as! NSNumber)
-        subtotal += rate * Int(filteredData[indexPath.row].1 as! NSNumber)
-        cell.costLabel!.text = "Rs." + String(rate  * Int(filteredData[indexPath.row].1 as! NSNumber))
         return cell
     }
     
