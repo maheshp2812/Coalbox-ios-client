@@ -29,6 +29,7 @@ class MainPageTableController : UITableViewController {
         itemsList.hidden = true
         parentController?.activityIndicator.startAnimating()
         parentController.infoLabel.hidden = true
+        parentController.progressLabel.hidden = true
         recentOrder = []
         self.tableView.hidden = true
         if UserDetails().getDetails() != nil {
@@ -45,6 +46,19 @@ class MainPageTableController : UITableViewController {
                     self.addData(orderData)
                     let number = orderData["totalPrice"] as! NSNumber
                     let dateString = ((result?.valueForKey("pickupDate"))! as! String)
+                    let progressText = orderData["status"] as! String
+                    if progressText == "Order placed" {
+                        self.parentController.progressLabel.textColor = UIColor.redColor()
+                        self.parentController.progressView.progress = 0.25
+                    } else if progressText == "In progress" {
+                        self.parentController.progressLabel.textColor = UIColor(red: 224/255, green: 170/255, blue: 0, alpha: 1)
+                        self.parentController.progressView.progress = 0.5
+                    } else {
+                        self.parentController.progressLabel.textColor = UIColor(red: 65/255, green: 117/255, blue: 5/255, alpha: 1)
+                        self.parentController.progressView.progress = 1.0
+                    }
+                    self.parentController.progressLabel.text = progressText
+                    self.parentController.progressLabel.hidden = false
                     self.parentController.priceLabel.text = "Rs.\(number)"
                     if orderData["serviceType"] as! String == "Regular" {
                         self.parentController.priceView.backgroundColor = UIColor(red: 252/255, green: 0/255, blue: 55/255, alpha: 1)

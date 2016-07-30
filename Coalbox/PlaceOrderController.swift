@@ -25,10 +25,21 @@ class PlaceOrderController : UITableViewController {
     @IBOutlet weak var stepper6: UIStepper!
     @IBOutlet weak var stepper7: UIStepper!
     
+    @IBOutlet weak var standardPrice: UILabel!
+    @IBOutlet weak var doorCurtainPrice: UILabel!
+    @IBOutlet weak var windowPrice: UILabel!
+    @IBOutlet weak var singleBedPrice: UILabel!
+    @IBOutlet weak var doubleBedPrice: UILabel!
+    @IBOutlet weak var tableclothPrice: UILabel!
+    @IBOutlet weak var sofaCoversPrice: UILabel!
+    
+    
     var specialClothingController : SpecialClothingController? = nil
+    var itemRates : [NSObject : AnyObject]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.itemRates = ItemRates().getRates()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -39,6 +50,14 @@ class PlaceOrderController : UITableViewController {
         tableclothLabel.text = Int(stepper5.value).description
         sofaLabel.text = Int(stepper6.value).description
         bedsheet2.text = Int(stepper7.value).description
+        
+        standardPrice.text = "( Rs." + String(itemRates!["StandardGarments"] as! NSNumber) + " )"
+        doorCurtainPrice.text = "( Rs." + String(itemRates!["DoorCurtains"] as! NSNumber) + " )"
+        windowPrice.text = "( Rs." + String(itemRates!["WindowCurtains"] as! NSNumber) + " )"
+        singleBedPrice.text = "( Rs." + String(itemRates!["BedsheetsSingle"] as! NSNumber) + " )"
+        doubleBedPrice.text = "( Rs." + String(itemRates!["BedsheetsDouble"] as! NSNumber) + " )"
+        tableclothPrice.text = "( Rs." + String(itemRates!["Tablecloth"] as! NSNumber) + " )"
+        sofaCoversPrice.text = "( Rs." + String(itemRates!["SofaCovers"] as! NSNumber) + " )"
         
         self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.setNavigationBarHidden(false, animated: false)

@@ -258,22 +258,13 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjh-yu-a6s">
                                 <rect key="frame" x="0.0" y="206" width="600" height="336"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ByM-jq-DZq">
-                                        <rect key="frame" x="16" y="320" width="568" height="2"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ByM-jq-DZq">
+                                        <rect key="frame" x="8" y="320" width="584" height="2"/>
                                     </progressView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ironing" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMc-QR-rWT">
-                                        <rect key="frame" x="513" y="294" width="71" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="71" id="T1i-BL-3qk"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" red="0.25490196078431371" green="0.45882352941176469" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT STATUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwV-0V-TTc">
-                                        <rect key="frame" x="16" y="294" width="102" height="21"/>
+                                        <rect key="frame" x="8" y="294" width="102" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="102" id="1Dq-nO-yBr"/>
+                                            <constraint firstAttribute="width" constant="102" id="hII-7G-zqt"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -380,20 +371,29 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                             <constraint firstItem="qXJ-3f-tPO" firstAttribute="centerY" secondItem="gHf-fW-BDy" secondAttribute="centerY" id="sN9-Jd-7zJ"/>
                                         </constraints>
                                     </scrollView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ironing" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="VMc-QR-rWT">
+                                        <rect key="frame" x="467" y="294" width="125" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="ztO-jh-CaD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.25490196078431371" green="0.45882352941176469" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="top" secondItem="AI3-s9-FIR" secondAttribute="bottom" constant="12" id="1HY-FO-91M"/>
+                                    <constraint firstItem="VMc-QR-rWT" firstAttribute="trailing" secondItem="AI3-s9-FIR" secondAttribute="trailing" id="60p-ct-Ha2"/>
+                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="leading" secondItem="AI3-s9-FIR" secondAttribute="leading" id="6yw-pT-qHZ"/>
                                     <constraint firstItem="AI3-s9-FIR" firstAttribute="leading" secondItem="xjh-yu-a6s" secondAttribute="leading" constant="8" id="CGJ-3y-fYR"/>
-                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="top" secondItem="VMc-QR-rWT" secondAttribute="top" id="DWY-bp-ml3"/>
-                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="leading" secondItem="AI3-s9-FIR" secondAttribute="leading" constant="8" id="JZ7-QT-og9"/>
-                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="leading" secondItem="ByM-jq-DZq" secondAttribute="leading" id="Rn4-9S-5B0"/>
-                                    <constraint firstItem="VMc-QR-rWT" firstAttribute="trailing" secondItem="AI3-s9-FIR" secondAttribute="trailing" constant="-8" id="Wow-7b-bIQ"/>
-                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="bottom" secondItem="VMc-QR-rWT" secondAttribute="bottom" id="bcu-2M-hrg"/>
-                                    <constraint firstItem="ByM-jq-DZq" firstAttribute="top" secondItem="uwV-0V-TTc" secondAttribute="bottom" constant="5" id="cmy-Js-CK3"/>
+                                    <constraint firstItem="ByM-jq-DZq" firstAttribute="top" secondItem="uwV-0V-TTc" secondAttribute="bottom" constant="5" id="DFA-Pp-RLG"/>
+                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="top" secondItem="AI3-s9-FIR" secondAttribute="bottom" constant="12" id="XuE-Kc-lq6"/>
+                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="leading" secondItem="ByM-jq-DZq" secondAttribute="leading" id="bQF-5t-5Pi"/>
+                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="bottom" secondItem="VMc-QR-rWT" secondAttribute="bottom" id="cLh-hO-ywg"/>
                                     <constraint firstItem="AI3-s9-FIR" firstAttribute="top" secondItem="xjh-yu-a6s" secondAttribute="top" id="dSG-tr-5Pf"/>
-                                    <constraint firstItem="VMc-QR-rWT" firstAttribute="trailing" secondItem="ByM-jq-DZq" secondAttribute="trailing" id="hJk-n7-Gz2"/>
+                                    <constraint firstItem="uwV-0V-TTc" firstAttribute="top" secondItem="VMc-QR-rWT" secondAttribute="top" id="jIT-4C-nyK"/>
                                     <constraint firstItem="AI3-s9-FIR" firstAttribute="centerX" secondItem="xjh-yu-a6s" secondAttribute="centerX" id="ooa-mb-uGx"/>
+                                    <constraint firstItem="VMc-QR-rWT" firstAttribute="trailing" secondItem="ByM-jq-DZq" secondAttribute="trailing" id="qa4-el-qN3"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="H5E-Sd-n3e">
@@ -408,17 +408,6 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPv-ah-eDg">
-                                <rect key="frame" x="0.0" y="542" width="600" height="58"/>
-                                <color key="backgroundColor" red="0.066666666666666666" green="0.47450980392156861" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
-                                <state key="normal" title="Order Now">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dHq-U3-ImS" kind="show" id="A4x-8j-ffb"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbt-hX-UEb" userLabel="bottomBorder">
                                 <rect key="frame" x="16" y="486" width="568" height="1"/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
@@ -437,6 +426,17 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                 </state>
                                 <connections>
                                     <action selector="onRefresh:" destination="jWF-DI-oHi" eventType="touchUpInside" id="j0i-zw-xxC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPv-ah-eDg">
+                                <rect key="frame" x="0.0" y="542" width="600" height="58"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.47450980392156861" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <state key="normal" title="Order Now">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bl5-Ac-8XA" kind="show" id="6I5-XJ-R8L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -474,6 +474,8 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                         <outlet property="pickupDateLabel" destination="ZI5-Fp-dTe" id="yVS-u0-xkx"/>
                         <outlet property="priceLabel" destination="W0I-Rw-1cN" id="BQX-ss-TOS"/>
                         <outlet property="priceView" destination="gHf-fW-BDy" id="WIE-w7-vU9"/>
+                        <outlet property="progressLabel" destination="VMc-QR-rWT" id="oJJ-bS-SWB"/>
+                        <outlet property="progressView" destination="ByM-jq-DZq" id="sfy-8D-sNB"/>
                         <outlet property="refreshButton" destination="J4o-BH-fiS" id="FCs-IF-yVe"/>
                         <outlet property="scrollView" destination="AI3-s9-FIR" id="YHE-sg-Lp5"/>
                         <segue destination="cZf-u2-rCc" kind="show" identifier="menuSegue" id="BrZ-ro-i4Y"/>
@@ -526,6 +528,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                 <connections>
                                     <action selector="onClick:" destination="MyA-j4-NmL" eventType="touchUpInside" id="wN5-Cx-oKE"/>
                                     <action selector="onProceed:" destination="MyA-j4-NmL" eventType="touchUpInside" id="kLd-UA-uQn"/>
+                                    <segue destination="RFj-LG-eAg" kind="show" id="pZe-qE-AKk"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEQ-Ez-58q" userLabel="middleBorder">
@@ -590,7 +593,6 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                     <connections>
                         <outlet property="infoLabel" destination="Pav-5G-cmf" id="AG3-GS-6CQ"/>
                         <outlet property="typeOfService" destination="L7q-4D-iN0" id="UYp-Vx-MtD"/>
-                        <segue destination="bl5-Ac-8XA" kind="show" identifier="ratesSegue" id="GqU-SN-1W0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWF-V8-Rgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -977,7 +979,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                         <outlet property="image" destination="luc-2p-ofi" id="r6O-aq-QYN"/>
                         <outlet property="loading" destination="fti-Tt-RLx" id="mde-ox-zMT"/>
                         <outlet property="message" destination="Qfg-UX-swn" id="61d-sH-ZdH"/>
-                        <segue destination="RFj-LG-eAg" kind="show" identifier="proceedSegue" id="GVn-aW-nfB"/>
+                        <segue destination="dHq-U3-ImS" kind="show" identifier="proceedSegue" id="xVi-V9-2zQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TdX-Mm-R3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1005,7 +1007,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
             <objects>
                 <tableViewController id="pFE-9g-hJC" customClass="AccountTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="22" id="Pw7-OY-NvT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="459"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1368,10 +1370,10 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="biD-UA-wMl">
-                                        <rect key="frame" x="8" y="23" width="211" height="47"/>
+                                        <rect key="frame" x="8" y="23" width="584" height="47"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ce8-BE-eNk">
-                                                <rect key="frame" x="0.0" y="0.0" width="211" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="584" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORDER ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvr-gb-FH5">
                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="21"/>
@@ -1382,8 +1384,8 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="160707RE007" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u16-zn-f5q">
-                                                        <rect key="frame" x="104" y="0.0" width="107" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="160707RE007" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="u16-zn-f5q">
+                                                        <rect key="frame" x="104" y="0.0" width="480" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1391,16 +1393,19 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7Ct-4T-NPA">
-                                                <rect key="frame" x="0.0" y="26" width="211" height="21"/>
+                                                <rect key="frame" x="0.0" y="26" width="584" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORDER STATUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyp-bz-ygR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="429" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ml5-cW-Bzc">
-                                                        <rect key="frame" x="133" y="0.0" width="78" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivered" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ml5-cW-Bzc">
+                                                        <rect key="frame" x="459" y="0.0" width="125" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="125" id="vyU-Ui-aGU"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1570,6 +1575,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                                     <constraint firstItem="Udk-2d-K38" firstAttribute="trailing" secondItem="vJ8-rc-Yio" secondAttribute="trailing" id="gXu-RG-vYD"/>
                                     <constraint firstItem="bPK-Mq-mMa" firstAttribute="leading" secondItem="chp-k4-Js2" secondAttribute="leading" id="gZI-98-Ej2"/>
                                     <constraint firstItem="59W-Wp-aVu" firstAttribute="top" secondItem="vJ8-rc-Yio" secondAttribute="bottom" constant="8" symbolic="YES" id="gdd-Fq-Mk7"/>
+                                    <constraint firstAttribute="trailing" secondItem="biD-UA-wMl" secondAttribute="trailing" constant="8" id="kgB-FO-yr2"/>
                                     <constraint firstItem="vJ8-rc-Yio" firstAttribute="leading" secondItem="59W-Wp-aVu" secondAttribute="leading" id="mms-RQ-k0G"/>
                                     <constraint firstItem="chp-k4-Js2" firstAttribute="top" secondItem="bPK-Mq-mMa" secondAttribute="bottom" constant="8" symbolic="YES" id="nWO-Gm-75o"/>
                                     <constraint firstItem="4mI-MT-Mbx" firstAttribute="leading" secondItem="cei-ze-tgf" secondAttribute="leading" id="odf-VM-4Qf"/>
@@ -1591,6 +1597,7 @@ BY USING THIS WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE  TO BE
                     <connections>
                         <outlet property="grandTotalLabel" destination="DBs-AL-uWW" id="2wT-Bd-HOh"/>
                         <outlet property="orderIDLabel" destination="u16-zn-f5q" id="kU3-SS-f1I"/>
+                        <outlet property="progressLabel" destination="ml5-cW-Bzc" id="Tjw-rK-kfr"/>
                         <outlet property="service1Image" destination="Pjd-jo-0Kn" id="EH5-dp-4IW"/>
                         <outlet property="service2Image" destination="dCP-ND-jfQ" id="Vhp-ac-Qh9"/>
                         <outlet property="specialLabel" destination="WdJ-E1-3b1" id="8bR-5E-cD7"/>
@@ -1861,7 +1868,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
             <objects>
                 <tableViewController id="33C-Md-vWb" customClass="SignupTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="rf5-sM-g0X">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="439"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2136,7 +2143,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
             <objects>
                 <tableViewController id="TCm-Q3-Dvk" customClass="OrderDetailsTableController" customModule="Coalbox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ift-Kf-kJM">
-                        <rect key="frame" x="0.0" y="0.0" width="587" height="203"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -2174,7 +2181,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="MRd-a1-tss">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="a0r-ZZ-uoH">
                                 <cells>
@@ -2189,7 +2196,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2206,7 +2213,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2223,7 +2230,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2258,15 +2265,15 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                         <sections>
                             <tableViewSection id="apz-8U-nnQ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="h4Z-na-7fv">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="h4Z-na-7fv">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h4Z-na-7fv" id="wEf-zp-dt8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotton Sarees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxq-6O-bqV">
-                                                    <rect key="frame" x="8" y="19" width="117" height="21"/>
+                                                    <rect key="frame" x="8" y="24" width="117" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="117" id="DOt-nI-zrx"/>
                                                     </constraints>
@@ -2275,7 +2282,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QAM-m8-4yn">
-                                                    <rect key="frame" x="467" y="15" width="125" height="29"/>
+                                                    <rect key="frame" x="467" y="20" width="125" height="29"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4j-eE-Ck8">
                                                             <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
@@ -2291,24 +2298,34 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                         </stepper>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-BX-CSI">
+                                                    <rect key="frame" x="8" y="40" width="117" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Bey-BX-CSI" firstAttribute="leading" secondItem="Bxq-6O-bqV" secondAttribute="leading" id="2ds-tp-45j"/>
                                                 <constraint firstItem="QAM-m8-4yn" firstAttribute="centerY" secondItem="Bxq-6O-bqV" secondAttribute="centerY" id="Axt-WA-eh1"/>
                                                 <constraint firstItem="QAM-m8-4yn" firstAttribute="trailing" secondItem="wEf-zp-dt8" secondAttribute="trailingMargin" id="Che-4u-luw"/>
+                                                <constraint firstItem="Bey-BX-CSI" firstAttribute="trailing" secondItem="Bxq-6O-bqV" secondAttribute="trailing" id="Izs-Ee-IrN"/>
+                                                <constraint firstItem="Bey-BX-CSI" firstAttribute="top" secondItem="wEf-zp-dt8" secondAttribute="topMargin" constant="32" id="Pac-jb-Kza"/>
+                                                <constraint firstItem="Bey-BX-CSI" firstAttribute="bottom" secondItem="wEf-zp-dt8" secondAttribute="bottomMargin" id="UmR-3X-t9y"/>
                                                 <constraint firstItem="Bxq-6O-bqV" firstAttribute="centerY" secondItem="wEf-zp-dt8" secondAttribute="centerY" id="ge9-15-ec3"/>
                                                 <constraint firstItem="Bxq-6O-bqV" firstAttribute="leading" secondItem="wEf-zp-dt8" secondAttribute="leadingMargin" id="sES-Z8-AS7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bs2-k9-7AM">
-                                        <rect key="frame" x="0.0" y="60" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="Bs2-k9-7AM">
+                                        <rect key="frame" x="0.0" y="70" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bs2-k9-7AM" id="ng8-z4-rNh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silk Sarees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPs-Js-Wz8">
-                                                    <rect key="frame" x="8" y="19" width="117" height="21"/>
+                                                    <rect key="frame" x="8" y="24" width="117" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="117" id="srm-7v-t4F"/>
                                                     </constraints>
@@ -2317,7 +2334,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T46-RT-lUL">
-                                                    <rect key="frame" x="467" y="15" width="125" height="29"/>
+                                                    <rect key="frame" x="467" y="20" width="125" height="29"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-Ss-9XG">
                                                             <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
@@ -2333,24 +2350,36 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                         </stepper>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3E-vk-Yg6">
+                                                    <rect key="frame" x="8" y="40" width="117" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="117" id="nTQ-W3-5hb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lPs-Js-Wz8" firstAttribute="centerY" secondItem="ng8-z4-rNh" secondAttribute="centerY" id="2oI-WI-QNV"/>
                                                 <constraint firstItem="lPs-Js-Wz8" firstAttribute="leading" secondItem="ng8-z4-rNh" secondAttribute="leadingMargin" id="Ffp-aL-VM3"/>
                                                 <constraint firstItem="T46-RT-lUL" firstAttribute="trailing" secondItem="ng8-z4-rNh" secondAttribute="trailingMargin" id="JZk-1h-Q7z"/>
                                                 <constraint firstItem="T46-RT-lUL" firstAttribute="centerY" secondItem="lPs-Js-Wz8" secondAttribute="centerY" id="KuD-fd-Qq5"/>
+                                                <constraint firstItem="H3E-vk-Yg6" firstAttribute="top" secondItem="ng8-z4-rNh" secondAttribute="topMargin" constant="32" id="Mq0-u4-1lg"/>
+                                                <constraint firstItem="H3E-vk-Yg6" firstAttribute="leading" secondItem="lPs-Js-Wz8" secondAttribute="leading" id="Vms-xZ-SkN"/>
+                                                <constraint firstItem="H3E-vk-Yg6" firstAttribute="bottom" secondItem="ng8-z4-rNh" secondAttribute="bottomMargin" id="zvo-Fv-2h4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BzF-05-cGa">
-                                        <rect key="frame" x="0.0" y="120" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="BzF-05-cGa">
+                                        <rect key="frame" x="0.0" y="140" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BzF-05-cGa" id="qPc-7A-PMa">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XVe-XO-nX8">
-                                                    <rect key="frame" x="467" y="15" width="125" height="29"/>
+                                                    <rect key="frame" x="467" y="20" width="125" height="29"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs8-Ni-ERt">
                                                             <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
@@ -2367,12 +2396,18 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotton Dhotis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-kn-doa">
-                                                    <rect key="frame" x="8" y="19" width="173" height="21"/>
+                                                    <rect key="frame" x="8" y="24" width="173" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="173" id="MAI-wS-6hw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ5-VD-Gwl">
+                                                    <rect key="frame" x="8" y="40" width="114" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2384,15 +2419,15 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PDy-LD-hgc">
-                                        <rect key="frame" x="0.0" y="180" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="PDy-LD-hgc">
+                                        <rect key="frame" x="0.0" y="210" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PDy-LD-hgc" id="NLu-P6-X0L">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-M3-Gdb">
-                                                    <rect key="frame" x="467" y="15" width="125" height="29"/>
+                                                    <rect key="frame" x="467" y="20" width="125" height="29"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oz2-4u-dAM">
                                                             <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
@@ -2409,12 +2444,18 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silk Dhotis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAK-Fq-ZQK">
-                                                    <rect key="frame" x="8" y="19" width="153" height="21"/>
+                                                    <rect key="frame" x="8" y="24" width="153" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="153" id="mQk-hK-vbu"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlx-oz-vVQ">
+                                                    <rect key="frame" x="8" y="40" width="84" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2426,15 +2467,15 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Iv4-Ff-sHU">
-                                        <rect key="frame" x="0.0" y="240" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="Iv4-Ff-sHU">
+                                        <rect key="frame" x="0.0" y="280" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iv4-Ff-sHU" id="s2u-gJ-2a7">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-B3-QNy">
-                                                    <rect key="frame" x="467" y="15" width="125" height="29"/>
+                                                    <rect key="frame" x="467" y="20" width="125" height="29"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJv-V2-b2b">
                                                             <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
@@ -2451,12 +2492,18 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 pc Suit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id4-N4-Tez">
-                                                    <rect key="frame" x="8" y="19" width="117" height="21"/>
+                                                    <rect key="frame" x="8" y="24" width="117" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="117" id="cHZ-7d-2pt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xZ-Ag-hap">
+                                                    <rect key="frame" x="8" y="40" width="88" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2468,15 +2515,15 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OJA-3Z-j2n">
-                                        <rect key="frame" x="0.0" y="300" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="OJA-3Z-j2n">
+                                        <rect key="frame" x="0.0" y="350" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OJA-3Z-j2n" id="EgY-WO-JQU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7bu-U9-fZu">
-                                                    <rect key="frame" x="467" y="15" width="125" height="29"/>
+                                                    <rect key="frame" x="467" y="20" width="125" height="29"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sc-sa-sgF">
                                                             <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
@@ -2493,12 +2540,18 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 pc Suit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kh-Wy-v64">
-                                                    <rect key="frame" x="8" y="19" width="117" height="21"/>
+                                                    <rect key="frame" x="8" y="24" width="117" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="117" id="zX2-kc-JGB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kf-Qi-Kpb">
+                                                    <rect key="frame" x="8" y="40" width="102" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2510,15 +2563,15 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ehC-Dk-jlG">
-                                        <rect key="frame" x="0.0" y="360" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="ehC-Dk-jlG">
+                                        <rect key="frame" x="0.0" y="420" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ehC-Dk-jlG" id="FPd-e7-gJd">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mpt-fb-JGF">
-                                                    <rect key="frame" x="467" y="15" width="125" height="29"/>
+                                                    <rect key="frame" x="467" y="20" width="125" height="29"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-5K-9rm">
                                                             <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
@@ -2535,12 +2588,18 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blazers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTQ-qc-IIb">
-                                                    <rect key="frame" x="8" y="19" width="117" height="21"/>
+                                                    <rect key="frame" x="8" y="24" width="117" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="117" id="vfg-oY-5Bp"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cv5-Oo-tzK">
+                                                    <rect key="frame" x="8" y="40" width="82" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2552,15 +2611,15 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5P1-Ev-Xs3">
-                                        <rect key="frame" x="0.0" y="420" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="5P1-Ev-Xs3">
+                                        <rect key="frame" x="0.0" y="490" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5P1-Ev-Xs3" id="9Uf-ve-O6l">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XbI-UQ-kEt">
-                                                    <rect key="frame" x="467" y="15" width="125" height="29"/>
+                                                    <rect key="frame" x="467" y="20" width="125" height="29"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0b-mC-Sxc">
                                                             <rect key="frame" x="0.0" y="0.0" width="11" height="29"/>
@@ -2577,12 +2636,18 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gowns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4R-3J-9Sa">
-                                                    <rect key="frame" x="8" y="19" width="117" height="21"/>
+                                                    <rect key="frame" x="8" y="24" width="117" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="117" id="jR4-vO-4cc"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CT-Si-X5o">
+                                                    <rect key="frame" x="8" y="40" width="75" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2603,6 +2668,10 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="blazersPrice" destination="cv5-Oo-tzK" id="uQa-CH-8xC"/>
+                        <outlet property="cottonDhotiPrice" destination="dJ5-VD-Gwl" id="O9X-iI-XuI"/>
+                        <outlet property="cottonPrice" destination="Bey-BX-CSI" id="RlY-cB-kYt"/>
+                        <outlet property="gownsPrice" destination="0CT-Si-X5o" id="3f9-if-4Zj"/>
                         <outlet property="label1" destination="Y4j-eE-Ck8" id="3T9-ka-YVv"/>
                         <outlet property="label2" destination="ZhY-Ss-9XG" id="1f8-j6-SRR"/>
                         <outlet property="label3" destination="Qs8-Ni-ERt" id="38Y-nY-12n"/>
@@ -2611,6 +2680,8 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                         <outlet property="label6" destination="1sc-sa-sgF" id="bfC-HB-yxN"/>
                         <outlet property="label7" destination="OYe-5K-9rm" id="Ske-85-BeZ"/>
                         <outlet property="label8" destination="F0b-mC-Sxc" id="K9I-OD-yO8"/>
+                        <outlet property="silkDhotiPrice" destination="nlx-oz-vVQ" id="VtF-RR-Axf"/>
+                        <outlet property="silkPrice" destination="H3E-vk-Yg6" id="SRf-20-cOn"/>
                         <outlet property="stepper1" destination="sPR-Sr-mFv" id="sj9-pX-HwR"/>
                         <outlet property="stepper2" destination="kNo-ag-yEd" id="Qzz-PA-PYE"/>
                         <outlet property="stepper3" destination="s5q-jN-e64" id="V9T-5S-myO"/>
@@ -2619,6 +2690,8 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                         <outlet property="stepper6" destination="d7O-BZ-Z0n" id="ZJ0-SK-pTK"/>
                         <outlet property="stepper7" destination="jaI-9F-b4s" id="Odl-JM-JcK"/>
                         <outlet property="stepper8" destination="TGG-Ye-QPm" id="L81-1M-sd6"/>
+                        <outlet property="suit2pcPrice" destination="3xZ-Ag-hap" id="rcU-fI-NZv"/>
+                        <outlet property="suit3pcPrice" destination="4Kf-Qi-Kpb" id="jgX-XG-MyR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HvN-NX-GZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2832,16 +2905,16 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a2f-ae-okE">
-                                                    <rect key="frame" x="8" y="23" width="82" height="38"/>
+                                                    <rect key="frame" x="8" y="23" width="133" height="38"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedsheets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huv-0S-lWB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single Bedsheets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huv-0S-lWB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="133" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single Bed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndp-di-EAg">
-                                                            <rect key="frame" x="0.0" y="21" width="82" height="17"/>
+                                                            <rect key="frame" x="0.0" y="21" width="133" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -2882,16 +2955,16 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g6a-nk-r3Q">
-                                                    <rect key="frame" x="8" y="23" width="82" height="38"/>
+                                                    <rect key="frame" x="8" y="23" width="140" height="38"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedsheets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-LT-Fid">
-                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Bedsheets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-LT-Fid">
+                                                            <rect key="frame" x="0.0" y="0.0" width="140" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Bed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Te-cf-AKq">
-                                                            <rect key="frame" x="0.0" y="21" width="82" height="17"/>
+                                                            <rect key="frame" x="0.0" y="21" width="140" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -2949,7 +3022,7 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7fn-h5-7Wg">
-                                                    <rect key="frame" x="8" y="31" width="80" height="21"/>
+                                                    <rect key="frame" x="8" y="23" width="80" height="38"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tablecloth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruS-bU-UsU">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="21"/>
@@ -2957,14 +3030,20 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoa-3P-ni0">
+                                                            <rect key="frame" x="0.0" y="21" width="80" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7fn-h5-7Wg" firstAttribute="centerY" secondItem="YFm-J0-kf9" secondAttribute="centerY" id="THV-Ca-D4h"/>
-                                                <constraint firstItem="7fn-h5-7Wg" firstAttribute="centerY" secondItem="3TH-AJ-PAf" secondAttribute="centerY" id="TyJ-n0-Yio"/>
-                                                <constraint firstItem="YFm-J0-kf9" firstAttribute="trailing" secondItem="3TH-AJ-PAf" secondAttribute="trailingMargin" id="dFK-PB-XaR"/>
-                                                <constraint firstItem="7fn-h5-7Wg" firstAttribute="leading" secondItem="3TH-AJ-PAf" secondAttribute="leadingMargin" id="oPW-bZ-lIV"/>
+                                                <constraint firstItem="YFm-J0-kf9" firstAttribute="trailing" secondItem="3TH-AJ-PAf" secondAttribute="trailingMargin" id="UrN-8Z-qdr"/>
+                                                <constraint firstItem="7fn-h5-7Wg" firstAttribute="centerY" secondItem="YFm-J0-kf9" secondAttribute="centerY" id="edG-av-caD"/>
+                                                <constraint firstItem="7fn-h5-7Wg" firstAttribute="leading" secondItem="3TH-AJ-PAf" secondAttribute="leadingMargin" id="maP-yo-y7N"/>
+                                                <constraint firstItem="YFm-J0-kf9" firstAttribute="centerY" secondItem="3TH-AJ-PAf" secondAttribute="centerY" id="ood-8T-Esf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3026,12 +3105,18 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                             <outlet property="delegate" destination="VAJ-FP-eIZ" id="GeV-SR-BT9"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="StandardCount" destination="gsA-1s-lXW" id="ej0-Re-HTr"/>
                         <outlet property="bedsheet2" destination="UjY-tx-0Ty" id="rnz-eN-p6F"/>
                         <outlet property="bedsheetLabel" destination="fpa-2V-JJr" id="mvD-9T-r4B"/>
                         <outlet property="doorCurtainLabel" destination="aca-UO-5Pn" id="86n-5u-095"/>
+                        <outlet property="doorCurtainPrice" destination="xkL-hr-NHy" id="Ocp-3t-zuR"/>
+                        <outlet property="doubleBedPrice" destination="0Te-cf-AKq" id="vTf-vt-49m"/>
+                        <outlet property="singleBedPrice" destination="Ndp-di-EAg" id="inv-Rk-E8h"/>
+                        <outlet property="sofaCoversPrice" destination="J5V-OH-GVf" id="6t9-Zu-A1Y"/>
                         <outlet property="sofaLabel" destination="1Jj-Cv-rpX" id="uQg-Pp-0FZ"/>
+                        <outlet property="standardPrice" destination="31H-aH-g5e" id="ifW-Ly-UFa"/>
                         <outlet property="stepper1" destination="rUG-Ze-yVl" id="u6h-wI-Ano"/>
                         <outlet property="stepper2" destination="V3F-rd-7l0" id="mIq-B0-TpO"/>
                         <outlet property="stepper3" destination="4kx-4E-6cy" id="PSX-ri-5Rm"/>
@@ -3040,7 +3125,9 @@ If you choose to visit the website, your visit and any dispute over privacy is s
                         <outlet property="stepper6" destination="SnS-kX-je5" id="0UF-Hc-Jiu"/>
                         <outlet property="stepper7" destination="3AH-gW-2M4" id="GvD-3i-NAa"/>
                         <outlet property="tableclothLabel" destination="UOQ-0i-IJe" id="MEH-Vr-3yT"/>
+                        <outlet property="tableclothPrice" destination="Aoa-3P-ni0" id="lpH-mv-I2l"/>
                         <outlet property="windowCurtainLabel" destination="qnr-K3-M6t" id="7TP-GL-dKf"/>
+                        <outlet property="windowPrice" destination="PgE-Lp-fVt" id="fas-wl-jqU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dq2-o9-CbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3256,9 +3343,9 @@ If you choose to visit the website, your visit and any dispute over privacy is s
         <image name="user-default-white" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="0Ml-hE-3y7"/>
+        <segue reference="QAI-3z-Lqu"/>
+        <segue reference="pZe-qE-AKk"/>
         <segue reference="lCf-fo-5cQ"/>
-        <segue reference="aFF-vB-oHe"/>
-        <segue reference="55K-OI-8pF"/>
-        <segue reference="QyJ-ms-O6Y"/>
     </inferredMetricsTieBreakers>
 </document>

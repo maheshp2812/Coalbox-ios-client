@@ -28,7 +28,6 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     @IBOutlet weak var s2Price: UILabel!
     var itemRates : [NSObject : AnyObject]?
 
-    var summaryController : SummaryTableController? = nil
     var tempOffset : CGFloat?
     
     var grandTotal : Int = 0
@@ -46,11 +45,13 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        
         super.viewWillAppear(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemRates = ItemRates().getRates()
         specialTF.delegate = self
         serviceType.text = orderDetails.getDetail("serviceType") as? String
         pickupDateLabel.text = (orderDetails.getDetail("pickupDate")! as! String) + ", " + (orderDetails.getDetail("pickupSlot")! as! String)
@@ -112,6 +113,7 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
         orderDetails.setDetail(service2.on, forKey: "service2")
         orderDetails.setDetail(specialTF.text, forKey: "service3")
         orderDetails.setDetail(grandTotal, forKey: "totalPrice")
+        orderDetails.setDetail("Order placed", forKey: "status")
         if UserDetails().getDetails() == nil {
             let alertController = UIAlertController(title: "Log In", message:"You must be logged in to place an order", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Login", style: UIAlertActionStyle.Default,handler:{
@@ -144,11 +146,7 @@ class SubmitOrderController : UIViewController,UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "summaryTableSegue" {
-            self.summaryController = segue.destinationViewController as? SummaryTableController
-            summaryController?.itemRates = self.itemRates
-        }
-        else if segue.identifier == "loginSegue" {
+        if segue.identifier == "loginSegue" {
             let loginController = segue.destinationViewController as? ViewController
             loginController?.orderPlaced = true
         }

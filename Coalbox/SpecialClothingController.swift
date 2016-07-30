@@ -27,11 +27,22 @@ class SpecialClothingController : UITableViewController {
     @IBOutlet weak var stepper7: UIStepper!
     @IBOutlet weak var stepper8: UIStepper!
     
+    @IBOutlet weak var cottonPrice: UILabel!
+    @IBOutlet weak var silkPrice: UILabel!
+    @IBOutlet weak var cottonDhotiPrice: UILabel!
+    @IBOutlet weak var silkDhotiPrice: UILabel!
+    @IBOutlet weak var suit2pcPrice: UILabel!
+    @IBOutlet weak var suit3pcPrice: UILabel!
+    @IBOutlet weak var blazersPrice: UILabel!
+    @IBOutlet weak var gownsPrice: UILabel!
+    
     let orderDetails = OrderDetails()
+    var itemRates : [NSObject : AnyObject]?
     
     var check = false
     
     override func viewDidLoad() {
+        itemRates = ItemRates().getRates()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(self.onDoneClick))
         super.viewDidLoad()
     }
@@ -41,6 +52,15 @@ class SpecialClothingController : UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        cottonPrice.text = "( Rs." + String(itemRates!["CottonSarees"] as! NSNumber) + " )"
+        silkPrice.text = "( Rs." + String(itemRates!["SilkSarees"] as! NSNumber) + " )"
+        cottonDhotiPrice.text = "( Rs." + String(itemRates!["CottonDhotis"] as! NSNumber) + " )"
+        silkDhotiPrice.text = "( Rs." + String(itemRates!["SilkDhotis"] as! NSNumber) + " )"
+        suit2pcPrice.text = "( Rs." + String(itemRates!["Suit2pc"] as! NSNumber) + " )"
+        suit3pcPrice.text = "( Rs." + String(itemRates!["Suit3pc"] as! NSNumber) + " )"
+        blazersPrice.text = "( Rs." + String(itemRates!["Blazers"] as! NSNumber) + " )"
+        gownsPrice.text = "( Rs." + String(itemRates!["Gowns"] as! NSNumber) + " )"
+        
         if let a = orderDetails.getDetail("Cotton Sarees") {
             label1.text = String(a)
             stepper1.value = Double(a as! NSNumber)

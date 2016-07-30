@@ -43,6 +43,13 @@ class OptionsController : UITableViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "loginSegue" {
+            let loginController = segue.destinationViewController as? ViewController
+            loginController?.mainPageAccess = true
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

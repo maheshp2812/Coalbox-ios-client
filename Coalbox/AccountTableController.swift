@@ -160,6 +160,12 @@ class AccountTableController : UITableViewController,UITextFieldDelegate,UIDropD
             self.presentViewController(alertController, animated: true, completion: nil)
             return false
         }
+        else if (phoneNo.characters.count != 10 || phoneNo.characters.count != 13) {
+            let alertController = UIAlertController(title: "Signup Failed", message:"Invalid phone number", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return false
+        }
         return true
     }
 }

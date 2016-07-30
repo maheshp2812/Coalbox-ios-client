@@ -17,6 +17,8 @@ class MainPageController : UIViewController {
     @IBOutlet weak var orderIDLabel: UILabel!
     @IBOutlet weak var pickupDateLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     
     @IBOutlet weak var refreshButton: UIButton!
     var userdata : NSDictionary? = nil

@@ -20,6 +20,7 @@ class OrderDetailsController : UIViewController {
     @IBOutlet weak var specialStack: UIStackView!
     
     @IBOutlet weak var orderIDLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,15 @@ class OrderDetailsController : UIViewController {
         subtotalLabel.text = "Rs." + String((orderDetails?.valueForKey("subtotal"))! as! NSNumber)
         grandTotalLabel.text = "Rs." + String((orderDetails?.valueForKey("totalPrice"))! as! NSNumber)
         orderIDLabel.text = orderDetails?.valueForKey("id") as? String
+        let progressText = orderDetails?.valueForKey("status") as? String
+        if progressText == "Order placed" {
+            progressLabel.textColor = UIColor.redColor()
+        } else if progressText == "In progress" {
+            progressLabel.textColor = UIColor(red: 224/255, green: 170/255, blue: 0, alpha: 1)
+        } else {
+            progressLabel.textColor = UIColor(red: 65/255, green: 117/255, blue: 5/255, alpha: 1)
+        }
+        progressLabel.text = progressText
         super.viewWillAppear(true)
     }
     

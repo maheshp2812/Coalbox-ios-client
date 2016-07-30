@@ -72,6 +72,7 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
         }
         else {
             sender.backgroundColor = UIColor(red: 17/255, green: 121/255, blue:245/255, alpha: 1.0)
+            loading.stopAnimating()
             sender.setTitle("Sign Up", forState: UIControlState.Normal)
         }
         
@@ -118,6 +119,12 @@ class SignupController : UIViewController,UITextFieldDelegate,UIDropDownDelegate
         if(name.isEmpty || email.isEmpty || password.isEmpty || phoneNo.isEmpty || add1.isEmpty || add2.isEmpty || signupTable.selectedApt.isEmpty) {
             print(name.isEmpty,email.isEmpty,password.isEmpty,phoneNo.isEmpty,add1.isEmpty,add2.isEmpty,selectedApt)
             let alertController = UIAlertController(title: "Signup Failed", message:"One or more fields are empty", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return false
+        }
+        else if (phoneNo.characters.count != 10 && phoneNo.characters.count != 13) {
+            let alertController = UIAlertController(title: "Signup Failed", message:"Invalid phone number", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler:nil))
             self.presentViewController(alertController, animated: true, completion: nil)
             return false

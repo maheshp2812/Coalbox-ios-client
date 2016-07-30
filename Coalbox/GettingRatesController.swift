@@ -9,8 +9,7 @@
 import UIKit
 
 class GettingRatesController : UIViewController {
-    var submitController : SubmitOrderController?
-    var itemRates : [NSObject : AnyObject]? = nil
+    var selectGarmentsController : PlaceOrderContainerController?
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var message: UILabel!
@@ -47,8 +46,7 @@ class GettingRatesController : UIViewController {
                     }
                 }
                 else {
-                    ItemRates().rates = results
-                    self.itemRates = results
+                    ItemRates().setRates(results!)
                     self.backtrack = true
                     self.performSegueWithIdentifier("proceedSegue", sender: self)
                 }
@@ -59,13 +57,6 @@ class GettingRatesController : UIViewController {
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         super.viewWillDisappear(true)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "proceedSegue" {
-            submitController = segue.destinationViewController as? SubmitOrderController
-            submitController?.itemRates = self.itemRates
-        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,6 +22,7 @@ class SummaryTableController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemRates = ItemRates().getRates()
         print("items",itemRates)
         numberOfItems = getCount()
         let nib = UINib(nibName: "SummaryPageCell", bundle: nil)

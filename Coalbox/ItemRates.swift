@@ -10,13 +10,18 @@ import Foundation
 
 
 class ItemRates {
-    var rates : [NSObject : AnyObject]?
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     func downloadRates(onComplete : MSItemBlock) {
         DbManager(tableName: "Prices").getRates(onComplete)
     }
     
-    func getAllDetails() -> [NSObject : AnyObject]?{
-        return rates
+    func getRates() -> [NSObject : AnyObject]? {
+        let newEntry = defaults.objectForKey("itemRates") as? [NSObject : AnyObject]
+        return newEntry
+    }
+    
+    func setRates(newEntry : [NSObject : AnyObject]) {
+        defaults.setObject(newEntry,forKey: "itemRates")
     }
 }
