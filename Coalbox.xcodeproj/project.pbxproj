@@ -62,6 +62,8 @@
 		EBACD78C1D1148020033D6BE /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACD78B1D1148020033D6BE /* MyAccountController.swift */; };
 		EBAEA21A1D1FBBEE00548CCA /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEA2191D1FBBEE00548CCA /* Ionicons.swift */; };
 		EBAEA21E1D1FC8B700548CCA /* HSDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEA21D1D1FC8B700548CCA /* HSDatePickerViewController.xib */; };
+		EBC029821D4DD2E500FCB19A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC029811D4DD2E500FCB19A /* HomeController.swift */; };
+		EBC029841D4E009400FCB19A /* CoalboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC029831D4E009400FCB19A /* CoalboxController.swift */; };
 		EBC4138D1D1EC9230075B443 /* HSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4138B1D1EC9230075B443 /* HSDatePickerViewController.m */; };
 		EBC413901D1ECC7A0075B443 /* PickupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC4138F1D1ECC7A0075B443 /* PickupController.swift */; };
 		EBC413921D1ECC850075B443 /* DeliveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC413911D1ECC850075B443 /* DeliveryController.swift */; };
@@ -162,6 +164,8 @@
 		EBACD78B1D1148020033D6BE /* MyAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
 		EBAEA2191D1FBBEE00548CCA /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
 		EBAEA21D1D1FC8B700548CCA /* HSDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSDatePickerViewController.xib; sourceTree = "<group>"; };
+		EBC029811D4DD2E500FCB19A /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		EBC029831D4E009400FCB19A /* CoalboxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoalboxController.swift; sourceTree = "<group>"; };
 		EBC4138A1D1EC9230075B443 /* HSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDatePickerViewController.h; sourceTree = "<group>"; };
 		EBC4138B1D1EC9230075B443 /* HSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDatePickerViewController.m; sourceTree = "<group>"; };
 		EBC4138F1D1ECC7A0075B443 /* PickupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupController.swift; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 				EB996E391D0D685100E2DF58 /* UserDetails.swift */,
 				EB5594D21CF2E1600054A4F4 /* ViewController.swift */,
 				EB5594D41CF2E1600054A4F4 /* Main.storyboard */,
+				EBC029831D4E009400FCB19A /* CoalboxController.swift */,
+				EBC029811D4DD2E500FCB19A /* HomeController.swift */,
 				EB50FFED1D479E4F008C9E96 /* LoadSocietiesController.swift */,
 				EB50FFEB1D4758A2008C9E96 /* DownloadingOrdersController.swift */,
 				EB50FFE91D4744AE008C9E96 /* OptionsController.swift */,
@@ -520,6 +526,7 @@
 				EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */,
 				EB717EA31D43B5C0008EB917 /* OrderDetailsTableController.swift in Sources */,
 				EB94537D1D2A9433002966FC /* KaedeTextField.swift in Sources */,
+				EBC029821D4DD2E500FCB19A /* HomeController.swift in Sources */,
 				EB16D5CE1D46073B00134417 /* PrivacyPolicyController.swift in Sources */,
 				EB226CD41D339B2E00C126E5 /* SummaryTableController.swift in Sources */,
 				EB3A97DC1D2D40A100B415E2 /* MBCircularProgressBarView.m in Sources */,
@@ -553,6 +560,7 @@
 				EB5594D11CF2E1600054A4F4 /* AppDelegate.swift in Sources */,
 				EBF05C181D1D15AF00360B8D /* ADVSegmentedControl.swift in Sources */,
 				EBC413901D1ECC7A0075B443 /* PickupController.swift in Sources */,
+				EBC029841D4E009400FCB19A /* CoalboxController.swift in Sources */,
 				EBFA6D9D1D001242001D7ACE /* MyOrdersController.swift in Sources */,
 				EB94537C1D2A9433002966FC /* JiroTextField.swift in Sources */,
 				EBACD78C1D1148020033D6BE /* MyAccountController.swift in Sources */,
