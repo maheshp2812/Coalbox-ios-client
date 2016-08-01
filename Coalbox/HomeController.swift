@@ -13,18 +13,24 @@ class HomeController : UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     var tableController : CoalboxTableController?
     var recentOrder : [(String,AnyObject?)] = []
-    
+
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var recentOrderStack: UIStackView!
+    @IBOutlet weak var viewOrders: UIButton!
     @IBOutlet weak var balanceLabel: UILabel!
     let dbAccessor = DbManager(tableName: "OrderDetails")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.hidden = true
         refreshControl.addTarget(self, action: #selector(onRefresh), forControlEvents: .ValueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Getting your data...")
         scrollView.addSubview(refreshControl)
     }
     
     func onRefresh() {
         recentOrder = []
+        viewOrders.hidden = true
         if UserDetails().getDetails() != nil {
             dbAccessor.accessRecentOrder(["email" : UserDetails().getDetail("email") as! String], onComplete: {
                 (result,response,error) in
@@ -44,21 +50,33 @@ class HomeController : UIViewController {
                     self.tableController?.currentStatus.text = progressText
                     let serviceType = orderData["serviceType"] as! String
                     if serviceType == "Regular" {
-                        self.tableController?.serviceType.textColor = UIColor(red: 252/255, green: 0/255, blue: 55/255, alpha: 1)
+                        self.tableController?.serviceType.textColor = UIColor(red: 255/255, green: 45/255, blue: 85/255, alpha: 1)
                     } else {
                         self.tableController?.serviceType.textColor = UIColor(red: 57/255, green: 73/255, blue: 171/255, alpha: 1)
                     }
                     self.tableController?.serviceType.text = serviceType
+                } else {
+                    let label = UILabel()
+                    label.text = "No orders placed"
+                    label.textColor = UIColor.darkGrayColor()
+                    label.numberOfLines = 0
+                    label.textAlignment = .Center
+                    self.tableController?.tableView.backgroundColor = UIColor.clearColor()
+                    self.tableController?.tableView.backgroundView = label
                 }
+                self.loading.stopAnimating()
+                self.scrollView.hidden = false
+                self.viewOrders.hidden = false
                 self.refreshControl.endRefreshing()
             })
         } else {
             let label = UILabel()
-            label.text = "No recent orders placed"
+            label.text = "You are not logged in"
             label.textColor = UIColor.darkGrayColor()
             label.numberOfLines = 0
             label.textAlignment = .Center
             self.tableController?.tableView.backgroundView = label
+            self.tableController?.tableView.backgroundColor = UIColor.clearColor()
             self.refreshControl.endRefreshing()
         }
     }
@@ -74,6 +92,7 @@ class HomeController : UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.blackColor()]
         UIApplication.sharedApplication().statusBarStyle = .Default
         self.tabBarController?.navigationItem.setHidesBackButton(true, animated: false)
+        onRefresh()
         super.viewWillAppear(true)
     }
     

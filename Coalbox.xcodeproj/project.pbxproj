@@ -14,7 +14,6 @@
 		EB1E8F1D1D27A8D8004C5A35 /* NSDateComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */; };
 		EB1E8F1F1D27B219004C5A35 /* SubmitOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */; };
 		EB226CD41D339B2E00C126E5 /* SummaryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */; };
-		EB2CE9951D3B7D680075D20B /* MainPageTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CE9941D3B7D680075D20B /* MainPageTableController.swift */; };
 		EB38D8E71D2259A4001150D0 /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38D8E61D2259A4001150D0 /* OrderDetails.swift */; };
 		EB3A97DB1D2D40A100B415E2 /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3A97D81D2D40A100B415E2 /* MBCircularProgressBarLayer.m */; };
 		EB3A97DC1D2D40A100B415E2 /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3A97DA1D2D40A100B415E2 /* MBCircularProgressBarView.m */; };
@@ -29,8 +28,6 @@
 		EB5594D81CF2E1600054A4F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5594D71CF2E1600054A4F4 /* Assets.xcassets */; };
 		EB5594DB1CF2E1600054A4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5594D91CF2E1600054A4F4 /* LaunchScreen.storyboard */; };
 		EB5594E61CF2E1610054A4F4 /* CoalboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5594E51CF2E1610054A4F4 /* CoalboxTests.swift */; };
-		EB717E9A1D4355A2008EB917 /* MainPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB717E981D4355A2008EB917 /* MainPageCell.swift */; };
-		EB717E9B1D4355A2008EB917 /* MainPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB717E991D4355A2008EB917 /* MainPageCell.xib */; };
 		EB717E9E1D435A16008EB917 /* SummaryPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB717E9C1D435A16008EB917 /* SummaryPageCell.swift */; };
 		EB717E9F1D435A16008EB917 /* SummaryPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB717E9D1D435A16008EB917 /* SummaryPageCell.xib */; };
 		EB717EA11D43ACD0008EB917 /* OrderDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB717EA01D43ACD0008EB917 /* OrderDetailsController.swift */; };
@@ -71,7 +68,6 @@
 		EBC9D4E81D1E65B500A0015A /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBC9D4E21D1E65B500A0015A /* ionicons.ttf */; };
 		EBD1A2351CF6ED7300A90D35 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD1A2341CF6ED7300A90D35 /* SignupController.swift */; };
 		EBD267821D0168600012190D /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD267811D0168600012190D /* MicrosoftAzureMobile.framework */; };
-		EBD318201CF999730035F51B /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3181F1CF999730035F51B /* MainPageController.swift */; };
 		EBE22C531D3F692C00027AC3 /* ViewOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE22C521D3F692C00027AC3 /* ViewOrdersController.swift */; };
 		EBE476821CFD7C3B00B216ED /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE476811CFD7C3B00B216ED /* AccountController.swift */; };
 		EBF05C181D1D15AF00360B8D /* ADVSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF05C171D1D15AF00360B8D /* ADVSegmentedControl.swift */; };
@@ -112,7 +108,6 @@
 		EB1E8F1C1D27A8D8004C5A35 /* NSDateComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateComparison.swift; sourceTree = "<group>"; };
 		EB1E8F1E1D27B219004C5A35 /* SubmitOrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitOrderController.swift; sourceTree = "<group>"; };
 		EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableController.swift; sourceTree = "<group>"; };
-		EB2CE9941D3B7D680075D20B /* MainPageTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageTableController.swift; sourceTree = "<group>"; };
 		EB38D8E61D2259A4001150D0 /* OrderDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
 		EB3A97D71D2D40A100B415E2 /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarLayer.h; path = Coalbox/MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
 		EB3A97D81D2D40A100B415E2 /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarLayer.m; path = Coalbox/MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
@@ -133,8 +128,6 @@
 		EB5594E11CF2E1610054A4F4 /* CoalboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoalboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5594E51CF2E1610054A4F4 /* CoalboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoalboxTests.swift; sourceTree = "<group>"; };
 		EB5594E71CF2E1610054A4F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB717E981D4355A2008EB917 /* MainPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageCell.swift; sourceTree = "<group>"; };
-		EB717E991D4355A2008EB917 /* MainPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPageCell.xib; sourceTree = "<group>"; };
 		EB717E9C1D435A16008EB917 /* SummaryPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryPageCell.swift; sourceTree = "<group>"; };
 		EB717E9D1D435A16008EB917 /* SummaryPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryPageCell.xib; sourceTree = "<group>"; };
 		EB717EA01D43ACD0008EB917 /* OrderDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsController.swift; sourceTree = "<group>"; };
@@ -176,7 +169,6 @@
 		EBD1A2341CF6ED7300A90D35 /* SignupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		EBD2677B1D0161BF0012190D /* Coalbox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coalbox-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBD267811D0168600012190D /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
-		EBD3181F1CF999730035F51B /* MainPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		EBE22C521D3F692C00027AC3 /* ViewOrdersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOrdersController.swift; sourceTree = "<group>"; };
 		EBE476811CFD7C3B00B216ED /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		EBF05C171D1D15AF00360B8D /* ADVSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADVSegmentedControl.swift; sourceTree = "<group>"; };
@@ -246,14 +238,11 @@
 				EB16D5CB1D4600F800134417 /* TnCController.swift */,
 				EB717EA21D43B5C0008EB917 /* OrderDetailsTableController.swift */,
 				EB717EA01D43ACD0008EB917 /* OrderDetailsController.swift */,
-				EB717E981D4355A2008EB917 /* MainPageCell.swift */,
-				EB717E991D4355A2008EB917 /* MainPageCell.xib */,
 				EB50FFEF1D49DE8D008C9E96 /* OrderDetailsCell.swift */,
 				EB50FFF01D49DE8D008C9E96 /* OrderDetailsCell.xib */,
 				EB153C0A1D3FB62400B8484E /* OrderCell.swift */,
 				EB153C081D3FB48000B8484E /* OrderCell.xib */,
 				EBE22C521D3F692C00027AC3 /* ViewOrdersController.swift */,
-				EB2CE9941D3B7D680075D20B /* MainPageTableController.swift */,
 				EB226CD31D339B2E00C126E5 /* SummaryTableController.swift */,
 				EB717E9C1D435A16008EB917 /* SummaryPageCell.swift */,
 				EB717E9D1D435A16008EB917 /* SummaryPageCell.xib */,
@@ -266,7 +255,6 @@
 				EBF05C171D1D15AF00360B8D /* ADVSegmentedControl.swift */,
 				EBFA6D9C1D001242001D7ACE /* MyOrdersController.swift */,
 				EBE476811CFD7C3B00B216ED /* AccountController.swift */,
-				EBD3181F1CF999730035F51B /* MainPageController.swift */,
 				EB5594D71CF2E1600054A4F4 /* Assets.xcassets */,
 				EB5594D91CF2E1600054A4F4 /* LaunchScreen.storyboard */,
 				EB5594DC1CF2E1600054A4F4 /* Info.plist */,
@@ -441,7 +429,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC9D4E81D1E65B500A0015A /* ionicons.ttf in Resources */,
-				EB717E9B1D4355A2008EB917 /* MainPageCell.xib in Resources */,
 				EB153C091D3FB48000B8484E /* OrderCell.xib in Resources */,
 				EB5594DB1CF2E1600054A4F4 /* LaunchScreen.storyboard in Resources */,
 				EB996E371D0D4E8600E2DF58 /* GoogleService-Info.plist in Resources */,
@@ -538,11 +525,9 @@
 				EB9453781D2A9433002966FC /* AkiraTextField.swift in Sources */,
 				EB9453791D2A9433002966FC /* HoshiTextField.swift in Sources */,
 				EB50FFF11D49DE8D008C9E96 /* OrderDetailsCell.swift in Sources */,
-				EBD318201CF999730035F51B /* MainPageController.swift in Sources */,
 				EB717EA11D43ACD0008EB917 /* OrderDetailsController.swift in Sources */,
 				EB94537B1D2A9433002966FC /* IsaoTextField.swift in Sources */,
 				EB996E3A1D0D685200E2DF58 /* UserDetails.swift in Sources */,
-				EB2CE9951D3B7D680075D20B /* MainPageTableController.swift in Sources */,
 				EB16D5CC1D4600F800134417 /* TnCController.swift in Sources */,
 				EB50FFEE1D479E4F008C9E96 /* LoadSocietiesController.swift in Sources */,
 				EBC4138D1D1EC9230075B443 /* HSDatePickerViewController.m in Sources */,
@@ -569,7 +554,6 @@
 				EBACD78C1D1148020033D6BE /* MyAccountController.swift in Sources */,
 				EB9E94571D4F67B800AED86C /* CoalboxTableController.swift in Sources */,
 				EBF05C1A1D1D16C000360B8D /* SelectServiceController.swift in Sources */,
-				EB717E9A1D4355A2008EB917 /* MainPageCell.swift in Sources */,
 				EB153C0B1D3FB62400B8484E /* OrderCell.swift in Sources */,
 				EB9453811D2A9433002966FC /* YokoTextField.swift in Sources */,
 				EBD1A2351CF6ED7300A90D35 /* SignupController.swift in Sources */,
@@ -760,6 +744,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Coalbox/Coalbox-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -823,6 +808,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Coalbox/Coalbox-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

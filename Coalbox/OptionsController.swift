@@ -34,6 +34,7 @@ class OptionsController : UITableViewController {
                 performSegueWithIdentifier("loginSegue", sender: self)
             }
         }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
