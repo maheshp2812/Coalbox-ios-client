@@ -30,7 +30,7 @@ class HomeController : UIViewController {
                 (result,response,error) in
                 if result?.count > 0 {
                     let orderData = result as! NSDictionary
-                    self.tableController?.totalPrice.text = String(orderData["totalPrice"] as! NSNumber)
+                    self.tableController?.totalPrice.text = "Rs." + String(orderData["totalPrice"] as! NSNumber)
                     self.tableController?.pickupLabel.text = (orderData["pickupDate"] as? String)! + ", " + (orderData["pickupSlot"] as? String)!
                     self.tableController?.deliveryLabel.text = (orderData["deliveryDate"] as? String)! + ", " + (orderData["deliverySlot"] as? String)!
                     let progressText = orderData["status"] as! String
@@ -48,10 +48,18 @@ class HomeController : UIViewController {
                     } else {
                         self.tableController?.serviceType.textColor = UIColor(red: 57/255, green: 73/255, blue: 171/255, alpha: 1)
                     }
-                    
+                    self.tableController?.serviceType.text = serviceType
                 }
                 self.refreshControl.endRefreshing()
             })
+        } else {
+            let label = UILabel()
+            label.text = "No recent orders placed"
+            label.textColor = UIColor.darkGrayColor()
+            label.numberOfLines = 0
+            label.textAlignment = .Center
+            self.tableController?.tableView.backgroundView = label
+            self.refreshControl.endRefreshing()
         }
     }
     

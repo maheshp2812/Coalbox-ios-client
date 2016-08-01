@@ -160,7 +160,7 @@
 		EB9453771D2A9433002966FC /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
 		EB996E361D0D4E8600E2DF58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB996E391D0D685100E2DF58 /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
-		EB9E94561D4F67B800AED86C /* CoalboxTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoalboxTableController.swift; path = Coalbox/CoalboxTableController.swift; sourceTree = "<group>"; };
+		EB9E94561D4F67B800AED86C /* CoalboxTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoalboxTableController.swift; sourceTree = "<group>"; };
 		EBA2FAB21D31181D00EE4079 /* SignupTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupTableController.swift; path = ../SignupTableController.swift; sourceTree = "<group>"; };
 		EBACD7891D1146C10033D6BE /* AccountTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableController.swift; sourceTree = "<group>"; };
 		EBACD78B1D1148020033D6BE /* MyAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
@@ -208,7 +208,6 @@
 		EB5594C41CF2E15F0054A4F4 = {
 			isa = PBXGroup;
 			children = (
-				EB9E94561D4F67B800AED86C /* CoalboxTableController.swift */,
 				EBD267831D0168640012190D /* Frameworks */,
 				EB5594CF1CF2E1600054A4F4 /* Coalbox */,
 				EB5594E41CF2E1610054A4F4 /* CoalboxTests */,
@@ -229,6 +228,7 @@
 		EB5594CF1CF2E1600054A4F4 /* Coalbox */ = {
 			isa = PBXGroup;
 			children = (
+				EB9E94561D4F67B800AED86C /* CoalboxTableController.swift */,
 				EBA2FAB21D31181D00EE4079 /* SignupTableController.swift */,
 				EB7E5BA51D20FFBD0051E43D /* PlaceOrderContainerController.swift */,
 				EB5594D01CF2E1600054A4F4 /* AppDelegate.swift */,

@@ -29,7 +29,8 @@ class GettingRatesController : UIViewController {
             backtrack = false
             image.image = nil
             message.text = ""
-            self.navigationController?.popViewControllerAnimated(true)
+            self.navigationController?.popViewControllerAnimated(false)
+            super.viewWillAppear(true)
         }
         else {
             super.viewWillAppear(true)

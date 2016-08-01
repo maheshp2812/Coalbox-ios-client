@@ -40,7 +40,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             self.navigationController?.setNavigationBarHidden(false, animated: true)
         }
         if UserDetails().getDetails() != nil {
-            performSegueWithIdentifier("launchloginToCoalboxSegue", sender: self)
+            performSegueWithIdentifier("launchloginToMainPage", sender: self)
         }
         super.viewWillAppear(true)
     }
